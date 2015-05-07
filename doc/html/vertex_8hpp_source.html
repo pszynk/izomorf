@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Plik źródłowy vertex.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">vertex.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="vertex_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef VERTEX_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define VERTEX_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classVertex.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVertex.html">Vertex</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">   33</a></span>&#160;        <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">   38</a></span>&#160;        <span class="keyword">typedef</span> std::pair&lt;unsigned int, unsigned int&gt; <a class="code" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">deg_t</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">   46</a></span>&#160;        <span class="keyword">typedef</span> std::set&lt;idx_t&gt;::const_iterator <a class="code" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">iterator</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classVertex.html#a4c8fc5e2511870e41a1f9a74116e9163">Vertex</a>(<a class="code" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> _index);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classVertex.html#a5be3d42eadcf36caa7af80227e02ad7a">addAdjacent</a>(<a class="code" href="classVertex.html">Vertex</a> &amp;adj);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classVertex.html#a40b130e700edabcc716e427a363aed7f">isAdjacent</a>(<a class="code" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> v) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> <a class="code" href="classVertex.html#a7fc1d1b1f8b06a1f78828959447ebab4">getIndex</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classVertex.html#ab934b969ce0a7ca993f68415ac2ef7a7">getOut</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classVertex.html#a2f2ba2a945262eb1ad0cf85cba463aa6">getIn</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">iterator</a> <a class="code" href="classVertex.html#afe907b35d105ae302e53bbd0416e2af7">begin</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">iterator</a> <a class="code" href="classVertex.html#a8e7eadc2393bd0706e4189e83e2ea6e5">end</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::string <a class="code" href="classVertex.html#a8134949da7cd56815688c6a2d0b4d9f9">getInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classVertex.html#aa614f5224115d0d25abc2f8073b41758">  125</a></span>&#160;        <a class="code" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> <a class="code" href="classVertex.html#aa614f5224115d0d25abc2f8073b41758">index</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classVertex.html#ac1a6f322618b6d221822bc047b26ceea">  130</a></span>&#160;        <a class="code" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">deg_t</a> <a class="code" href="classVertex.html#ac1a6f322618b6d221822bc047b26ceea">degree</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classVertex.html#a47b4f2e131ebb0bc19d9765032b14bbe">  135</a></span>&#160;        std::set&lt;idx_t&gt; <a class="code" href="classVertex.html#a47b4f2e131ebb0bc19d9765032b14bbe">adjacent</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classVertex.html#a144482cc091abe9c30061f987d0596f7">addNeighbour</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* end of include guard: VERTEX_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classVertex_html_a9dfe0aad480124fc2948013263615e2e"><div class="ttname"><a href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">Vertex::deg_t</a></div><div class="ttdeci">std::pair&lt; unsigned int, unsigned int &gt; deg_t</div><div class="ttdoc">typ reprezentujący parę wejściowość - wyjściowość </div><div class="ttdef"><b>Definition:</b> vertex.hpp:38</div></div>
+<div class="ttc" id="classVertex_html_a2f2ba2a945262eb1ad0cf85cba463aa6"><div class="ttname"><a href="classVertex.html#a2f2ba2a945262eb1ad0cf85cba463aa6">Vertex::getIn</a></div><div class="ttdeci">unsigned int getIn() const </div><div class="ttdoc">zwraca wejściowość wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.cpp:51</div></div>
+<div class="ttc" id="classVertex_html_a12fe2194264f72b70b284bba723052c1"><div class="ttname"><a href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a></div><div class="ttdeci">unsigned int idx_t</div><div class="ttdoc">typ po którym indeksowane są wierzchołki w grafie </div><div class="ttdef"><b>Definition:</b> vertex.hpp:33</div></div>
+<div class="ttc" id="classVertex_html_a47b4f2e131ebb0bc19d9765032b14bbe"><div class="ttname"><a href="classVertex.html#a47b4f2e131ebb0bc19d9765032b14bbe">Vertex::adjacent</a></div><div class="ttdeci">std::set&lt; idx_t &gt; adjacent</div><div class="ttdoc">lista sąsiedztwa wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.hpp:135</div></div>
+<div class="ttc" id="classVertex_html_a5be3d42eadcf36caa7af80227e02ad7a"><div class="ttname"><a href="classVertex.html#a5be3d42eadcf36caa7af80227e02ad7a">Vertex::addAdjacent</a></div><div class="ttdeci">bool addAdjacent(Vertex &amp;adj)</div><div class="ttdoc">dodaj wierzchołek sąsiadujący </div><div class="ttdef"><b>Definition:</b> vertex.cpp:26</div></div>
+<div class="ttc" id="classVertex_html_a4c8fc5e2511870e41a1f9a74116e9163"><div class="ttname"><a href="classVertex.html#a4c8fc5e2511870e41a1f9a74116e9163">Vertex::Vertex</a></div><div class="ttdeci">Vertex(idx_t _index)</div><div class="ttdoc">konstruktor wierzchołka o podanym indeksie </div><div class="ttdef"><b>Definition:</b> vertex.cpp:17</div></div>
+<div class="ttc" id="classVertex_html_ac1a6f322618b6d221822bc047b26ceea"><div class="ttname"><a href="classVertex.html#ac1a6f322618b6d221822bc047b26ceea">Vertex::degree</a></div><div class="ttdeci">deg_t degree</div><div class="ttdoc">wejściowość i wyjściowość wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.hpp:130</div></div>
+<div class="ttc" id="classVertex_html_a40b130e700edabcc716e427a363aed7f"><div class="ttname"><a href="classVertex.html#a40b130e700edabcc716e427a363aed7f">Vertex::isAdjacent</a></div><div class="ttdeci">bool isAdjacent(idx_t v) const </div><div class="ttdoc">sprawdź czy wierzchołek o danym indeksie jest sąsiadem </div><div class="ttdef"><b>Definition:</b> vertex.cpp:36</div></div>
+<div class="ttc" id="classVertex_html_a7fc1d1b1f8b06a1f78828959447ebab4"><div class="ttname"><a href="classVertex.html#a7fc1d1b1f8b06a1f78828959447ebab4">Vertex::getIndex</a></div><div class="ttdeci">idx_t getIndex() const </div><div class="ttdoc">zwraca indeks danego wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.cpp:21</div></div>
+<div class="ttc" id="classVertex_html_afe907b35d105ae302e53bbd0416e2af7"><div class="ttname"><a href="classVertex.html#afe907b35d105ae302e53bbd0416e2af7">Vertex::begin</a></div><div class="ttdeci">iterator begin() const </div><div class="ttdoc">iterator po indeksach wierzchołków sąsiadujących </div><div class="ttdef"><b>Definition:</b> vertex.cpp:41</div></div>
+<div class="ttc" id="classVertex_html_ac889dee153c9abe7b3fb652ec6583df9"><div class="ttname"><a href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">Vertex::iterator</a></div><div class="ttdeci">std::set&lt; idx_t &gt;::const_iterator iterator</div><div class="ttdoc">iterator wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.hpp:46</div></div>
+<div class="ttc" id="classVertex_html_aa614f5224115d0d25abc2f8073b41758"><div class="ttname"><a href="classVertex.html#aa614f5224115d0d25abc2f8073b41758">Vertex::index</a></div><div class="ttdeci">idx_t index</div><div class="ttdoc">indeks wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.hpp:125</div></div>
+<div class="ttc" id="classVertex_html_a144482cc091abe9c30061f987d0596f7"><div class="ttname"><a href="classVertex.html#a144482cc091abe9c30061f987d0596f7">Vertex::addNeighbour</a></div><div class="ttdeci">void addNeighbour()</div><div class="ttdoc">procedura wywoływana gdy wierzchołek jest dodawany do listy sąsiedztwa innego wierzchołka ...</div><div class="ttdef"><b>Definition:</b> vertex.cpp:80</div></div>
+<div class="ttc" id="classVertex_html_a8134949da7cd56815688c6a2d0b4d9f9"><div class="ttname"><a href="classVertex.html#a8134949da7cd56815688c6a2d0b4d9f9">Vertex::getInfo</a></div><div class="ttdeci">std::string getInfo() const </div><div class="ttdoc">informacje na temat wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.cpp:61</div></div>
+<div class="ttc" id="classVertex_html_a8e7eadc2393bd0706e4189e83e2ea6e5"><div class="ttname"><a href="classVertex.html#a8e7eadc2393bd0706e4189e83e2ea6e5">Vertex::end</a></div><div class="ttdeci">iterator end() const </div><div class="ttdoc">iterator po indeksach wierzchołków sąsiadujących </div><div class="ttdef"><b>Definition:</b> vertex.cpp:46</div></div>
+<div class="ttc" id="classVertex_html_ab934b969ce0a7ca993f68415ac2ef7a7"><div class="ttname"><a href="classVertex.html#ab934b969ce0a7ca993f68415ac2ef7a7">Vertex::getOut</a></div><div class="ttdeci">unsigned int getOut() const </div><div class="ttdoc">zwraca wyjściowość wierzchołka </div><div class="ttdef"><b>Definition:</b> vertex.cpp:56</div></div>
+<div class="ttc" id="classVertex_html"><div class="ttname"><a href="classVertex.html">Vertex</a></div><div class="ttdoc">klasa reprezentuje wierzchołek grafie w reprezentacji list sąsiedztwa </div><div class="ttdef"><b>Definition:</b> vertex.hpp:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,105 @@
+\hypertarget{utils_8hpp}{\section{Dokumentacja pliku utils.\-hpp}
+\label{utils_8hpp}\index{utils.\-hpp@{utils.\-hpp}}
+}
+
+
+deklaracja funkcji pomocniczych  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::string $>$ \& \hyperlink{utils_8hpp_a7e8c005cbce86b3a6b65bcfb106b2825}{split} (const std\-::string \&s, char delim, std\-::vector$<$ std\-::string $>$ \&elems)
+\begin{DoxyCompactList}\small\item\em dzieli string na podstringi \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{utils_8hpp_ae924c9b43cd7b086945003c09c294d2b}{split} (const std\-::string \&s, char delim)
+\begin{DoxyCompactList}\small\item\em dźieli string na podstringi \end{DoxyCompactList}\item 
+std\-::string \& \hyperlink{utils_8hpp_a952833329369b7b1b07a02e02d45e968}{strip\-\_\-space} (std\-::string \&s)
+\begin{DoxyCompactList}\small\item\em usuwa niewidzialne znaki ze stringa \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+deklaracja funkcji pomocniczych Detailed description starts here.
+
+Funkcje pomocnicze, służące do obsługi stringów 
+
+
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{utils_8hpp_a7e8c005cbce86b3a6b65bcfb106b2825}{\index{utils.\-hpp@{utils.\-hpp}!split@{split}}
+\index{split@{split}!utils.hpp@{utils.\-hpp}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$\& split (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s, }
+\item[{char}]{delim, }
+\item[{std\-::vector$<$ std\-::string $>$ \&}]{elems}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a7e8c005cbce86b3a6b65bcfb106b2825}
+
+
+dzieli string na podstringi 
+
+dzielenie stringa na podstawie znaku dzielącego
+
+
+\begin{DoxyParams}{Parametry}
+{\em s} & string wejściowy \\
+\hline
+{\em delim} & znak podziału \\
+\hline
+{\em elems} & wektor z postringami wynikowymi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+referencja na wektor elems 
+\end{DoxyReturn}
+\hypertarget{utils_8hpp_ae924c9b43cd7b086945003c09c294d2b}{\index{utils.\-hpp@{utils.\-hpp}!split@{split}}
+\index{split@{split}!utils.hpp@{utils.\-hpp}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ split (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s, }
+\item[{char}]{delim}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_ae924c9b43cd7b086945003c09c294d2b}
+
+
+dźieli string na podstringi 
+
+dzielenie stringa na podstawie znaku dzielącego
+
+
+\begin{DoxyParams}{Parametry}
+{\em s} & string wejściowy \\
+\hline
+{\em delim} & znak podziału\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wektor podstringów 
+\end{DoxyReturn}
+\hypertarget{utils_8hpp_a952833329369b7b1b07a02e02d45e968}{\index{utils.\-hpp@{utils.\-hpp}!strip\-\_\-space@{strip\-\_\-space}}
+\index{strip\-\_\-space@{strip\-\_\-space}!utils.hpp@{utils.\-hpp}}
+\subsubsection[{strip\-\_\-space}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string\& strip\-\_\-space (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{utils_8hpp_a952833329369b7b1b07a02e02d45e968}
+
+
+usuwa niewidzialne znaki ze stringa 
+
+usuwanie znaku spacji, tabulacji, nowej linii ze stringa
+
+
+\begin{DoxyParams}{Parametry}
+{\em s} & string wejściowy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+string s bez białych znaków 
+\end{DoxyReturn}

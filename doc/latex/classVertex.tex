@@ -1,0 +1,274 @@
+\hypertarget{classVertex}{\section{Dokumentacja klasy Vertex}
+\label{classVertex}\index{Vertex@{Vertex}}
+}
+
+
+klasa reprezentuje wierzchołek grafie w reprezentacji list sąsiedztwa  
+
+
+
+
+{\ttfamily \#include $<$vertex.\-hpp$>$}
+
+\subsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t}
+\begin{DoxyCompactList}\small\item\em typ po którym indeksowane są wierzchołki w grafie \end{DoxyCompactList}\item 
+typedef std\-::pair$<$ unsigned \\*
+int, unsigned int $>$ \hyperlink{classVertex_a9dfe0aad480124fc2948013263615e2e}{deg\-\_\-t}
+\begin{DoxyCompactList}\small\item\em typ reprezentujący parę wejściowość -\/ wyjściowość \end{DoxyCompactList}\item 
+typedef std\-::set$<$ \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t} $>$\\*
+\-::const\-\_\-iterator \hyperlink{classVertex_ac889dee153c9abe7b3fb652ec6583df9}{iterator}
+\begin{DoxyCompactList}\small\item\em iterator wierzchołka \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVertex_a4c8fc5e2511870e41a1f9a74116e9163}{Vertex} (\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t} \-\_\-index)
+\begin{DoxyCompactList}\small\item\em konstruktor wierzchołka o podanym indeksie \end{DoxyCompactList}\item 
+bool \hyperlink{classVertex_a5be3d42eadcf36caa7af80227e02ad7a}{add\-Adjacent} (\hyperlink{classVertex}{Vertex} \&adj)
+\begin{DoxyCompactList}\small\item\em dodaj wierzchołek sąsiadujący \end{DoxyCompactList}\item 
+bool \hyperlink{classVertex_a40b130e700edabcc716e427a363aed7f}{is\-Adjacent} (\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t} v) const 
+\begin{DoxyCompactList}\small\item\em sprawdź czy wierzchołek o danym indeksie jest sąsiadem \end{DoxyCompactList}\item 
+\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t} \hyperlink{classVertex_a7fc1d1b1f8b06a1f78828959447ebab4}{get\-Index} () const 
+\begin{DoxyCompactList}\small\item\em zwraca indeks danego wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classVertex_ab934b969ce0a7ca993f68415ac2ef7a7}{get\-Out} () const 
+\begin{DoxyCompactList}\small\item\em zwraca wyjściowość wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classVertex_a2f2ba2a945262eb1ad0cf85cba463aa6}{get\-In} () const 
+\begin{DoxyCompactList}\small\item\em zwraca wejściowość wierzchołka \end{DoxyCompactList}\item 
+\hyperlink{classVertex_ac889dee153c9abe7b3fb652ec6583df9}{iterator} \hyperlink{classVertex_afe907b35d105ae302e53bbd0416e2af7}{begin} () const 
+\begin{DoxyCompactList}\small\item\em iterator po indeksach wierzchołków sąsiadujących \end{DoxyCompactList}\item 
+\hyperlink{classVertex_ac889dee153c9abe7b3fb652ec6583df9}{iterator} \hyperlink{classVertex_a8e7eadc2393bd0706e4189e83e2ea6e5}{end} () const 
+\begin{DoxyCompactList}\small\item\em iterator po indeksach wierzchołków sąsiadujących \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classVertex_a8134949da7cd56815688c6a2d0b4d9f9}{get\-Info} () const 
+\begin{DoxyCompactList}\small\item\em informacje na temat wierzchołka \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classVertex_a144482cc091abe9c30061f987d0596f7}{add\-Neighbour} ()
+\begin{DoxyCompactList}\small\item\em procedura wywoływana gdy wierzchołek jest dodawany do listy sąsiedztwa innego wierzchołka \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t} \hyperlink{classVertex_aa614f5224115d0d25abc2f8073b41758}{index}
+\begin{DoxyCompactList}\small\item\em indeks wierzchołka \end{DoxyCompactList}\item 
+\hyperlink{classVertex_a9dfe0aad480124fc2948013263615e2e}{deg\-\_\-t} \hyperlink{classVertex_ac1a6f322618b6d221822bc047b26ceea}{degree}
+\begin{DoxyCompactList}\small\item\em wejściowość i wyjściowość wierzchołka \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{idx\-\_\-t} $>$ \hyperlink{classVertex_a47b4f2e131ebb0bc19d9765032b14bbe}{adjacent}
+\begin{DoxyCompactList}\small\item\em lista sąsiedztwa wierzchołka \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+klasa reprezentuje wierzchołek grafie w reprezentacji list sąsiedztwa 
+
+Klasa odpowiada liście sąsiedztwa jednego wierzchołka. 
+
+\subsection{Dokumentacja składowych definicji typu}
+\hypertarget{classVertex_a9dfe0aad480124fc2948013263615e2e}{\index{Vertex@{Vertex}!deg\-\_\-t@{deg\-\_\-t}}
+\index{deg\-\_\-t@{deg\-\_\-t}!Vertex@{Vertex}}
+\subsubsection[{deg\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::pair$<$unsigned int, unsigned int$>$ {\bf Vertex\-::deg\-\_\-t}}}\label{classVertex_a9dfe0aad480124fc2948013263615e2e}
+
+
+typ reprezentujący parę wejściowość -\/ wyjściowość 
+
+\hypertarget{classVertex_a12fe2194264f72b70b284bba723052c1}{\index{Vertex@{Vertex}!idx\-\_\-t@{idx\-\_\-t}}
+\index{idx\-\_\-t@{idx\-\_\-t}!Vertex@{Vertex}}
+\subsubsection[{idx\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf Vertex\-::idx\-\_\-t}}}\label{classVertex_a12fe2194264f72b70b284bba723052c1}
+
+
+typ po którym indeksowane są wierzchołki w grafie 
+
+\hypertarget{classVertex_ac889dee153c9abe7b3fb652ec6583df9}{\index{Vertex@{Vertex}!iterator@{iterator}}
+\index{iterator@{iterator}!Vertex@{Vertex}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::set$<${\bf idx\-\_\-t}$>$\-::const\-\_\-iterator {\bf Vertex\-::iterator}}}\label{classVertex_ac889dee153c9abe7b3fb652ec6583df9}
+
+
+iterator wierzchołka 
+
+Iterator po indeksach wierzchołków sąsiadujących z danym wierzchołkiem 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classVertex_a4c8fc5e2511870e41a1f9a74116e9163}{\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\-::\-Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf idx\-\_\-t}}]{\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{classVertex_a4c8fc5e2511870e41a1f9a74116e9163}
+
+
+konstruktor wierzchołka o podanym indeksie 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \-\_\-index} & indeks dla tworzonego wierzchołka \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classVertex_a5be3d42eadcf36caa7af80227e02ad7a}{\index{Vertex@{Vertex}!add\-Adjacent@{add\-Adjacent}}
+\index{add\-Adjacent@{add\-Adjacent}!Vertex@{Vertex}}
+\subsubsection[{add\-Adjacent}]{\setlength{\rightskip}{0pt plus 5cm}bool Vertex\-::add\-Adjacent (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex} \&}]{adj}
+\end{DoxyParamCaption}
+)}}\label{classVertex_a5be3d42eadcf36caa7af80227e02ad7a}
+
+
+dodaj wierzchołek sąsiadujący 
+
+
+\begin{DoxyParams}{Parametry}
+{\em adj} & referencja na dodawany wierzchołek\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy dodano wierzchołek (nie dodano jeżeli wierzchołek jest już sąsiadem) 
+\end{DoxyReturn}
+\hypertarget{classVertex_a144482cc091abe9c30061f987d0596f7}{\index{Vertex@{Vertex}!add\-Neighbour@{add\-Neighbour}}
+\index{add\-Neighbour@{add\-Neighbour}!Vertex@{Vertex}}
+\subsubsection[{add\-Neighbour}]{\setlength{\rightskip}{0pt plus 5cm}void Vertex\-::add\-Neighbour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVertex_a144482cc091abe9c30061f987d0596f7}
+
+
+procedura wywoływana gdy wierzchołek jest dodawany do listy sąsiedztwa innego wierzchołka 
+
+\hypertarget{classVertex_afe907b35d105ae302e53bbd0416e2af7}{\index{Vertex@{Vertex}!begin@{begin}}
+\index{begin@{begin}!Vertex@{Vertex}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\-::iterator} Vertex\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_afe907b35d105ae302e53bbd0416e2af7}
+
+
+iterator po indeksach wierzchołków sąsiadujących 
+
+\begin{DoxyReturn}{Zwraca}
+iterator na początek listy wierzchołków 
+\end{DoxyReturn}
+\hypertarget{classVertex_a8e7eadc2393bd0706e4189e83e2ea6e5}{\index{Vertex@{Vertex}!end@{end}}
+\index{end@{end}!Vertex@{Vertex}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\-::iterator} Vertex\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_a8e7eadc2393bd0706e4189e83e2ea6e5}
+
+
+iterator po indeksach wierzchołków sąsiadujących 
+
+\begin{DoxyReturn}{Zwraca}
+iterator na koniec listy wierzchołków 
+\end{DoxyReturn}
+\hypertarget{classVertex_a2f2ba2a945262eb1ad0cf85cba463aa6}{\index{Vertex@{Vertex}!get\-In@{get\-In}}
+\index{get\-In@{get\-In}!Vertex@{Vertex}}
+\subsubsection[{get\-In}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Vertex\-::get\-In (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_a2f2ba2a945262eb1ad0cf85cba463aa6}
+
+
+zwraca wejściowość wierzchołka 
+
+\begin{DoxyReturn}{Zwraca}
+wejściowość 
+\end{DoxyReturn}
+\hypertarget{classVertex_a7fc1d1b1f8b06a1f78828959447ebab4}{\index{Vertex@{Vertex}!get\-Index@{get\-Index}}
+\index{get\-Index@{get\-Index}!Vertex@{Vertex}}
+\subsubsection[{get\-Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf idx\-\_\-t} Vertex\-::get\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_a7fc1d1b1f8b06a1f78828959447ebab4}
+
+
+zwraca indeks danego wierzchołka 
+
+\begin{DoxyReturn}{Zwraca}
+indeks 
+\end{DoxyReturn}
+\hypertarget{classVertex_a8134949da7cd56815688c6a2d0b4d9f9}{\index{Vertex@{Vertex}!get\-Info@{get\-Info}}
+\index{get\-Info@{get\-Info}!Vertex@{Vertex}}
+\subsubsection[{get\-Info}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Vertex\-::get\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_a8134949da7cd56815688c6a2d0b4d9f9}
+
+
+informacje na temat wierzchołka 
+
+procedura pomocnicza
+
+\begin{DoxyReturn}{Zwraca}
+string z info. wierzchołka 
+\end{DoxyReturn}
+\hypertarget{classVertex_ab934b969ce0a7ca993f68415ac2ef7a7}{\index{Vertex@{Vertex}!get\-Out@{get\-Out}}
+\index{get\-Out@{get\-Out}!Vertex@{Vertex}}
+\subsubsection[{get\-Out}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Vertex\-::get\-Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_ab934b969ce0a7ca993f68415ac2ef7a7}
+
+
+zwraca wyjściowość wierzchołka 
+
+\begin{DoxyReturn}{Zwraca}
+wyjściowość 
+\end{DoxyReturn}
+\hypertarget{classVertex_a40b130e700edabcc716e427a363aed7f}{\index{Vertex@{Vertex}!is\-Adjacent@{is\-Adjacent}}
+\index{is\-Adjacent@{is\-Adjacent}!Vertex@{Vertex}}
+\subsubsection[{is\-Adjacent}]{\setlength{\rightskip}{0pt plus 5cm}bool Vertex\-::is\-Adjacent (
+\begin{DoxyParamCaption}
+\item[{{\bf idx\-\_\-t}}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classVertex_a40b130e700edabcc716e427a363aed7f}
+
+
+sprawdź czy wierzchołek o danym indeksie jest sąsiadem 
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & indeks potencjalnego sąsiada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy v to indeks wierzchołka sąsiadującego z danym wierzchołkiem 
+\end{DoxyReturn}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classVertex_a47b4f2e131ebb0bc19d9765032b14bbe}{\index{Vertex@{Vertex}!adjacent@{adjacent}}
+\index{adjacent@{adjacent}!Vertex@{Vertex}}
+\subsubsection[{adjacent}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf idx\-\_\-t}$>$ Vertex\-::adjacent\hspace{0.3cm}{\ttfamily [private]}}}\label{classVertex_a47b4f2e131ebb0bc19d9765032b14bbe}
+
+
+lista sąsiedztwa wierzchołka 
+
+\hypertarget{classVertex_ac1a6f322618b6d221822bc047b26ceea}{\index{Vertex@{Vertex}!degree@{degree}}
+\index{degree@{degree}!Vertex@{Vertex}}
+\subsubsection[{degree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf deg\-\_\-t} Vertex\-::degree\hspace{0.3cm}{\ttfamily [private]}}}\label{classVertex_ac1a6f322618b6d221822bc047b26ceea}
+
+
+wejściowość i wyjściowość wierzchołka 
+
+\hypertarget{classVertex_aa614f5224115d0d25abc2f8073b41758}{\index{Vertex@{Vertex}!index@{index}}
+\index{index@{index}!Vertex@{Vertex}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf idx\-\_\-t} Vertex\-::index\hspace{0.3cm}{\ttfamily [private]}}}\label{classVertex_aa614f5224115d0d25abc2f8073b41758}
+
+
+indeks wierzchołka 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vertex_8hpp}{vertex.\-hpp}\item 
+\hyperlink{vertex_8cpp}{vertex.\-cpp}\end{DoxyCompactItemize}

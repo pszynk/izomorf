@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Plik źródłowy isomorphismAlgo.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">isomorphismAlgo.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="isomorphismAlgo_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef ISOMORPHISMALGO_HPP</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ISOMORPHISMALGO_HPP</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph_8hpp.html">graph.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIsomorphismAlgo.html">IsomorphismAlgo</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">   38</a></span>&#160;        <span class="keyword">typedef</span> std::map&lt;Graph::label_t, Graph::label_t&gt; <a class="code" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classIsomorphismAlgo.html#a9ce685f18e7dc74ad6af1b70b8f1073e">IsomorphismAlgo</a>(<span class="keyword">const</span> <a class="code" href="classGraph.html">Graph</a> &amp;_graphX, <span class="keyword">const</span> <a class="code" href="classGraph.html">Graph</a> &amp;_graphY);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classIsomorphismAlgo.html#a57a1df7c1d6b397a43b93f69e51a6849">isIsomorphism</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classIsomorphismAlgo.html#ad129995900091c355428eab6418f1a56">meetsRequirements</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a043622f6de8535919784045ca8cc97cf">   84</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> &amp;<a class="code" href="classIsomorphismAlgo.html#a043622f6de8535919784045ca8cc97cf">getIsoMap</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> this-&gt;<a class="code" href="classIsomorphismAlgo.html#a75072a3ecb3b6ed97207b016a83b8571">f_map</a>;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classIsomorphismAlgo.html#ae8249f495dbf6ac95c89f468ac9c1be4">verifyIsomorphism</a>(<span class="keyword">const</span> <a class="code" href="classGraph.html">Graph</a> &amp;_graphX, <span class="keyword">const</span> <a class="code" href="classGraph.html">Graph</a> &amp;_graphY, <span class="keyword">const</span> <a class="code" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> &amp;f);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        std::string <a class="code" href="classIsomorphismAlgo.html#a6af4fec0a6fc1877427d637bcd84a1ab">getInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">  110</a></span>&#160;        <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">dfs_idx_t</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">  115</a></span>&#160;        <span class="keyword">typedef</span> std::vector&lt;Graph::Edge&gt;::const_iterator <a class="code" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">edge_iter</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">  120</a></span>&#160;        <span class="keyword">typedef</span> std::map&lt;Graph::label_t, dfs_idx_t&gt; <a class="code" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">  125</a></span>&#160;        <span class="keyword">typedef</span> std::vector&lt;Graph::label_t&gt; <a class="code" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">dfs_vec_t</a>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo_1_1EdgeComparator.html">  133</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classIsomorphismAlgo_1_1EdgeComparator.html">EdgeComparator</a> {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo_1_1EdgeComparator.html#a5b4469dad63a2ef7a25cefc15e7a2aad">  141</a></span>&#160;                <a class="code" href="classIsomorphismAlgo_1_1EdgeComparator.html#a5b4469dad63a2ef7a25cefc15e7a2aad">EdgeComparator</a>(<span class="keyword">const</span> <a class="code" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a>&amp; _dfs_num):<a class="code" href="classIsomorphismAlgo_1_1EdgeComparator.html#a556adfa994a59c346150236ae0dce5c0">dfs_num</a>(_dfs_num)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            {};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="classIsomorphismAlgo_1_1EdgeComparator.html#ad208cca714eb330527241b39faf83c12">operator() </a>(<span class="keyword">const</span> <a class="code" href="structGraph_1_1Edge.html">Graph::Edge</a> &amp;left, <span class="keyword">const</span> <a class="code" href="structGraph_1_1Edge.html">Graph::Edge</a> &amp;right);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo_1_1EdgeComparator.html#a556adfa994a59c346150236ae0dce5c0">  160</a></span>&#160;                <span class="keyword">const</span> <a class="code" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a> &amp;<a class="code" href="classIsomorphismAlgo_1_1EdgeComparator.html#a556adfa994a59c346150236ae0dce5c0">dfs_num</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        };</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">  166</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classGraph.html">Graph</a> &amp;<a class="code" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">graphX</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">  171</a></span>&#160;        <span class="keyword">const</span> <a class="code" href="classGraph.html">Graph</a> &amp;<a class="code" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">graphY</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a75072a3ecb3b6ed97207b016a83b8571">  177</a></span>&#160;        <a class="code" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> <a class="code" href="classIsomorphismAlgo.html#a75072a3ecb3b6ed97207b016a83b8571">f_map</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a4de551ab18fc95ef86ea8c79260656b2">  184</a></span>&#160;        <a class="code" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a> <a class="code" href="classIsomorphismAlgo.html#a4de551ab18fc95ef86ea8c79260656b2">dfs_num</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#affd06f1251c222a483b7188313a11193">  190</a></span>&#160;        <a class="code" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">dfs_vec_t</a> <a class="code" href="classIsomorphismAlgo.html#affd06f1251c222a483b7188313a11193">dfs_vec</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#aad800e9783285450edbcdcb3b65c4133">  195</a></span>&#160;        std::set&lt;Graph::label_t&gt; <a class="code" href="classIsomorphismAlgo.html#aad800e9783285450edbcdcb3b65c4133">in_S</a>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a0763ab4b07232f8aa9ca80561f353ad1">  201</a></span>&#160;        std::vector&lt;Graph::Edge&gt; <a class="code" href="classIsomorphismAlgo.html#a0763ab4b07232f8aa9ca80561f353ad1">ordered_edges</a>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a3cf2ede3f4668ecb3ea8a005e190c9f4">  208</a></span>&#160;        std::map&lt;unsigned int, unsigned int&gt; <a class="code" href="classIsomorphismAlgo.html#a3cf2ede3f4668ecb3ea8a005e190c9f4">invX_buckets</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#a8dcd9224b6360d3e5776307d8680f975">  215</a></span>&#160;        std::map&lt;unsigned int, unsigned int&gt; <a class="code" href="classIsomorphismAlgo.html#a8dcd9224b6360d3e5776307d8680f975">invY_buckets</a>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classIsomorphismAlgo.html#af185ab17b845defe14c0998c173e70ae">  223</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classIsomorphismAlgo.html#af185ab17b845defe14c0998c173e70ae">edges_count_k</a>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classIsomorphismAlgo.html#aa10814d9f3fe70fde74ec4f6aadb6273">match</a>(<a class="code" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">edge_iter</a> iter, <span class="keywordtype">int</span> dfs_num_k);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classIsomorphismAlgo.html#a249ab9bd04912a86f39388976dd055ca">resetData</a>();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classIsomorphismAlgo.html#af639949389513c66aa9d4c9dd686b147">countInvBuckets</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classIsomorphismAlgo.html#a491943424391031d479fdcde3afb2ed5">numberVertexes</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classIsomorphismAlgo.html#a5b487ae56ceec1206c0c0e21fb49def0">orderEdges</a>();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;};</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* end of include guard: ISOMORPHISMALGO_HPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a6af4fec0a6fc1877427d637bcd84a1ab"><div class="ttname"><a href="classIsomorphismAlgo.html#a6af4fec0a6fc1877427d637bcd84a1ab">IsomorphismAlgo::getInfo</a></div><div class="ttdeci">std::string getInfo() const </div><div class="ttdoc">informacje pomocnicze na temat obiektu klasy IsomorphismAlgo </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:297</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a0763ab4b07232f8aa9ca80561f353ad1"><div class="ttname"><a href="classIsomorphismAlgo.html#a0763ab4b07232f8aa9ca80561f353ad1">IsomorphismAlgo::ordered_edges</a></div><div class="ttdeci">std::vector&lt; Graph::Edge &gt; ordered_edges</div><div class="ttdoc">posortowane krawędzie DFS lasu, odpowiadające krawędziom grafu IsomorphismAlgo::graphX ...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:201</div></div>
+<div class="ttc" id="classGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdoc">klasa implementuje graf w reprezentacji listowej </div><div class="ttdef"><b>Definition:</b> graph.hpp:67</div></div>
+<div class="ttc" id="graph_8hpp_html"><div class="ttname"><a href="graph_8hpp.html">graph.hpp</a></div><div class="ttdoc">plik nagłówkowy klasy Graph </div></div>
+<div class="ttc" id="classIsomorphismAlgo_1_1EdgeComparator_html_a5b4469dad63a2ef7a25cefc15e7a2aad"><div class="ttname"><a href="classIsomorphismAlgo_1_1EdgeComparator.html#a5b4469dad63a2ef7a25cefc15e7a2aad">IsomorphismAlgo::EdgeComparator::EdgeComparator</a></div><div class="ttdeci">EdgeComparator(const dfs_num_t &amp;_dfs_num)</div><div class="ttdoc">konstruktor pobiera referencje na mapowanie typu IsomorphismAlgo::dfs_num_t </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:141</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a249ab9bd04912a86f39388976dd055ca"><div class="ttname"><a href="classIsomorphismAlgo.html#a249ab9bd04912a86f39388976dd055ca">IsomorphismAlgo::resetData</a></div><div class="ttdeci">void resetData()</div><div class="ttdoc">czyści struktury danych </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:181</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_affd06f1251c222a483b7188313a11193"><div class="ttname"><a href="classIsomorphismAlgo.html#affd06f1251c222a483b7188313a11193">IsomorphismAlgo::dfs_vec</a></div><div class="ttdeci">dfs_vec_t dfs_vec</div><div class="ttdoc">mapowanie IsomorphismAlgo::dfs_idx_t -&gt; Graph::label_t dla wierzchołków grafu IsomorphismAlgo::graphX...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:190</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a906dbedec7eb2192c4a8963323031704"><div class="ttname"><a href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">IsomorphismAlgo::dfs_vec_t</a></div><div class="ttdeci">std::vector&lt; Graph::label_t &gt; dfs_vec_t</div><div class="ttdoc">mapowanie IsomorphismAlgo::dfs_idx_t -&gt; Graph::label_t </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:125</div></div>
+<div class="ttc" id="classIsomorphismAlgo_1_1EdgeComparator_html_ad208cca714eb330527241b39faf83c12"><div class="ttname"><a href="classIsomorphismAlgo_1_1EdgeComparator.html#ad208cca714eb330527241b39faf83c12">IsomorphismAlgo::EdgeComparator::operator()</a></div><div class="ttdeci">bool operator()(const Graph::Edge &amp;left, const Graph::Edge &amp;right)</div><div class="ttdoc">sortowanie leksykograficzne krawędzi </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:257</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a57a1df7c1d6b397a43b93f69e51a6849"><div class="ttname"><a href="classIsomorphismAlgo.html#a57a1df7c1d6b397a43b93f69e51a6849">IsomorphismAlgo::isIsomorphism</a></div><div class="ttdeci">bool isIsomorphism()</div><div class="ttdoc">funkcja weryfikująca izomorfizm grafów podanych w konstruktorze </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:19</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a4de551ab18fc95ef86ea8c79260656b2"><div class="ttname"><a href="classIsomorphismAlgo.html#a4de551ab18fc95ef86ea8c79260656b2">IsomorphismAlgo::dfs_num</a></div><div class="ttdeci">dfs_num_t dfs_num</div><div class="ttdoc">mapowanie Graph::label_t -&gt; IsomorphismAlgo::dfs_idx_t dla wierzchołków grafu IsomorphismAlgo::graphX...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:184</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a5b487ae56ceec1206c0c0e21fb49def0"><div class="ttname"><a href="classIsomorphismAlgo.html#a5b487ae56ceec1206c0c0e21fb49def0">IsomorphismAlgo::orderEdges</a></div><div class="ttdeci">void orderEdges()</div><div class="ttdoc">pobiera i sortuje krawędzie grafu IsomorphismAlgo::graphX </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:279</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_ae8249f495dbf6ac95c89f468ac9c1be4"><div class="ttname"><a href="classIsomorphismAlgo.html#ae8249f495dbf6ac95c89f468ac9c1be4">IsomorphismAlgo::verifyIsomorphism</a></div><div class="ttdeci">static bool verifyIsomorphism(const Graph &amp;_graphX, const Graph &amp;_graphY, const iso_map &amp;f)</div><div class="ttdoc">Weryfikuje przekształcenie izomorficzne dwóch grafów. </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:327</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_ad129995900091c355428eab6418f1a56"><div class="ttname"><a href="classIsomorphismAlgo.html#ad129995900091c355428eab6418f1a56">IsomorphismAlgo::meetsRequirements</a></div><div class="ttdeci">bool meetsRequirements()</div><div class="ttdoc">sprawdź warunki podstawowe izomorfizmu grafów podanych w konstruktorze. </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:37</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_ab4ec6489271a99fae3bd2476b22ef35b"><div class="ttname"><a href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a></div><div class="ttdeci">int dfs_idx_t</div><div class="ttdoc">indeks wierzchołka DFS lasu </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:110</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a2c5e2b83f11243efd51460172b3b0cfa"><div class="ttname"><a href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">IsomorphismAlgo::edge_iter</a></div><div class="ttdeci">std::vector&lt; Graph::Edge &gt;::const_iterator edge_iter</div><div class="ttdoc">iterator po posortowanych krawędziach </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:115</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_ad95c1101cd4ef09d4a581d8fbe44aff0"><div class="ttname"><a href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">IsomorphismAlgo::iso_map</a></div><div class="ttdeci">std::map&lt; Graph::label_t, Graph::label_t &gt; iso_map</div><div class="ttdoc">mapa do reprezentacji izomorfizmu dwóch grafów </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:38</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a491943424391031d479fdcde3afb2ed5"><div class="ttname"><a href="classIsomorphismAlgo.html#a491943424391031d479fdcde3afb2ed5">IsomorphismAlgo::numberVertexes</a></div><div class="ttdeci">void numberVertexes()</div><div class="ttdoc">numeruje wierzchołki grafu IsomorphismAlgo::graphX zgodnie z czasem przechodzenia DFS ...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:214</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a75072a3ecb3b6ed97207b016a83b8571"><div class="ttname"><a href="classIsomorphismAlgo.html#a75072a3ecb3b6ed97207b016a83b8571">IsomorphismAlgo::f_map</a></div><div class="ttdeci">iso_map f_map</div><div class="ttdoc">przekształcenie izomorficzne wierzchołków grafu IsomorphismAlgo::graphX na IsomorphismAlgo::graphY ...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:177</div></div>
+<div class="ttc" id="classIsomorphismAlgo_1_1EdgeComparator_html"><div class="ttname"><a href="classIsomorphismAlgo_1_1EdgeComparator.html">IsomorphismAlgo::EdgeComparator</a></div><div class="ttdoc">komparator do sortowania krawędzi w DFS lesie </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:133</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a043622f6de8535919784045ca8cc97cf"><div class="ttname"><a href="classIsomorphismAlgo.html#a043622f6de8535919784045ca8cc97cf">IsomorphismAlgo::getIsoMap</a></div><div class="ttdeci">const iso_map &amp; getIsoMap() const </div><div class="ttdoc">zwraca referencję na przekształcenie izomorficzne, otrzymane przy weryfikacji izomorfizmu. </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:84</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_aad800e9783285450edbcdcb3b65c4133"><div class="ttname"><a href="classIsomorphismAlgo.html#aad800e9783285450edbcdcb3b65c4133">IsomorphismAlgo::in_S</a></div><div class="ttdeci">std::set&lt; Graph::label_t &gt; in_S</div><div class="ttdoc">wierzchołki grafu IsomorphismAlgo::graphY już dopasowane </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:195</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_af639949389513c66aa9d4c9dd686b147"><div class="ttname"><a href="classIsomorphismAlgo.html#af639949389513c66aa9d4c9dd686b147">IsomorphismAlgo::countInvBuckets</a></div><div class="ttdeci">void countInvBuckets()</div><div class="ttdoc">wyznacza liczność wierzchołków o tych samych &#39;stopniach&#39; (invariant) w obu grafach. </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:194</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a3cf2ede3f4668ecb3ea8a005e190c9f4"><div class="ttname"><a href="classIsomorphismAlgo.html#a3cf2ede3f4668ecb3ea8a005e190c9f4">IsomorphismAlgo::invX_buckets</a></div><div class="ttdeci">std::map&lt; unsigned int, unsigned int &gt; invX_buckets</div><div class="ttdoc">struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym &#39;stopniu&#39; (invariant) w grafie...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:208</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a9ce685f18e7dc74ad6af1b70b8f1073e"><div class="ttname"><a href="classIsomorphismAlgo.html#a9ce685f18e7dc74ad6af1b70b8f1073e">IsomorphismAlgo::IsomorphismAlgo</a></div><div class="ttdeci">IsomorphismAlgo(const Graph &amp;_graphX, const Graph &amp;_graphY)</div><div class="ttdoc">konstruktor biorący referencje na dwa grafy </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:12</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html"><div class="ttname"><a href="classIsomorphismAlgo.html">IsomorphismAlgo</a></div><div class="ttdoc">klasa reprezentuje algorytm do weryfikacji izomorfizmu grafów </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:30</div></div>
+<div class="ttc" id="classIsomorphismAlgo_1_1EdgeComparator_html_a556adfa994a59c346150236ae0dce5c0"><div class="ttname"><a href="classIsomorphismAlgo_1_1EdgeComparator.html#a556adfa994a59c346150236ae0dce5c0">IsomorphismAlgo::EdgeComparator::dfs_num</a></div><div class="ttdeci">const dfs_num_t &amp; dfs_num</div><div class="ttdoc">mapa IsomorphismAlgo::dfs_num_t </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:160</div></div>
+<div class="ttc" id="structGraph_1_1Edge_html"><div class="ttname"><a href="structGraph_1_1Edge.html">Graph::Edge</a></div><div class="ttdoc">struktura reprezentuje krawędź skierowaną w grafie </div><div class="ttdef"><b>Definition:</b> graph.hpp:112</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a7656ae201d816e62edda60462cdb3a6e"><div class="ttname"><a href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a></div><div class="ttdeci">const Graph &amp; graphY</div><div class="ttdoc">Graf Y w którym szukane będą wierzchołki izomorficzne. </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:171</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_aa10814d9f3fe70fde74ec4f6aadb6273"><div class="ttname"><a href="classIsomorphismAlgo.html#aa10814d9f3fe70fde74ec4f6aadb6273">IsomorphismAlgo::match</a></div><div class="ttdeci">bool match(edge_iter iter, int dfs_num_k)</div><div class="ttdoc">główna procedura sprawdzająca izomorfizm grafów </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.cpp:62</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a78bc7264b0a6a264b0343209b3ca3647"><div class="ttname"><a href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a></div><div class="ttdeci">const Graph &amp; graphX</div><div class="ttdoc">Graf X na podstawie którego budowany będzie DFS las. </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:166</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a8dcd9224b6360d3e5776307d8680f975"><div class="ttname"><a href="classIsomorphismAlgo.html#a8dcd9224b6360d3e5776307d8680f975">IsomorphismAlgo::invY_buckets</a></div><div class="ttdeci">std::map&lt; unsigned int, unsigned int &gt; invY_buckets</div><div class="ttdoc">struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym &#39;stopniu&#39; (invariant) w grafie...</div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:215</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_a848c1d965a1c201d768513f756629bbe"><div class="ttname"><a href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">IsomorphismAlgo::dfs_num_t</a></div><div class="ttdeci">std::map&lt; Graph::label_t, dfs_idx_t &gt; dfs_num_t</div><div class="ttdoc">mapowanie Graph::label_t -&gt; IsomorphismAlgo::dfs_idx_t </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:120</div></div>
+<div class="ttc" id="classIsomorphismAlgo_html_af185ab17b845defe14c0998c173e70ae"><div class="ttname"><a href="classIsomorphismAlgo.html#af185ab17b845defe14c0998c173e70ae">IsomorphismAlgo::edges_count_k</a></div><div class="ttdeci">int edges_count_k</div><div class="ttdoc">licznik wykorzystywany w metodzie IsomorphismAlgo::match </div><div class="ttdef"><b>Definition:</b> isomorphismAlgo.hpp:223</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

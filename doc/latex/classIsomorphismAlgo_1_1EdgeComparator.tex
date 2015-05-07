@@ -1,0 +1,87 @@
+\hypertarget{classIsomorphismAlgo_1_1EdgeComparator}{\section{Dokumentacja klasy Isomorphism\-Algo\-:\-:Edge\-Comparator}
+\label{classIsomorphismAlgo_1_1EdgeComparator}\index{Isomorphism\-Algo\-::\-Edge\-Comparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}}
+}
+
+
+komparator do sortowania krawędzi w D\-F\-S lesie  
+
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIsomorphismAlgo_1_1EdgeComparator_a5b4469dad63a2ef7a25cefc15e7a2aad}{Edge\-Comparator} (const \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{dfs\-\_\-num\-\_\-t} \&\-\_\-dfs\-\_\-num)
+\begin{DoxyCompactList}\small\item\em konstruktor pobiera referencje na mapowanie typu \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{Isomorphism\-Algo\-::dfs\-\_\-num\-\_\-t} \end{DoxyCompactList}\item 
+bool \hyperlink{classIsomorphismAlgo_1_1EdgeComparator_ad208cca714eb330527241b39faf83c12}{operator()} (const \hyperlink{structGraph_1_1Edge}{Graph\-::\-Edge} \&left, const \hyperlink{structGraph_1_1Edge}{Graph\-::\-Edge} \&right)
+\begin{DoxyCompactList}\small\item\em sortowanie leksykograficzne krawędzi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{dfs\-\_\-num\-\_\-t} \& \hyperlink{classIsomorphismAlgo_1_1EdgeComparator_a556adfa994a59c346150236ae0dce5c0}{dfs\-\_\-num}
+\begin{DoxyCompactList}\small\item\em mapa \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{Isomorphism\-Algo\-::dfs\-\_\-num\-\_\-t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+komparator do sortowania krawędzi w D\-F\-S lesie 
+
+Krawędzie z grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} są sortowane leksykograficznie względem indeksów wierzchołków \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} D\-F\-S lasu. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classIsomorphismAlgo_1_1EdgeComparator_a5b4469dad63a2ef7a25cefc15e7a2aad}{\index{Isomorphism\-Algo\-::\-Edge\-Comparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}!Edge\-Comparator@{Edge\-Comparator}}
+\index{Edge\-Comparator@{Edge\-Comparator}!IsomorphismAlgo::EdgeComparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}}
+\subsubsection[{Edge\-Comparator}]{\setlength{\rightskip}{0pt plus 5cm}Isomorphism\-Algo\-::\-Edge\-Comparator\-::\-Edge\-Comparator (
+\begin{DoxyParamCaption}
+\item[{const {\bf dfs\-\_\-num\-\_\-t} \&}]{\-\_\-dfs\-\_\-num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classIsomorphismAlgo_1_1EdgeComparator_a5b4469dad63a2ef7a25cefc15e7a2aad}
+
+
+konstruktor pobiera referencje na mapowanie typu \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{Isomorphism\-Algo\-::dfs\-\_\-num\-\_\-t} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \-\_\-dfs\-\_\-num} & mapowanie typu \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{Isomorphism\-Algo\-::dfs\-\_\-num\-\_\-t} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classIsomorphismAlgo_1_1EdgeComparator_ad208cca714eb330527241b39faf83c12}{\index{Isomorphism\-Algo\-::\-Edge\-Comparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}!operator()@{operator()}}
+\index{operator()@{operator()}!IsomorphismAlgo::EdgeComparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}bool Isomorphism\-Algo\-::\-Edge\-Comparator\-::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph\-::\-Edge} \&}]{left, }
+\item[{const {\bf Graph\-::\-Edge} \&}]{right}
+\end{DoxyParamCaption}
+)}}\label{classIsomorphismAlgo_1_1EdgeComparator_ad208cca714eb330527241b39faf83c12}
+
+
+sortowanie leksykograficzne krawędzi 
+
+Sortowanie krawędzi D\-F\-S lasu wymagane w algorytmie powrotów.
+
+
+\begin{DoxyParams}{Parametry}
+{\em left} & pierwsza krawędź \\
+\hline
+{\em right} & druga krawędź\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy pierwsza krawędź jest mniejsza od drugiej 
+\end{DoxyReturn}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classIsomorphismAlgo_1_1EdgeComparator_a556adfa994a59c346150236ae0dce5c0}{\index{Isomorphism\-Algo\-::\-Edge\-Comparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}!dfs\-\_\-num@{dfs\-\_\-num}}
+\index{dfs\-\_\-num@{dfs\-\_\-num}!IsomorphismAlgo::EdgeComparator@{Isomorphism\-Algo\-::\-Edge\-Comparator}}
+\subsubsection[{dfs\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf dfs\-\_\-num\-\_\-t}\& Isomorphism\-Algo\-::\-Edge\-Comparator\-::dfs\-\_\-num\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_1_1EdgeComparator_a556adfa994a59c346150236ae0dce5c0}
+
+
+mapa \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{Isomorphism\-Algo\-::dfs\-\_\-num\-\_\-t} 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{isomorphismAlgo_8hpp}{isomorphism\-Algo.\-hpp}\item 
+\hyperlink{isomorphismAlgo_8cpp}{isomorphism\-Algo.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Dokumentacja pliku graph.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku graph.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>plik nagłówkowy klasy <a class="el" href="classGraph.html" title="klasa implementuje graf w reprezentacji listowej ">Graph</a>  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;map&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;stack&gt;</code><br/>
+<code>#include &lt;initializer_list&gt;</code><br/>
+<code>#include &lt;stdexcept&gt;</code><br/>
+<code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;random&gt;</code><br/>
+<code>#include &lt;cmath&gt;</code><br/>
+<code>#include &quot;<a class="el" href="vertex_8hpp_source.html">vertex.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br/>
+</div>
+<p><a href="graph_8hpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html">Graph</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">klasa implementuje graf w reprezentacji listowej  <a href="classGraph.html#details">Więcej...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura reprezentuje krawędź skierowaną w grafie  <a href="structGraph_1_1Edge.html#details">Więcej...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph_1_1AdjIter.html">Graph::AdjIter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">klasa pomocnicza, iterator po znacznikach wierzchołków sąsiadujących z wierzchołkiem  <a href="classGraph_1_1AdjIter.html#details">Więcej...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a36f6fc7d1a3bb66002ed1bf7205d0056"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8hpp.html#a36f6fc7d1a3bb66002ed1bf7205d0056">COM_SIGN</a>&#160;&#160;&#160;&quot;#&quot;</td></tr>
+<tr class="memdesc:a36f6fc7d1a3bb66002ed1bf7205d0056"><td class="mdescLeft">&#160;</td><td class="mdescRight">znak komentarza w plikach z rep. grafu  <a href="#a36f6fc7d1a3bb66002ed1bf7205d0056">Więcej...</a><br/></td></tr>
+<tr class="separator:a36f6fc7d1a3bb66002ed1bf7205d0056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af748d6be1adfe0bf504c296f132de9ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8hpp.html#af748d6be1adfe0bf504c296f132de9ff">DELIMITER_CHAR</a>&#160;&#160;&#160;','</td></tr>
+<tr class="memdesc:af748d6be1adfe0bf504c296f132de9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">znak oddzielający w plikach z rep. grafu  <a href="#af748d6be1adfe0bf504c296f132de9ff">Więcej...</a><br/></td></tr>
+<tr class="separator:af748d6be1adfe0bf504c296f132de9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670aeb71fe957355658431f037fe4990"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8hpp.html#a670aeb71fe957355658431f037fe4990">MAX_RANDOM_FAILS</a>&#160;&#160;&#160;(1000*10)</td></tr>
+<tr class="memdesc:a670aeb71fe957355658431f037fe4990"><td class="mdescLeft">&#160;</td><td class="mdescRight">maksymalna liczba losowań przy generowanie grafu losowego  <a href="#a670aeb71fe957355658431f037fe4990">Więcej...</a><br/></td></tr>
+<tr class="separator:a670aeb71fe957355658431f037fe4990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a8aff7513bde5154e374e5c7a99f38bb7"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8hpp.html#a8aff7513bde5154e374e5c7a99f38bb7">operator&lt;&lt;</a> (std::ostream &amp;strm, const <a class="el" href="classGraph.html">Graph</a> &amp;g)</td></tr>
+<tr class="separator:a8aff7513bde5154e374e5c7a99f38bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694dfce5839c398362898b57184d57d5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graph_8hpp.html#a694dfce5839c398362898b57184d57d5">operator&gt;&gt;</a> (std::istream &amp;strm, <a class="el" href="classGraph.html">Graph</a> &amp;g)</td></tr>
+<tr class="separator:a694dfce5839c398362898b57184d57d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>plik nagłówkowy klasy <a class="el" href="classGraph.html" title="klasa implementuje graf w reprezentacji listowej ">Graph</a> </p>
+<p>Detailed description starts here.</p>
+<p>Deklaracja klasy <a class="el" href="classGraph.html" title="klasa implementuje graf w reprezentacji listowej ">Graph</a> i klas wewnętrznych klasy <a class="el" href="classGraph.html" title="klasa implementuje graf w reprezentacji listowej ">Graph</a> </p>
+<hr/>
+</div><h2 class="groupheader">Dokumentacja definicji</h2>
+<a class="anchor" id="a36f6fc7d1a3bb66002ed1bf7205d0056"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COM_SIGN&#160;&#160;&#160;&quot;#&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>znak komentarza w plikach z rep. grafu </p>
+
+</div>
+</div>
+<a class="anchor" id="af748d6be1adfe0bf504c296f132de9ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELIMITER_CHAR&#160;&#160;&#160;','</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>znak oddzielający w plikach z rep. grafu </p>
+
+</div>
+</div>
+<a class="anchor" id="a670aeb71fe957355658431f037fe4990"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_RANDOM_FAILS&#160;&#160;&#160;(1000*10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>maksymalna liczba losowań przy generowanie grafu losowego </p>
+<p>Liczba możliwych nieudanych prób przy losowaniu nowej krawędzi do grafu losowego. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="a8aff7513bde5154e374e5c7a99f38bb7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a694dfce5839c398362898b57184d57d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

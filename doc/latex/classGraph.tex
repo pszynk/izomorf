@@ -1,0 +1,968 @@
+\hypertarget{classGraph}{\section{Dokumentacja klasy Graph}
+\label{classGraph}\index{Graph@{Graph}}
+}
+
+
+klasa implementuje graf w reprezentacji listowej  
+
+
+
+
+{\ttfamily \#include $<$graph.\-hpp$>$}
+
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGraph_1_1AdjIter}{Adj\-Iter}
+\begin{DoxyCompactList}\small\item\em klasa pomocnicza, iterator po znacznikach wierzchołków sąsiadujących z wierzchołkiem \end{DoxyCompactList}\item 
+struct \hyperlink{structGraph_1_1Edge}{Edge}
+\begin{DoxyCompactList}\small\item\em struktura reprezentuje krawędź skierowaną w grafie \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t}
+\begin{DoxyCompactList}\small\item\em znacznik wierzchołka w grafie \end{DoxyCompactList}\item 
+typedef std\-::set$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ \hyperlink{classGraph_ac91822a10fe3fc10ea8449531fc32b95}{vertex\-\_\-set\-\_\-t}
+\begin{DoxyCompactList}\small\item\em zbiór znaczników wierzchołków \end{DoxyCompactList}\item 
+typedef \\*
+vertex\-\_\-set\-\_\-t\-::const\-\_\-iterator \hyperlink{classGraph_a865985566962f6fcab1c0a465305424f}{iterator}
+\begin{DoxyCompactList}\small\item\em iterator po zbiorze znaczników \end{DoxyCompactList}\item 
+typedef std\-::vector$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ \hyperlink{classGraph_a8d2f79e14998a438e64bf07f31abb359}{dfs\-\_\-path}
+\begin{DoxyCompactList}\small\item\em struktura pomocnicza reprezentująca krawędź skierowaną w grafie \end{DoxyCompactList}\item 
+typedef std\-::set$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ \hyperlink{classGraph_af10e18e1cb3834650bd69bad6bec3fc0}{dfs\-\_\-visited}
+\begin{DoxyCompactList}\small\item\em zbiór wcześniej odwiedzonych wierzchołków \end{DoxyCompactList}\item 
+typedef std\-::set$<$ \hyperlink{structGraph_1_1Edge}{Edge} $>$ \hyperlink{classGraph_a7875f5959501bdafb3ba4dd428dfb10b}{edge\-\_\-set\-\_\-t}
+\begin{DoxyCompactList}\small\item\em zbiór krawędzi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_ae4c72b8ac4d693c49800a4c7e273654f}{Graph} ()
+\begin{DoxyCompactList}\small\item\em stwórz pusty graf \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a2940fa9094c860f7e4ff5b3f513c2732}{get\-Vertex\-Count} () const 
+\begin{DoxyCompactList}\small\item\em zwróć liczbę wierzchołków w grafie \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a5d560f48bc0d31e822ab660984a570a8}{get\-Edge\-Count} () const 
+\begin{DoxyCompactList}\small\item\em zwróć liczbę krawędzi w grafie \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a3aebca6e6e0d56f1beab029bdba321f4}{get\-Size} () const 
+\begin{DoxyCompactList}\small\item\em zwróć liczbę wierzchołków w grafie \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a35c719c0e92763e034e6519c46a1cf4b}{get\-Invariant} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em zwróć 'stopień' (invariant) wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_ab1410db4047cde674ca0f602a6eb722f}{get\-In} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em zwróć wejściowość wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a948347b4ce0ea0f18663bb75003406d4}{get\-In} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label, const \hyperlink{classGraph_ac91822a10fe3fc10ea8449531fc32b95}{vertex\-\_\-set\-\_\-t} \&vset) const 
+\begin{DoxyCompactList}\small\item\em zwróć wejściowość wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a136b8e5410d1f68c808f76cb1859026d}{get\-Out} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em zwróć wyjściowość wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a39e23b858256af1a9ce21b74bffb62f4}{get\-Out} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label, const \hyperlink{classGraph_ac91822a10fe3fc10ea8449531fc32b95}{vertex\-\_\-set\-\_\-t} \&vset) const 
+\begin{DoxyCompactList}\small\item\em zwróć wyjściowość wierzchołka \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a108b1de9af3e6cd422ded99e80a18664}{get\-Edges} (\hyperlink{classGraph_a7875f5959501bdafb3ba4dd428dfb10b}{edge\-\_\-set\-\_\-t} \&edges) const 
+\begin{DoxyCompactList}\small\item\em zapełnij zbiór krawędziami grafu \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_aa9fc3b29889013a4a2d271357715904d}{get\-Edges} (\hyperlink{classGraph_a7875f5959501bdafb3ba4dd428dfb10b}{edge\-\_\-set\-\_\-t} \&edges, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\item 
+unsigned int \hyperlink{classGraph_a57425d2dd30d5f9ba267654deadda35a}{get\-Edges} (\hyperlink{classGraph_a7875f5959501bdafb3ba4dd428dfb10b}{edge\-\_\-set\-\_\-t} \&edges, const \hyperlink{classGraph_ac91822a10fe3fc10ea8449531fc32b95}{vertex\-\_\-set\-\_\-t} \&verts) const 
+\item 
+void \hyperlink{classGraph_a23c276cd34e6b1103a533e9cf6419877}{get\-D\-F\-S\-Path} (\hyperlink{classGraph_a8d2f79e14998a438e64bf07f31abb359}{dfs\-\_\-path} \&path, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} start, const \hyperlink{classGraph_af10e18e1cb3834650bd69bad6bec3fc0}{dfs\-\_\-visited} \&visited=\hyperlink{classGraph_af10e18e1cb3834650bd69bad6bec3fc0}{dfs\-\_\-visited}()) const 
+\begin{DoxyCompactList}\small\item\em zapisz ścieżkę po przejściu grafu wgłąb (D\-F\-S) \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classGraph_a74e18e8a9825e77323ebfcc70b718380}{get\-Info} () const 
+\begin{DoxyCompactList}\small\item\em informacje na temat grafu \end{DoxyCompactList}\item 
+bool \hyperlink{classGraph_a96fc255863c32f9f7d1920ca4a2570fe}{add\-Vertex} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label)
+\begin{DoxyCompactList}\small\item\em dodaj wierzchołek do grafu \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_ac4d679a954ffea0b463d6b559aec8597}{set\-Vertex} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label, std\-::initializer\-\_\-list$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ adj)
+\begin{DoxyCompactList}\small\item\em ustaw wierzchołek \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_a2c638cac3d3bb7b47b1aef864b2c6a69}{set\-Vertex} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label, std\-::vector$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ adj)
+\begin{DoxyCompactList}\small\item\em ustaw wierzchołek \end{DoxyCompactList}\item 
+bool \hyperlink{classGraph_a7f214a25b838ec94dff78062364694f5}{add\-Edge} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} v, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} w)
+\begin{DoxyCompactList}\small\item\em dodaje krawędź między dwoma wierzchołkami \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_ac6192a41101102ca8aa6acca607c84f3}{clear} ()
+\begin{DoxyCompactList}\small\item\em usuwa wszystkie krawędzie i wierzchołki z grafu \end{DoxyCompactList}\item 
+bool \hyperlink{classGraph_ab3d0a9b8a15458f9fd6fe2ad71debaeb}{is\-Empty} () const 
+\begin{DoxyCompactList}\small\item\em sprawdź czy graf nie zawiera wierzchołków \end{DoxyCompactList}\item 
+bool \hyperlink{classGraph_aa52d8b66a416c850f24ea4a507f8bbc1}{is\-Node} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em czy wierzchołek o danym znaczniku należy do grafu \end{DoxyCompactList}\item 
+bool \hyperlink{classGraph_af7c39ac36f29f27c0241796bd8f49973}{is\-Connection} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} v, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} w) const 
+\begin{DoxyCompactList}\small\item\em czy w grafie występuje połączenie między wierzchołkami \end{DoxyCompactList}\item 
+bool \hyperlink{classGraph_afa6257363d71719e5cbb7a32485606fc}{is\-Connection} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} v, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} w, const \hyperlink{classGraph_ac91822a10fe3fc10ea8449531fc32b95}{vertex\-\_\-set\-\_\-t} \&vset) const 
+\begin{DoxyCompactList}\small\item\em czy w grafie indukowanym występuje połączenie między wierzchołkami \end{DoxyCompactList}\item 
+\hyperlink{classGraph_a865985566962f6fcab1c0a465305424f}{iterator} \hyperlink{classGraph_a9db1e55265e70cd90f392355c7fb7e41}{begin} () const 
+\begin{DoxyCompactList}\small\item\em iterator wierzchołków grafu \end{DoxyCompactList}\item 
+\hyperlink{classGraph_a865985566962f6fcab1c0a465305424f}{iterator} \hyperlink{classGraph_adf6826e424173fd08bdf8574ef15ce33}{end} () const 
+\begin{DoxyCompactList}\small\item\em iterator wierzchołków grafu \end{DoxyCompactList}\item 
+\hyperlink{classGraph_1_1AdjIter}{Adj\-Iter} \hyperlink{classGraph_a3319a876a8ca646b9095c0ff0be154ac}{adj\-Begin} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em iterator wierzchołków incydentnych \end{DoxyCompactList}\item 
+\hyperlink{classGraph_1_1AdjIter}{Adj\-Iter} \hyperlink{classGraph_a359f0041dfa65eec7d1d658200f19a2a}{adj\-End} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em iterator wierzchołków incydentnych \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classGraph_ae82fbe23587b4650fe1356b0fb72645e}{dump\-Vertex} (const \hyperlink{classVertex}{Vertex} \&v) const 
+\begin{DoxyCompactList}\small\item\em zapisz wierzchołek do postaci stringa \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_ad12b2c8e5fe1cebfd477de21ac94d430}{load\-Vertex} (std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em wczyta wierzchołek ze stringa \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_a30e5863626904c020da9ca97044786c0}{save\-To\-File} (const std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em zapisz graf do pliku \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_a2d059878df5c617afb415cc1f4cd8dbc}{load\-From\-File} (const std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em wczytaj graf z pliku \end{DoxyCompactList}\item 
+\hyperlink{classGraph}{Graph} \& \hyperlink{classGraph_a5f50072f6f495e94211b6d59cfcd0acf}{random\-Isomorphic} (const \hyperlink{classGraph}{Graph} \&other)
+\begin{DoxyCompactList}\small\item\em twórz losowy graf izomorficzny \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGraph}{Graph} \hyperlink{classGraph_a84c0f0a47f1ccfc8587a571cc039daad}{generate\-Random} (unsigned int \hyperlink{classGraph_aa0961f75ec603fa6b4f1e631b70233f1}{vertex\-\_\-count}, double density)
+\begin{DoxyCompactList}\small\item\em wygeneruj losowy, skierowany graf spójny \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} \hyperlink{classGraph_ad2c5979f339ecee307f980972a088342}{get\-Label} (\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t} idx) const 
+\begin{DoxyCompactList}\small\item\em zwróć znacznik dla wierzchołka o indeksie idx \end{DoxyCompactList}\item 
+\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t} \hyperlink{classGraph_acefa9a82c8dfa36713c8fe15000cd2ac}{get\-Index} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em zwróć indeks dla wierzchołka o znaczniku label \end{DoxyCompactList}\item 
+const \hyperlink{classVertex}{Vertex} \& \hyperlink{classGraph_a949e2c8794a3c1dc85b4f6dc4e76f843}{get\-Vertex\-At} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} label) const 
+\begin{DoxyCompactList}\small\item\em zwraca referencję na wierzchołek o podanym znaczniku \end{DoxyCompactList}\item 
+void \hyperlink{classGraph_ae971bb36c7c46b65f4ba7c4902bf4c53}{find\-Next\-Free\-Idx} ()
+\begin{DoxyCompactList}\small\item\em znajdź kolejny wolny indeks dla następnego wierzchołka \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classGraph_aa0961f75ec603fa6b4f1e631b70233f1}{vertex\-\_\-count}
+\begin{DoxyCompactList}\small\item\em liczba wierzchołków w grafie \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_ad84b4512d3366d236491358b6314bc47}{edge\-\_\-count}
+\begin{DoxyCompactList}\small\item\em liczba krawędzi w grafie \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classGraph_a53211b7cd85e28093bbe540e5a2ec21d}{\-\_\-\-\_\-inv\-\_\-power}
+\begin{DoxyCompactList}\small\item\em potęga t używana przy liczeniu 'stopnia' wierzchołka \end{DoxyCompactList}\item 
+\hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t} \hyperlink{classGraph_a205f5526664ea4f94ad94c1cb7de3c56}{\-\_\-\-\_\-first\-\_\-free\-\_\-idx}
+\begin{DoxyCompactList}\small\item\em pierwszy wolny indeks dla kolejnego wierzchołka grafu \end{DoxyCompactList}\item 
+std\-::map$<$ \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t}, \hyperlink{classVertex}{Vertex} $>$ \hyperlink{classGraph_a69d5f1746e168b9555daa83b84c0341b}{vertexes}
+\begin{DoxyCompactList}\small\item\em mapa indeks -\/$>$ wierzchołek \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ \hyperlink{classGraph_a752008a468385625c22da499d248ada3}{labels}
+\begin{DoxyCompactList}\small\item\em wszystkie znaczniki w grafie \end{DoxyCompactList}\item 
+std\-::map$<$ \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t}, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ \hyperlink{classGraph_a6472b8bfc461dc9081b609b28e27d2b0}{idx\-\_\-label\-\_\-map}
+\begin{DoxyCompactList}\small\item\em mapa indeks -\/$>$ znacznik \end{DoxyCompactList}\item 
+std\-::map$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t}, \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t} $>$ \hyperlink{classGraph_ac2083a954ecbb76a242deed60755fd07}{label\-\_\-idx\-\_\-map}
+\begin{DoxyCompactList}\small\item\em mapa znacznik -\/$>$ indeks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{classGraph_a8aff7513bde5154e374e5c7a99f38bb7}{operator$<$$<$} (std\-::ostream \&strm, const \hyperlink{classGraph}{Graph} \&g)
+\item 
+std\-::istream \& \hyperlink{classGraph_a694dfce5839c398362898b57184d57d5}{operator$>$$>$} (std\-::istream \&strm, \hyperlink{classGraph}{Graph} \&g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+klasa implementuje graf w reprezentacji listowej 
+
+Klasa \hyperlink{classGraph}{Graph} to implementacja grafu w reprezentacji list sąsiedztwa. Pozwala na\-:
+\begin{DoxyItemize}
+\item ręczne generowanie grafu
+\item wczytywanie i zapisywanie grafu do pliku
+\item generowanie losowego grafu
+\end{DoxyItemize}
+
+Wierzchołki grafu identyfikowane są typem \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t}, ale wewnątrz grafu są indeksowane typem \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t}. Pozwala to na łatwe wygenerowanie grafów izomorficznych. Wystarczy zmienić mapowanie znaczników na indeksy. 
+
+\subsection{Dokumentacja składowych definicji typu}
+\hypertarget{classGraph_a8d2f79e14998a438e64bf07f31abb359}{\index{Graph@{Graph}!dfs\-\_\-path@{dfs\-\_\-path}}
+\index{dfs\-\_\-path@{dfs\-\_\-path}!Graph@{Graph}}
+\subsubsection[{dfs\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<${\bf label\-\_\-t}$>$ {\bf Graph\-::dfs\-\_\-path}}}\label{classGraph_a8d2f79e14998a438e64bf07f31abb359}
+
+
+struktura pomocnicza reprezentująca krawędź skierowaną w grafie 
+
+Prosta struktura do reprezentacji krawędzi skierowanych. Wykorzystywania do porównywania krawędzi np. przy sortowaniu. ścieżka dfs po grafie
+
+Wykorzystywane przy przechodzeniu grafu wgłąb \hypertarget{classGraph_af10e18e1cb3834650bd69bad6bec3fc0}{\index{Graph@{Graph}!dfs\-\_\-visited@{dfs\-\_\-visited}}
+\index{dfs\-\_\-visited@{dfs\-\_\-visited}!Graph@{Graph}}
+\subsubsection[{dfs\-\_\-visited}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::set$<${\bf label\-\_\-t}$>$ {\bf Graph\-::dfs\-\_\-visited}}}\label{classGraph_af10e18e1cb3834650bd69bad6bec3fc0}
+
+
+zbiór wcześniej odwiedzonych wierzchołków 
+
+Wykorzystywane przy przechodzeniu grafu wgłąb \hypertarget{classGraph_a7875f5959501bdafb3ba4dd428dfb10b}{\index{Graph@{Graph}!edge\-\_\-set\-\_\-t@{edge\-\_\-set\-\_\-t}}
+\index{edge\-\_\-set\-\_\-t@{edge\-\_\-set\-\_\-t}!Graph@{Graph}}
+\subsubsection[{edge\-\_\-set\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::set$<${\bf Edge}$>$ {\bf Graph\-::edge\-\_\-set\-\_\-t}}}\label{classGraph_a7875f5959501bdafb3ba4dd428dfb10b}
+
+
+zbiór krawędzi 
+
+\hypertarget{classGraph_a865985566962f6fcab1c0a465305424f}{\index{Graph@{Graph}!iterator@{iterator}}
+\index{iterator@{iterator}!Graph@{Graph}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef vertex\-\_\-set\-\_\-t\-::const\-\_\-iterator {\bf Graph\-::iterator}}}\label{classGraph_a865985566962f6fcab1c0a465305424f}
+
+
+iterator po zbiorze znaczników 
+
+\hypertarget{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{\index{Graph@{Graph}!label\-\_\-t@{label\-\_\-t}}
+\index{label\-\_\-t@{label\-\_\-t}!Graph@{Graph}}
+\subsubsection[{label\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf Graph\-::label\-\_\-t}}}\label{classGraph_a2237a0ada8484c37b8200c0e3685ca71}
+
+
+znacznik wierzchołka w grafie 
+
+Identyfikuje wierzchołki w grafie. Zewnętrzne oznakowanie wierzchołków. \hypertarget{classGraph_ac91822a10fe3fc10ea8449531fc32b95}{\index{Graph@{Graph}!vertex\-\_\-set\-\_\-t@{vertex\-\_\-set\-\_\-t}}
+\index{vertex\-\_\-set\-\_\-t@{vertex\-\_\-set\-\_\-t}!Graph@{Graph}}
+\subsubsection[{vertex\-\_\-set\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::set$<${\bf label\-\_\-t}$>$ {\bf Graph\-::vertex\-\_\-set\-\_\-t}}}\label{classGraph_ac91822a10fe3fc10ea8449531fc32b95}
+
+
+zbiór znaczników wierzchołków 
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classGraph_ae4c72b8ac4d693c49800a4c7e273654f}{\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-::\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGraph_ae4c72b8ac4d693c49800a4c7e273654f}
+
+
+stwórz pusty graf 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classGraph_a7f214a25b838ec94dff78062364694f5}{\index{Graph@{Graph}!add\-Edge@{add\-Edge}}
+\index{add\-Edge@{add\-Edge}!Graph@{Graph}}
+\subsubsection[{add\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::add\-Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{v, }
+\item[{{\bf label\-\_\-t}}]{w}
+\end{DoxyParamCaption}
+)}}\label{classGraph_a7f214a25b838ec94dff78062364694f5}
+
+
+dodaje krawędź między dwoma wierzchołkami 
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & znacznik wierzchołka źródłowego \\
+\hline
+{\em w} & znacznik wierzchołka docelowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy dodano krawędź (nie dodano gdy już ustnieje lub nie w grafie nie ma któregoś z wierzchołków) 
+\end{DoxyReturn}
+\hypertarget{classGraph_a96fc255863c32f9f7d1920ca4a2570fe}{\index{Graph@{Graph}!add\-Vertex@{add\-Vertex}}
+\index{add\-Vertex@{add\-Vertex}!Graph@{Graph}}
+\subsubsection[{add\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::add\-Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+)}}\label{classGraph_a96fc255863c32f9f7d1920ca4a2570fe}
+
+
+dodaj wierzchołek do grafu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik dodawanego wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy rzeczywiście dodano wierzchołek (jeżeli znacznik jest już w użyciu to nie dodano) 
+\end{DoxyReturn}
+\hypertarget{classGraph_a3319a876a8ca646b9095c0ff0be154ac}{\index{Graph@{Graph}!adj\-Begin@{adj\-Begin}}
+\index{adj\-Begin@{adj\-Begin}!Graph@{Graph}}
+\subsubsection[{adj\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\-::\-Adj\-Iter} Graph\-::adj\-Begin (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a3319a876a8ca646b9095c0ff0be154ac}
+
+
+iterator wierzchołków incydentnych 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka źródłowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+iterator wskazujący na początek znaczników wierzchołków incydentnych z wierzchołkiem label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a359f0041dfa65eec7d1d658200f19a2a}{\index{Graph@{Graph}!adj\-End@{adj\-End}}
+\index{adj\-End@{adj\-End}!Graph@{Graph}}
+\subsubsection[{adj\-End}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\-::\-Adj\-Iter} Graph\-::adj\-End (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a359f0041dfa65eec7d1d658200f19a2a}
+
+
+iterator wierzchołków incydentnych 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka źródłowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+iterator wskazujący na koniec znaczników wierzchołków incydentnych z wierzchołkiem label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a9db1e55265e70cd90f392355c7fb7e41}{\index{Graph@{Graph}!begin@{begin}}
+\index{begin@{begin}!Graph@{Graph}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} Graph\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_a9db1e55265e70cd90f392355c7fb7e41}
+
+
+iterator wierzchołków grafu 
+
+\begin{DoxyReturn}{Zwraca}
+iterator wskazujący na początek znaczników wierzchołków grafu 
+\end{DoxyReturn}
+\hypertarget{classGraph_ac6192a41101102ca8aa6acca607c84f3}{\index{Graph@{Graph}!clear@{clear}}
+\index{clear@{clear}!Graph@{Graph}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGraph_ac6192a41101102ca8aa6acca607c84f3}
+
+
+usuwa wszystkie krawędzie i wierzchołki z grafu 
+
+\hypertarget{classGraph_ae82fbe23587b4650fe1356b0fb72645e}{\index{Graph@{Graph}!dump\-Vertex@{dump\-Vertex}}
+\index{dump\-Vertex@{dump\-Vertex}!Graph@{Graph}}
+\subsubsection[{dump\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Graph\-::dump\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} \&}]{v}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_ae82fbe23587b4650fe1356b0fb72645e}
+
+
+zapisz wierzchołek do postaci stringa 
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & referencja na wierzchołek\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+string z zapisanym wierzchołkiem 
+\end{DoxyReturn}
+\hypertarget{classGraph_adf6826e424173fd08bdf8574ef15ce33}{\index{Graph@{Graph}!end@{end}}
+\index{end@{end}!Graph@{Graph}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} Graph\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_adf6826e424173fd08bdf8574ef15ce33}
+
+
+iterator wierzchołków grafu 
+
+\begin{DoxyReturn}{Zwraca}
+iterator wskazujący na koniec znaczników wierzchołków grafu 
+\end{DoxyReturn}
+\hypertarget{classGraph_ae971bb36c7c46b65f4ba7c4902bf4c53}{\index{Graph@{Graph}!find\-Next\-Free\-Idx@{find\-Next\-Free\-Idx}}
+\index{find\-Next\-Free\-Idx@{find\-Next\-Free\-Idx}!Graph@{Graph}}
+\subsubsection[{find\-Next\-Free\-Idx}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::find\-Next\-Free\-Idx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_ae971bb36c7c46b65f4ba7c4902bf4c53}
+
+
+znajdź kolejny wolny indeks dla następnego wierzchołka 
+
+\hypertarget{classGraph_a84c0f0a47f1ccfc8587a571cc039daad}{\index{Graph@{Graph}!generate\-Random@{generate\-Random}}
+\index{generate\-Random@{generate\-Random}!Graph@{Graph}}
+\subsubsection[{generate\-Random}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} Graph\-::generate\-Random (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{vertex\-\_\-count, }
+\item[{double}]{density}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classGraph_a84c0f0a47f1ccfc8587a571cc039daad}
+
+
+wygeneruj losowy, skierowany graf spójny 
+
+
+\begin{DoxyParams}{Parametry}
+{\em vertex\-\_\-count} & liczba wierzchołków w grafie losowym \\
+\hline
+{\em density} & gęstość grafu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+losowy, skierowany graf spójny o vertex\-\_\-count wierzchołkach i gęstości density krawędzi 
+\end{DoxyReturn}
+\hypertarget{classGraph_a23c276cd34e6b1103a533e9cf6419877}{\index{Graph@{Graph}!get\-D\-F\-S\-Path@{get\-D\-F\-S\-Path}}
+\index{get\-D\-F\-S\-Path@{get\-D\-F\-S\-Path}!Graph@{Graph}}
+\subsubsection[{get\-D\-F\-S\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::get\-D\-F\-S\-Path (
+\begin{DoxyParamCaption}
+\item[{{\bf dfs\-\_\-path} \&}]{path, }
+\item[{{\bf label\-\_\-t}}]{start, }
+\item[{const {\bf dfs\-\_\-visited} \&}]{visited = {\ttfamily {\bf dfs\-\_\-visited}()}}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a23c276cd34e6b1103a533e9cf6419877}
+
+
+zapisz ścieżkę po przejściu grafu wgłąb (D\-F\-S) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & referencja na ścieżkę \\
+\hline
+{\em start} & znacznik wierzchołka startowego \\
+\hline
+{\em visited} & zbiór wierzchołków które należy uznać za wcześniej odwiedzone \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraph_a5d560f48bc0d31e822ab660984a570a8}{\index{Graph@{Graph}!get\-Edge\-Count@{get\-Edge\-Count}}
+\index{get\-Edge\-Count@{get\-Edge\-Count}!Graph@{Graph}}
+\subsubsection[{get\-Edge\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Edge\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a5d560f48bc0d31e822ab660984a570a8}
+
+
+zwróć liczbę krawędzi w grafie 
+
+\begin{DoxyReturn}{Zwraca}
+liczba krawędzi w grafie 
+\end{DoxyReturn}
+\hypertarget{classGraph_a108b1de9af3e6cd422ded99e80a18664}{\index{Graph@{Graph}!get\-Edges@{get\-Edges}}
+\index{get\-Edges@{get\-Edges}!Graph@{Graph}}
+\subsubsection[{get\-Edges}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Edges (
+\begin{DoxyParamCaption}
+\item[{{\bf edge\-\_\-set\-\_\-t} \&}]{edges}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a108b1de9af3e6cd422ded99e80a18664}
+
+
+zapełnij zbiór krawędziami grafu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em edges} & referencja na zbiór krawędzi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+liczba umieszczonych krawędzi 
+\end{DoxyReturn}
+\hypertarget{classGraph_aa9fc3b29889013a4a2d271357715904d}{\index{Graph@{Graph}!get\-Edges@{get\-Edges}}
+\index{get\-Edges@{get\-Edges}!Graph@{Graph}}
+\subsubsection[{get\-Edges}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Edges (
+\begin{DoxyParamCaption}
+\item[{{\bf edge\-\_\-set\-\_\-t} \&}]{edges, }
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_aa9fc3b29889013a4a2d271357715904d}
+zapełnij zbiór krawędziami grafu
+
+krawędzie grafu incydentne z wierzchołkiem label
+
+
+\begin{DoxyParams}{Parametry}
+{\em edges} & referencja na zbiór krawędzi \\
+\hline
+{\em label} & znacznik wierzchołka z incydentnego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+liczba umieszczonych krawędzi 
+\end{DoxyReturn}
+\hypertarget{classGraph_a57425d2dd30d5f9ba267654deadda35a}{\index{Graph@{Graph}!get\-Edges@{get\-Edges}}
+\index{get\-Edges@{get\-Edges}!Graph@{Graph}}
+\subsubsection[{get\-Edges}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Edges (
+\begin{DoxyParamCaption}
+\item[{{\bf edge\-\_\-set\-\_\-t} \&}]{edges, }
+\item[{const {\bf vertex\-\_\-set\-\_\-t} \&}]{verts}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a57425d2dd30d5f9ba267654deadda35a}
+zapełnij zbiór krawędziami grafu
+
+krawędzie grafu indukowanego wierzchołkami z verts
+
+
+\begin{DoxyParams}{Parametry}
+{\em edges} & referencja na zbiór krawędzi \\
+\hline
+{\em verts} & referencja na zbiór znaczników wierzchołków\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+liczba umieszczonych krawędzi 
+\end{DoxyReturn}
+\hypertarget{classGraph_ab1410db4047cde674ca0f602a6eb722f}{\index{Graph@{Graph}!get\-In@{get\-In}}
+\index{get\-In@{get\-In}!Graph@{Graph}}
+\subsubsection[{get\-In}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-In (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_ab1410db4047cde674ca0f602a6eb722f}
+
+
+zwróć wejściowość wierzchołka 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wejściowość wierzchołka label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a948347b4ce0ea0f18663bb75003406d4}{\index{Graph@{Graph}!get\-In@{get\-In}}
+\index{get\-In@{get\-In}!Graph@{Graph}}
+\subsubsection[{get\-In}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-In (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label, }
+\item[{const {\bf vertex\-\_\-set\-\_\-t} \&}]{vset}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a948347b4ce0ea0f18663bb75003406d4}
+
+
+zwróć wejściowość wierzchołka 
+
+wejściowość wierzchołka w podgrafie indukowanym zbiorem wierzchołków
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka \\
+\hline
+{\em vset} & podzbiór wierzchołków grafu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wejściowość wierzchołka label w grafie indkowanym zbiorem vset 
+\end{DoxyReturn}
+\hypertarget{classGraph_acefa9a82c8dfa36713c8fe15000cd2ac}{\index{Graph@{Graph}!get\-Index@{get\-Index}}
+\index{get\-Index@{get\-Index}!Graph@{Graph}}
+\subsubsection[{get\-Index}]{\setlength{\rightskip}{0pt plus 5cm}{\bf idx\-\_\-t} Graph\-::get\-Index (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_acefa9a82c8dfa36713c8fe15000cd2ac}
+
+
+zwróć indeks dla wierzchołka o znaczniku label 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+indeks wierzchołka label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a74e18e8a9825e77323ebfcc70b718380}{\index{Graph@{Graph}!get\-Info@{get\-Info}}
+\index{get\-Info@{get\-Info}!Graph@{Graph}}
+\subsubsection[{get\-Info}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Graph\-::get\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a74e18e8a9825e77323ebfcc70b718380}
+
+
+informacje na temat grafu 
+
+Metoda pomocnicza.
+
+\begin{DoxyReturn}{Zwraca}
+string z informacjami o grafie 
+\end{DoxyReturn}
+\hypertarget{classGraph_a35c719c0e92763e034e6519c46a1cf4b}{\index{Graph@{Graph}!get\-Invariant@{get\-Invariant}}
+\index{get\-Invariant@{get\-Invariant}!Graph@{Graph}}
+\subsubsection[{get\-Invariant}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Invariant (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a35c719c0e92763e034e6519c46a1cf4b}
+
+
+zwróć 'stopień' (invariant) wierzchołka 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+'stopień' wierzchołka label 
+\end{DoxyReturn}
+\hypertarget{classGraph_ad2c5979f339ecee307f980972a088342}{\index{Graph@{Graph}!get\-Label@{get\-Label}}
+\index{get\-Label@{get\-Label}!Graph@{Graph}}
+\subsubsection[{get\-Label}]{\setlength{\rightskip}{0pt plus 5cm}{\bf label\-\_\-t} Graph\-::get\-Label (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex\-::idx\-\_\-t}}]{idx}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_ad2c5979f339ecee307f980972a088342}
+
+
+zwróć znacznik dla wierzchołka o indeksie idx 
+
+
+\begin{DoxyParams}{Parametry}
+{\em idx} & indeks wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+znacznik wierzchołka idx 
+\end{DoxyReturn}
+\hypertarget{classGraph_a136b8e5410d1f68c808f76cb1859026d}{\index{Graph@{Graph}!get\-Out@{get\-Out}}
+\index{get\-Out@{get\-Out}!Graph@{Graph}}
+\subsubsection[{get\-Out}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Out (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a136b8e5410d1f68c808f76cb1859026d}
+
+
+zwróć wyjściowość wierzchołka 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wyjściowość wierzchołka label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a39e23b858256af1a9ce21b74bffb62f4}{\index{Graph@{Graph}!get\-Out@{get\-Out}}
+\index{get\-Out@{get\-Out}!Graph@{Graph}}
+\subsubsection[{get\-Out}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Out (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label, }
+\item[{const {\bf vertex\-\_\-set\-\_\-t} \&}]{vset}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a39e23b858256af1a9ce21b74bffb62f4}
+
+
+zwróć wyjściowość wierzchołka 
+
+wyjściowość wierzchołka w podgrafie indukowanym zbiorem wierzchołków
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka \\
+\hline
+{\em vset} & podzbiór wierzchołków grafu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+wyjściowość wierzchołka label w grafie indkowanym zbiorem vset 
+\end{DoxyReturn}
+\hypertarget{classGraph_a3aebca6e6e0d56f1beab029bdba321f4}{\index{Graph@{Graph}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!Graph@{Graph}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a3aebca6e6e0d56f1beab029bdba321f4}
+
+
+zwróć liczbę wierzchołków w grafie 
+
+\begin{DoxyReturn}{Zwraca}
+liczba wierzchołków w grafie 
+\end{DoxyReturn}
+\hypertarget{classGraph_a949e2c8794a3c1dc85b4f6dc4e76f843}{\index{Graph@{Graph}!get\-Vertex\-At@{get\-Vertex\-At}}
+\index{get\-Vertex\-At@{get\-Vertex\-At}!Graph@{Graph}}
+\subsubsection[{get\-Vertex\-At}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Vertex} \& Graph\-::get\-Vertex\-At (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_a949e2c8794a3c1dc85b4f6dc4e76f843}
+
+
+zwraca referencję na wierzchołek o podanym znaczniku 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+referencja na wierzchołek o znaczniku label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a2940fa9094c860f7e4ff5b3f513c2732}{\index{Graph@{Graph}!get\-Vertex\-Count@{get\-Vertex\-Count}}
+\index{get\-Vertex\-Count@{get\-Vertex\-Count}!Graph@{Graph}}
+\subsubsection[{get\-Vertex\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::get\-Vertex\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_a2940fa9094c860f7e4ff5b3f513c2732}
+
+
+zwróć liczbę wierzchołków w grafie 
+
+\begin{DoxyReturn}{Zwraca}
+liczba wierzchołków w grafie 
+\end{DoxyReturn}
+\hypertarget{classGraph_af7c39ac36f29f27c0241796bd8f49973}{\index{Graph@{Graph}!is\-Connection@{is\-Connection}}
+\index{is\-Connection@{is\-Connection}!Graph@{Graph}}
+\subsubsection[{is\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::is\-Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{v, }
+\item[{{\bf label\-\_\-t}}]{w}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_af7c39ac36f29f27c0241796bd8f49973}
+
+
+czy w grafie występuje połączenie między wierzchołkami 
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & znacznik wierzchołka źródłowego \\
+\hline
+{\em w} & znacznik wierzchołka docelowego\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy wstępuje połączenie 
+\end{DoxyReturn}
+\hypertarget{classGraph_afa6257363d71719e5cbb7a32485606fc}{\index{Graph@{Graph}!is\-Connection@{is\-Connection}}
+\index{is\-Connection@{is\-Connection}!Graph@{Graph}}
+\subsubsection[{is\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::is\-Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{v, }
+\item[{{\bf label\-\_\-t}}]{w, }
+\item[{const {\bf vertex\-\_\-set\-\_\-t} \&}]{vset}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_afa6257363d71719e5cbb7a32485606fc}
+
+
+czy w grafie indukowanym występuje połączenie między wierzchołkami 
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & znacznik wierzchołka źródłowego \\
+\hline
+{\em w} & znacznik wierzchołka docelowego \\
+\hline
+{\em vset} & zbiór wierzchołków rozpinających\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy wstępuje połączenie 
+\end{DoxyReturn}
+\hypertarget{classGraph_ab3d0a9b8a15458f9fd6fe2ad71debaeb}{\index{Graph@{Graph}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!Graph@{Graph}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_ab3d0a9b8a15458f9fd6fe2ad71debaeb}
+
+
+sprawdź czy graf nie zawiera wierzchołków 
+
+\begin{DoxyReturn}{Zwraca}
+czy graf jest pusty 
+\end{DoxyReturn}
+\hypertarget{classGraph_aa52d8b66a416c850f24ea4a507f8bbc1}{\index{Graph@{Graph}!is\-Node@{is\-Node}}
+\index{is\-Node@{is\-Node}!Graph@{Graph}}
+\subsubsection[{is\-Node}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::is\-Node (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label}
+\end{DoxyParamCaption}
+) const}}\label{classGraph_aa52d8b66a416c850f24ea4a507f8bbc1}
+
+
+czy wierzchołek o danym znaczniku należy do grafu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy graf zawiera wierzchołek label 
+\end{DoxyReturn}
+\hypertarget{classGraph_a2d059878df5c617afb415cc1f4cd8dbc}{\index{Graph@{Graph}!load\-From\-File@{load\-From\-File}}
+\index{load\-From\-File@{load\-From\-File}!Graph@{Graph}}
+\subsubsection[{load\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::load\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classGraph_a2d059878df5c617afb415cc1f4cd8dbc}
+
+
+wczytaj graf z pliku 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & nazwa pliku \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraph_ad12b2c8e5fe1cebfd477de21ac94d430}{\index{Graph@{Graph}!load\-Vertex@{load\-Vertex}}
+\index{load\-Vertex@{load\-Vertex}!Graph@{Graph}}
+\subsubsection[{load\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::load\-Vertex (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{classGraph_ad12b2c8e5fe1cebfd477de21ac94d430}
+
+
+wczyta wierzchołek ze stringa 
+
+
+\begin{DoxyParams}{Parametry}
+{\em str} & string z wierzchołkiem \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraph_a5f50072f6f495e94211b6d59cfcd0acf}{\index{Graph@{Graph}!random\-Isomorphic@{random\-Isomorphic}}
+\index{random\-Isomorphic@{random\-Isomorphic}!Graph@{Graph}}
+\subsubsection[{random\-Isomorphic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} \& Graph\-::random\-Isomorphic (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classGraph_a5f50072f6f495e94211b6d59cfcd0acf}
+
+
+twórz losowy graf izomorficzny 
+
+
+\begin{DoxyParams}{Parametry}
+{\em other} & graf który będzie izomorficzny z nowym grafem\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+referencja na graf izomorficzny do grafu other 
+\end{DoxyReturn}
+\hypertarget{classGraph_a30e5863626904c020da9ca97044786c0}{\index{Graph@{Graph}!save\-To\-File@{save\-To\-File}}
+\index{save\-To\-File@{save\-To\-File}!Graph@{Graph}}
+\subsubsection[{save\-To\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::save\-To\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classGraph_a30e5863626904c020da9ca97044786c0}
+
+
+zapisz graf do pliku 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename} & nazwa pliku \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraph_ac4d679a954ffea0b463d6b559aec8597}{\index{Graph@{Graph}!set\-Vertex@{set\-Vertex}}
+\index{set\-Vertex@{set\-Vertex}!Graph@{Graph}}
+\subsubsection[{set\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::set\-Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label, }
+\item[{std\-::initializer\-\_\-list$<$ {\bf label\-\_\-t} $>$}]{adj}
+\end{DoxyParamCaption}
+)}}\label{classGraph_ac4d679a954ffea0b463d6b559aec8597}
+
+
+ustaw wierzchołek 
+
+ustawia listę sąsiedztwa wierzchołka. Jeżeli w grafie nie istnieją jeszcze rozpatrywane wierzchołki to są one dodawane.
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka \\
+\hline
+{\em adj} & lista znaczników wierzchołków (lista sąsiedztwa) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraph_a2c638cac3d3bb7b47b1aef864b2c6a69}{\index{Graph@{Graph}!set\-Vertex@{set\-Vertex}}
+\index{set\-Vertex@{set\-Vertex}!Graph@{Graph}}
+\subsubsection[{set\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-::set\-Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf label\-\_\-t}}]{label, }
+\item[{std\-::vector$<$ {\bf label\-\_\-t} $>$}]{adj}
+\end{DoxyParamCaption}
+)}}\label{classGraph_a2c638cac3d3bb7b47b1aef864b2c6a69}
+
+
+ustaw wierzchołek 
+
+ustawia listę sąsiedztwa wierzchołka. Jeżeli w grafie nie istnieją jeszcze rozpatrywane wierzchołki to są one dodawane.
+
+
+\begin{DoxyParams}{Parametry}
+{\em label} & znacznik wierzchołka \\
+\hline
+{\em adj} & lista znaczników wierzchołków (lista sąsiedztwa) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{classGraph_a8aff7513bde5154e374e5c7a99f38bb7}{\index{Graph@{Graph}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Graph@{Graph}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{strm, }
+\item[{const {\bf Graph} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classGraph_a8aff7513bde5154e374e5c7a99f38bb7}
+\hypertarget{classGraph_a694dfce5839c398362898b57184d57d5}{\index{Graph@{Graph}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Graph@{Graph}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{strm, }
+\item[{{\bf Graph} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classGraph_a694dfce5839c398362898b57184d57d5}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classGraph_a205f5526664ea4f94ad94c1cb7de3c56}{\index{Graph@{Graph}!\-\_\-\-\_\-first\-\_\-free\-\_\-idx@{\-\_\-\-\_\-first\-\_\-free\-\_\-idx}}
+\index{\-\_\-\-\_\-first\-\_\-free\-\_\-idx@{\-\_\-\-\_\-first\-\_\-free\-\_\-idx}!Graph@{Graph}}
+\subsubsection[{\-\_\-\-\_\-first\-\_\-free\-\_\-idx}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\-::idx\-\_\-t} Graph\-::\-\_\-\-\_\-first\-\_\-free\-\_\-idx\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_a205f5526664ea4f94ad94c1cb7de3c56}
+
+
+pierwszy wolny indeks dla kolejnego wierzchołka grafu 
+
+\hypertarget{classGraph_a53211b7cd85e28093bbe540e5a2ec21d}{\index{Graph@{Graph}!\-\_\-\-\_\-inv\-\_\-power@{\-\_\-\-\_\-inv\-\_\-power}}
+\index{\-\_\-\-\_\-inv\-\_\-power@{\-\_\-\-\_\-inv\-\_\-power}!Graph@{Graph}}
+\subsubsection[{\-\_\-\-\_\-inv\-\_\-power}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::\-\_\-\-\_\-inv\-\_\-power\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_a53211b7cd85e28093bbe540e5a2ec21d}
+
+
+potęga t używana przy liczeniu 'stopnia' wierzchołka 
+
+10$^\wedge$t $\ast$ wyjściowość + wejściowość \hypertarget{classGraph_ad84b4512d3366d236491358b6314bc47}{\index{Graph@{Graph}!edge\-\_\-count@{edge\-\_\-count}}
+\index{edge\-\_\-count@{edge\-\_\-count}!Graph@{Graph}}
+\subsubsection[{edge\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::edge\-\_\-count\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_ad84b4512d3366d236491358b6314bc47}
+
+
+liczba krawędzi w grafie 
+
+\hypertarget{classGraph_a6472b8bfc461dc9081b609b28e27d2b0}{\index{Graph@{Graph}!idx\-\_\-label\-\_\-map@{idx\-\_\-label\-\_\-map}}
+\index{idx\-\_\-label\-\_\-map@{idx\-\_\-label\-\_\-map}!Graph@{Graph}}
+\subsubsection[{idx\-\_\-label\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<${\bf Vertex\-::idx\-\_\-t}, {\bf label\-\_\-t}$>$ Graph\-::idx\-\_\-label\-\_\-map\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_a6472b8bfc461dc9081b609b28e27d2b0}
+
+
+mapa indeks -\/$>$ znacznik 
+
+\hypertarget{classGraph_ac2083a954ecbb76a242deed60755fd07}{\index{Graph@{Graph}!label\-\_\-idx\-\_\-map@{label\-\_\-idx\-\_\-map}}
+\index{label\-\_\-idx\-\_\-map@{label\-\_\-idx\-\_\-map}!Graph@{Graph}}
+\subsubsection[{label\-\_\-idx\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<${\bf label\-\_\-t}, {\bf Vertex\-::idx\-\_\-t}$>$ Graph\-::label\-\_\-idx\-\_\-map\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_ac2083a954ecbb76a242deed60755fd07}
+
+
+mapa znacznik -\/$>$ indeks 
+
+\hypertarget{classGraph_a752008a468385625c22da499d248ada3}{\index{Graph@{Graph}!labels@{labels}}
+\index{labels@{labels}!Graph@{Graph}}
+\subsubsection[{labels}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf label\-\_\-t}$>$ Graph\-::labels\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_a752008a468385625c22da499d248ada3}
+
+
+wszystkie znaczniki w grafie 
+
+\hypertarget{classGraph_aa0961f75ec603fa6b4f1e631b70233f1}{\index{Graph@{Graph}!vertex\-\_\-count@{vertex\-\_\-count}}
+\index{vertex\-\_\-count@{vertex\-\_\-count}!Graph@{Graph}}
+\subsubsection[{vertex\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Graph\-::vertex\-\_\-count\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_aa0961f75ec603fa6b4f1e631b70233f1}
+
+
+liczba wierzchołków w grafie 
+
+\hypertarget{classGraph_a69d5f1746e168b9555daa83b84c0341b}{\index{Graph@{Graph}!vertexes@{vertexes}}
+\index{vertexes@{vertexes}!Graph@{Graph}}
+\subsubsection[{vertexes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<${\bf Vertex\-::idx\-\_\-t}, {\bf Vertex}$>$ Graph\-::vertexes\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_a69d5f1746e168b9555daa83b84c0341b}
+
+
+mapa indeks -\/$>$ wierzchołek 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graph_8hpp}{graph.\-hpp}\item 
+\hyperlink{graph_8cpp}{graph.\-cpp}\end{DoxyCompactItemize}

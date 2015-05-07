@@ -1,0 +1,300 @@
+\hypertarget{izomorf_8cpp}{\section{Dokumentacja pliku izomorf.\-cpp}
+\label{izomorf_8cpp}\index{izomorf.\-cpp@{izomorf.\-cpp}}
+}
+
+
+plik z metodą main  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}graph.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}isomorphism\-Algo.\-hpp\char`\"{}}\\*
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{izomorf_8cpp_ae47ae39684a21f9ed38126bec4bdeb91}{help\-Msg} ()
+\begin{DoxyCompactList}\small\item\em zwraca wiadomość pomocniczą programu \end{DoxyCompactList}\item 
+void \hyperlink{izomorf_8cpp_a8d5995fab3e041363206e6fa4b29ae36}{read\-Graph} (\hyperlink{classGraph}{Graph} \&g, std\-::string filename, std\-::string graphname)
+\begin{DoxyCompactList}\small\item\em wczytuje z pliku, ew. wypisuje komunikat błędu \end{DoxyCompactList}\item 
+void \hyperlink{izomorf_8cpp_a29718bc40cb3376b8a001ef2302405fa}{check\-Isomorphism} (const \hyperlink{classGraph}{Graph} \&g\-X, const \hyperlink{classGraph}{Graph} \&g\-Y)
+\begin{DoxyCompactList}\small\item\em wypisuje na konsolę proces weryfikacji izomorfizmu dwóch grafów \end{DoxyCompactList}\item 
+bool \hyperlink{izomorf_8cpp_a58911a9916143ae18acef21486921e96}{run\-Test\-Unit} (const \hyperlink{classGraph}{Graph} \&g\-X, const \hyperlink{classGraph}{Graph} \&g\-Y, bool meets, bool izom, unsigned int nr, std\-::string testname)
+\begin{DoxyCompactList}\small\item\em uruchom unittest \end{DoxyCompactList}\item 
+bool \hyperlink{izomorf_8cpp_a31a739b17510260e75c265cc792be17f}{run\-File\-Test} (std\-::string filename\-X, std\-::string filename\-Y, bool meets, bool izom, unsigned int nr, std\-::string testname)
+\begin{DoxyCompactList}\small\item\em uruchom unittest na grafach zapisanych w plikach \end{DoxyCompactList}\item 
+bool \hyperlink{izomorf_8cpp_a4ea7ed9fa412f43134c46c1397e6f707}{run\-Random\-Test} (unsigned int v, double d, bool izom, unsigned int nr, std\-::string testname)
+\begin{DoxyCompactList}\small\item\em uruchom unittest na grafach losowych \end{DoxyCompactList}\item 
+void \hyperlink{izomorf_8cpp_a863e4ee5d523eee436fdf5a744d498bb}{execute\-Tests} ()
+\begin{DoxyCompactList}\small\item\em uruchom testy \end{DoxyCompactList}\item 
+void \hyperlink{izomorf_8cpp_a1af22615fb37e3037bdc0488a0eb8d18}{execute\-From\-Files} (std\-::string filename\-X, std\-::string filename\-Y)
+\begin{DoxyCompactList}\small\item\em uruchom program na grafach zapisanych w plikach \end{DoxyCompactList}\item 
+void \hyperlink{izomorf_8cpp_a899ab41860e9884343d9b0e328068a5c}{execute\-Random} (unsigned int v, double d)
+\begin{DoxyCompactList}\small\item\em uruchom program na losowych izomorficznych grafach \end{DoxyCompactList}\item 
+void \hyperlink{izomorf_8cpp_aa516c7b96652f0d0c32560ffb5a1da44}{parse\-Input} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em interpretuj argumenty wywołania programu \end{DoxyCompactList}\item 
+int \hyperlink{izomorf_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em funkcja main \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+plik z metodą main Detailed description starts here. 
+
+
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{izomorf_8cpp_a29718bc40cb3376b8a001ef2302405fa}{\index{izomorf.\-cpp@{izomorf.\-cpp}!check\-Isomorphism@{check\-Isomorphism}}
+\index{check\-Isomorphism@{check\-Isomorphism}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{check\-Isomorphism}]{\setlength{\rightskip}{0pt plus 5cm}void check\-Isomorphism (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph} \&}]{g\-X, }
+\item[{const {\bf Graph} \&}]{g\-Y}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a29718bc40cb3376b8a001ef2302405fa}
+
+
+wypisuje na konsolę proces weryfikacji izomorfizmu dwóch grafów 
+
+
+\begin{DoxyParams}{Parametry}
+{\em g\-X} & graf pierwszy \\
+\hline
+{\em g\-Y} & graf drugi \\
+\hline
+\end{DoxyParams}
+\hypertarget{izomorf_8cpp_a1af22615fb37e3037bdc0488a0eb8d18}{\index{izomorf.\-cpp@{izomorf.\-cpp}!execute\-From\-Files@{execute\-From\-Files}}
+\index{execute\-From\-Files@{execute\-From\-Files}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{execute\-From\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void execute\-From\-Files (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename\-X, }
+\item[{std\-::string}]{filename\-Y}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a1af22615fb37e3037bdc0488a0eb8d18}
+
+
+uruchom program na grafach zapisanych w plikach 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename\-X} & plik z grafem 1 \\
+\hline
+{\em filename\-Y} & plik z grafem 2 \\
+\hline
+\end{DoxyParams}
+\hypertarget{izomorf_8cpp_a899ab41860e9884343d9b0e328068a5c}{\index{izomorf.\-cpp@{izomorf.\-cpp}!execute\-Random@{execute\-Random}}
+\index{execute\-Random@{execute\-Random}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{execute\-Random}]{\setlength{\rightskip}{0pt plus 5cm}void execute\-Random (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{v, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a899ab41860e9884343d9b0e328068a5c}
+
+
+uruchom program na losowych izomorficznych grafach 
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & ilosc wierzchołków w grafach losowych \\
+\hline
+{\em d} & gęstość krawędzi w grafach losowych \\
+\hline
+\end{DoxyParams}
+\hypertarget{izomorf_8cpp_a863e4ee5d523eee436fdf5a744d498bb}{\index{izomorf.\-cpp@{izomorf.\-cpp}!execute\-Tests@{execute\-Tests}}
+\index{execute\-Tests@{execute\-Tests}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{execute\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void execute\-Tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a863e4ee5d523eee436fdf5a744d498bb}
+
+
+uruchom testy 
+
+\hypertarget{izomorf_8cpp_ae47ae39684a21f9ed38126bec4bdeb91}{\index{izomorf.\-cpp@{izomorf.\-cpp}!help\-Msg@{help\-Msg}}
+\index{help\-Msg@{help\-Msg}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{help\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string help\-Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_ae47ae39684a21f9ed38126bec4bdeb91}
+
+
+zwraca wiadomość pomocniczą programu 
+
+\begin{DoxyReturn}{Zwraca}
+string z wiadomością pomocniczą. 
+\end{DoxyReturn}
+\hypertarget{izomorf_8cpp_ac0f2228420376f4db7e1274f2b41667c}{\index{izomorf.\-cpp@{izomorf.\-cpp}!main@{main}}
+\index{main@{main}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_ac0f2228420376f4db7e1274f2b41667c}
+
+
+funkcja main 
+
+
+\begin{DoxyParams}{Parametry}
+{\em argc} & ilość parametrów programu \\
+\hline
+{\em argv\mbox{[}$\,$\mbox{]}} & parametry programu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+zwraca 0 w przypadku poprawnego wykonania, w razie błędnego wartość różną od 0. 
+\end{DoxyReturn}
+\hypertarget{izomorf_8cpp_aa516c7b96652f0d0c32560ffb5a1da44}{\index{izomorf.\-cpp@{izomorf.\-cpp}!parse\-Input@{parse\-Input}}
+\index{parse\-Input@{parse\-Input}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{parse\-Input}]{\setlength{\rightskip}{0pt plus 5cm}void parse\-Input (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_aa516c7b96652f0d0c32560ffb5a1da44}
+
+
+interpretuj argumenty wywołania programu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em argc} & liczba zmiennych \\
+\hline
+{\em argv\mbox{[}$\,$\mbox{]}} & tablica argumentów \\
+\hline
+\end{DoxyParams}
+\hypertarget{izomorf_8cpp_a8d5995fab3e041363206e6fa4b29ae36}{\index{izomorf.\-cpp@{izomorf.\-cpp}!read\-Graph@{read\-Graph}}
+\index{read\-Graph@{read\-Graph}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{read\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}void read\-Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph} \&}]{g, }
+\item[{std\-::string}]{filename, }
+\item[{std\-::string}]{graphname}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a8d5995fab3e041363206e6fa4b29ae36}
+
+
+wczytuje z pliku, ew. wypisuje komunikat błędu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em g} & wczytywany graf \\
+\hline
+{\em filename} & nazwa pliku z grafem \\
+\hline
+{\em graphname} & nazwa grafu dla komunikatu o błędzie \\
+\hline
+\end{DoxyParams}
+\hypertarget{izomorf_8cpp_a31a739b17510260e75c265cc792be17f}{\index{izomorf.\-cpp@{izomorf.\-cpp}!run\-File\-Test@{run\-File\-Test}}
+\index{run\-File\-Test@{run\-File\-Test}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{run\-File\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool run\-File\-Test (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename\-X, }
+\item[{std\-::string}]{filename\-Y, }
+\item[{bool}]{meets, }
+\item[{bool}]{izom, }
+\item[{unsigned int}]{nr, }
+\item[{std\-::string}]{testname}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a31a739b17510260e75c265cc792be17f}
+
+
+uruchom unittest na grafach zapisanych w plikach 
+
+
+\begin{DoxyParams}{Parametry}
+{\em filename\-X} & plik z grafem 1 \\
+\hline
+{\em filename\-Y} & plik z grafem 2 \\
+\hline
+{\em meets} & czy grafy powinny spełniać warunki izomorfizmu \\
+\hline
+{\em izom} & czy grafy powinny być izomorficzne \\
+\hline
+{\em nr} & numer testu \\
+\hline
+{\em testname} & nazwa testu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy test wykonał się poprawnie 
+\end{DoxyReturn}
+\hypertarget{izomorf_8cpp_a4ea7ed9fa412f43134c46c1397e6f707}{\index{izomorf.\-cpp@{izomorf.\-cpp}!run\-Random\-Test@{run\-Random\-Test}}
+\index{run\-Random\-Test@{run\-Random\-Test}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{run\-Random\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool run\-Random\-Test (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{v, }
+\item[{double}]{d, }
+\item[{bool}]{izom, }
+\item[{unsigned int}]{nr, }
+\item[{std\-::string}]{testname}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a4ea7ed9fa412f43134c46c1397e6f707}
+
+
+uruchom unittest na grafach losowych 
+
+Generuje dwa losowe grafy izomorficzne i weryfikuje ich izomorfizm
+
+
+\begin{DoxyParams}{Parametry}
+{\em v} & ilosc wierzchołków w grafach losowych \\
+\hline
+{\em d} & gęstość krawędzi w grafach losowych \\
+\hline
+{\em izom} & czy grafy powinny być izomorficzne \\
+\hline
+{\em nr} & numer testu \\
+\hline
+{\em testname} & nazwa testu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy test wykonał się poprawnie 
+\end{DoxyReturn}
+\hypertarget{izomorf_8cpp_a58911a9916143ae18acef21486921e96}{\index{izomorf.\-cpp@{izomorf.\-cpp}!run\-Test\-Unit@{run\-Test\-Unit}}
+\index{run\-Test\-Unit@{run\-Test\-Unit}!izomorf.cpp@{izomorf.\-cpp}}
+\subsubsection[{run\-Test\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}bool run\-Test\-Unit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph} \&}]{g\-X, }
+\item[{const {\bf Graph} \&}]{g\-Y, }
+\item[{bool}]{meets, }
+\item[{bool}]{izom, }
+\item[{unsigned int}]{nr, }
+\item[{std\-::string}]{testname}
+\end{DoxyParamCaption}
+)}}\label{izomorf_8cpp_a58911a9916143ae18acef21486921e96}
+
+
+uruchom unittest 
+
+Unittest sprawdza czy grafy spełniają warunki izomorfizmu i czy są izomorficzny
+
+
+\begin{DoxyParams}{Parametry}
+{\em g\-X} & graf pierwszy \\
+\hline
+{\em g\-Y} & graf drugi \\
+\hline
+{\em meets} & czy grafy powinny spełniać warunki \\
+\hline
+{\em izom} & czy grafy powinny być izomorficzne \\
+\hline
+{\em nr} & numer testu \\
+\hline
+{\em testname} & nazwa testu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy test wykonał się poprawnie 
+\end{DoxyReturn}

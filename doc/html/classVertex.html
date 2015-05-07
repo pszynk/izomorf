@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Dokumentacja klasy Vertex</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Typy publiczne</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="classVertex-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Vertex</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>klasa reprezentuje wierzchołek grafie w reprezentacji list sąsiedztwa  
+ <a href="classVertex.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="vertex_8hpp_source.html">vertex.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Typy publiczne</h2></td></tr>
+<tr class="memitem:a12fe2194264f72b70b284bba723052c1"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a></td></tr>
+<tr class="memdesc:a12fe2194264f72b70b284bba723052c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">typ po którym indeksowane są wierzchołki w grafie  <a href="#a12fe2194264f72b70b284bba723052c1">Więcej...</a><br/></td></tr>
+<tr class="separator:a12fe2194264f72b70b284bba723052c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dfe0aad480124fc2948013263615e2e"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; unsigned <br class="typebreak"/>
+int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">deg_t</a></td></tr>
+<tr class="memdesc:a9dfe0aad480124fc2948013263615e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">typ reprezentujący parę wejściowość - wyjściowość  <a href="#a9dfe0aad480124fc2948013263615e2e">Więcej...</a><br/></td></tr>
+<tr class="separator:a9dfe0aad480124fc2948013263615e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac889dee153c9abe7b3fb652ec6583df9"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">iterator</a></td></tr>
+<tr class="memdesc:ac889dee153c9abe7b3fb652ec6583df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator wierzchołka  <a href="#ac889dee153c9abe7b3fb652ec6583df9">Więcej...</a><br/></td></tr>
+<tr class="separator:ac889dee153c9abe7b3fb652ec6583df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a4c8fc5e2511870e41a1f9a74116e9163"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a4c8fc5e2511870e41a1f9a74116e9163">Vertex</a> (<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> _index)</td></tr>
+<tr class="memdesc:a4c8fc5e2511870e41a1f9a74116e9163"><td class="mdescLeft">&#160;</td><td class="mdescRight">konstruktor wierzchołka o podanym indeksie  <a href="#a4c8fc5e2511870e41a1f9a74116e9163">Więcej...</a><br/></td></tr>
+<tr class="separator:a4c8fc5e2511870e41a1f9a74116e9163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be3d42eadcf36caa7af80227e02ad7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a5be3d42eadcf36caa7af80227e02ad7a">addAdjacent</a> (<a class="el" href="classVertex.html">Vertex</a> &amp;adj)</td></tr>
+<tr class="memdesc:a5be3d42eadcf36caa7af80227e02ad7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaj wierzchołek sąsiadujący  <a href="#a5be3d42eadcf36caa7af80227e02ad7a">Więcej...</a><br/></td></tr>
+<tr class="separator:a5be3d42eadcf36caa7af80227e02ad7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b130e700edabcc716e427a363aed7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a40b130e700edabcc716e427a363aed7f">isAdjacent</a> (<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> v) const </td></tr>
+<tr class="memdesc:a40b130e700edabcc716e427a363aed7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">sprawdź czy wierzchołek o danym indeksie jest sąsiadem  <a href="#a40b130e700edabcc716e427a363aed7f">Więcej...</a><br/></td></tr>
+<tr class="separator:a40b130e700edabcc716e427a363aed7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc1d1b1f8b06a1f78828959447ebab4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a7fc1d1b1f8b06a1f78828959447ebab4">getIndex</a> () const </td></tr>
+<tr class="memdesc:a7fc1d1b1f8b06a1f78828959447ebab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca indeks danego wierzchołka  <a href="#a7fc1d1b1f8b06a1f78828959447ebab4">Więcej...</a><br/></td></tr>
+<tr class="separator:a7fc1d1b1f8b06a1f78828959447ebab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab934b969ce0a7ca993f68415ac2ef7a7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ab934b969ce0a7ca993f68415ac2ef7a7">getOut</a> () const </td></tr>
+<tr class="memdesc:ab934b969ce0a7ca993f68415ac2ef7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca wyjściowość wierzchołka  <a href="#ab934b969ce0a7ca993f68415ac2ef7a7">Więcej...</a><br/></td></tr>
+<tr class="separator:ab934b969ce0a7ca993f68415ac2ef7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2ba2a945262eb1ad0cf85cba463aa6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a2f2ba2a945262eb1ad0cf85cba463aa6">getIn</a> () const </td></tr>
+<tr class="memdesc:a2f2ba2a945262eb1ad0cf85cba463aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca wejściowość wierzchołka  <a href="#a2f2ba2a945262eb1ad0cf85cba463aa6">Więcej...</a><br/></td></tr>
+<tr class="separator:a2f2ba2a945262eb1ad0cf85cba463aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe907b35d105ae302e53bbd0416e2af7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#afe907b35d105ae302e53bbd0416e2af7">begin</a> () const </td></tr>
+<tr class="memdesc:afe907b35d105ae302e53bbd0416e2af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator po indeksach wierzchołków sąsiadujących  <a href="#afe907b35d105ae302e53bbd0416e2af7">Więcej...</a><br/></td></tr>
+<tr class="separator:afe907b35d105ae302e53bbd0416e2af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7eadc2393bd0706e4189e83e2ea6e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a8e7eadc2393bd0706e4189e83e2ea6e5">end</a> () const </td></tr>
+<tr class="memdesc:a8e7eadc2393bd0706e4189e83e2ea6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator po indeksach wierzchołków sąsiadujących  <a href="#a8e7eadc2393bd0706e4189e83e2ea6e5">Więcej...</a><br/></td></tr>
+<tr class="separator:a8e7eadc2393bd0706e4189e83e2ea6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8134949da7cd56815688c6a2d0b4d9f9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a8134949da7cd56815688c6a2d0b4d9f9">getInfo</a> () const </td></tr>
+<tr class="memdesc:a8134949da7cd56815688c6a2d0b4d9f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">informacje na temat wierzchołka  <a href="#a8134949da7cd56815688c6a2d0b4d9f9">Więcej...</a><br/></td></tr>
+<tr class="separator:a8134949da7cd56815688c6a2d0b4d9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a144482cc091abe9c30061f987d0596f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a144482cc091abe9c30061f987d0596f7">addNeighbour</a> ()</td></tr>
+<tr class="memdesc:a144482cc091abe9c30061f987d0596f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">procedura wywoływana gdy wierzchołek jest dodawany do listy sąsiedztwa innego wierzchołka  <a href="#a144482cc091abe9c30061f987d0596f7">Więcej...</a><br/></td></tr>
+<tr class="separator:a144482cc091abe9c30061f987d0596f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:aa614f5224115d0d25abc2f8073b41758"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#aa614f5224115d0d25abc2f8073b41758">index</a></td></tr>
+<tr class="memdesc:aa614f5224115d0d25abc2f8073b41758"><td class="mdescLeft">&#160;</td><td class="mdescRight">indeks wierzchołka  <a href="#aa614f5224115d0d25abc2f8073b41758">Więcej...</a><br/></td></tr>
+<tr class="separator:aa614f5224115d0d25abc2f8073b41758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a6f322618b6d221822bc047b26ceea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">deg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#ac1a6f322618b6d221822bc047b26ceea">degree</a></td></tr>
+<tr class="memdesc:ac1a6f322618b6d221822bc047b26ceea"><td class="mdescLeft">&#160;</td><td class="mdescRight">wejściowość i wyjściowość wierzchołka  <a href="#ac1a6f322618b6d221822bc047b26ceea">Więcej...</a><br/></td></tr>
+<tr class="separator:ac1a6f322618b6d221822bc047b26ceea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b4f2e131ebb0bc19d9765032b14bbe"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVertex.html#a47b4f2e131ebb0bc19d9765032b14bbe">adjacent</a></td></tr>
+<tr class="memdesc:a47b4f2e131ebb0bc19d9765032b14bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">lista sąsiedztwa wierzchołka  <a href="#a47b4f2e131ebb0bc19d9765032b14bbe">Więcej...</a><br/></td></tr>
+<tr class="separator:a47b4f2e131ebb0bc19d9765032b14bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>klasa reprezentuje wierzchołek grafie w reprezentacji list sąsiedztwa </p>
+<p>Klasa odpowiada liście sąsiedztwa jednego wierzchołka. </p>
+</div><h2 class="groupheader">Dokumentacja składowych definicji typu</h2>
+<a class="anchor" id="a9dfe0aad480124fc2948013263615e2e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::pair&lt;unsigned int, unsigned int&gt; <a class="el" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">Vertex::deg_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>typ reprezentujący parę wejściowość - wyjściowość </p>
+
+</div>
+</div>
+<a class="anchor" id="a12fe2194264f72b70b284bba723052c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>typ po którym indeksowane są wierzchołki w grafie </p>
+
+</div>
+</div>
+<a class="anchor" id="ac889dee153c9abe7b3fb652ec6583df9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>&gt;::const_iterator <a class="el" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">Vertex::iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator wierzchołka </p>
+<p>Iterator po indeksach wierzchołków sąsiadujących z danym wierzchołkiem </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a4c8fc5e2511870e41a1f9a74116e9163"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vertex::Vertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>konstruktor wierzchołka o podanym indeksie </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_index</td><td>indeks dla tworzonego wierzchołka </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a5be3d42eadcf36caa7af80227e02ad7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vertex::addAdjacent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>adj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaj wierzchołek sąsiadujący </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adj</td><td>referencja na dodawany wierzchołek</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy dodano wierzchołek (nie dodano jeżeli wierzchołek jest już sąsiadem) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a144482cc091abe9c30061f987d0596f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Vertex::addNeighbour </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>procedura wywoływana gdy wierzchołek jest dodawany do listy sąsiedztwa innego wierzchołka </p>
+
+</div>
+</div>
+<a class="anchor" id="afe907b35d105ae302e53bbd0416e2af7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">Vertex::iterator</a> Vertex::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator po indeksach wierzchołków sąsiadujących </p>
+<dl class="section return"><dt>Zwraca</dt><dd>iterator na początek listy wierzchołków </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e7eadc2393bd0706e4189e83e2ea6e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex.html#ac889dee153c9abe7b3fb652ec6583df9">Vertex::iterator</a> Vertex::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator po indeksach wierzchołków sąsiadujących </p>
+<dl class="section return"><dt>Zwraca</dt><dd>iterator na koniec listy wierzchołków </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2f2ba2a945262eb1ad0cf85cba463aa6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Vertex::getIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca wejściowość wierzchołka </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wejściowość </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7fc1d1b1f8b06a1f78828959447ebab4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> Vertex::getIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca indeks danego wierzchołka </p>
+<dl class="section return"><dt>Zwraca</dt><dd>indeks </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8134949da7cd56815688c6a2d0b4d9f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Vertex::getInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>informacje na temat wierzchołka </p>
+<p>procedura pomocnicza</p>
+<dl class="section return"><dt>Zwraca</dt><dd>string z info. wierzchołka </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab934b969ce0a7ca993f68415ac2ef7a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Vertex::getOut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca wyjściowość wierzchołka </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wyjściowość </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a40b130e700edabcc716e427a363aed7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Vertex::isAdjacent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sprawdź czy wierzchołek o danym indeksie jest sąsiadem </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>indeks potencjalnego sąsiada</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy v to indeks wierzchołka sąsiadującego z danym wierzchołkiem </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a47b4f2e131ebb0bc19d9765032b14bbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a>&gt; Vertex::adjacent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>lista sąsiedztwa wierzchołka </p>
+
+</div>
+</div>
+<a class="anchor" id="ac1a6f322618b6d221822bc047b26ceea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex.html#a9dfe0aad480124fc2948013263615e2e">deg_t</a> Vertex::degree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wejściowość i wyjściowość wierzchołka </p>
+
+</div>
+</div>
+<a class="anchor" id="aa614f5224115d0d25abc2f8073b41758"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">idx_t</a> Vertex::index</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>indeks wierzchołka </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="vertex_8hpp_source.html">vertex.hpp</a></li>
+<li><a class="el" href="vertex_8cpp.html">vertex.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Dokumentacja pliku izomorf.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku izomorf.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>plik z metodą main  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;iomanip&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &lt;iterator&gt;</code><br/>
+<code>#include &lt;chrono&gt;</code><br/>
+<code>#include &lt;exception&gt;</code><br/>
+<code>#include &lt;assert.h&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &quot;<a class="el" href="graph_8hpp_source.html">graph.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="isomorphismAlgo_8hpp_source.html">isomorphismAlgo.hpp</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:ae47ae39684a21f9ed38126bec4bdeb91"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#ae47ae39684a21f9ed38126bec4bdeb91">helpMsg</a> ()</td></tr>
+<tr class="memdesc:ae47ae39684a21f9ed38126bec4bdeb91"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca wiadomość pomocniczą programu  <a href="#ae47ae39684a21f9ed38126bec4bdeb91">Więcej...</a><br/></td></tr>
+<tr class="separator:ae47ae39684a21f9ed38126bec4bdeb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5995fab3e041363206e6fa4b29ae36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a8d5995fab3e041363206e6fa4b29ae36">readGraph</a> (<a class="el" href="classGraph.html">Graph</a> &amp;g, std::string filename, std::string graphname)</td></tr>
+<tr class="memdesc:a8d5995fab3e041363206e6fa4b29ae36"><td class="mdescLeft">&#160;</td><td class="mdescRight">wczytuje z pliku, ew. wypisuje komunikat błędu  <a href="#a8d5995fab3e041363206e6fa4b29ae36">Więcej...</a><br/></td></tr>
+<tr class="separator:a8d5995fab3e041363206e6fa4b29ae36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29718bc40cb3376b8a001ef2302405fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a29718bc40cb3376b8a001ef2302405fa">checkIsomorphism</a> (const <a class="el" href="classGraph.html">Graph</a> &amp;gX, const <a class="el" href="classGraph.html">Graph</a> &amp;gY)</td></tr>
+<tr class="memdesc:a29718bc40cb3376b8a001ef2302405fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">wypisuje na konsolę proces weryfikacji izomorfizmu dwóch grafów  <a href="#a29718bc40cb3376b8a001ef2302405fa">Więcej...</a><br/></td></tr>
+<tr class="separator:a29718bc40cb3376b8a001ef2302405fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58911a9916143ae18acef21486921e96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a58911a9916143ae18acef21486921e96">runTestUnit</a> (const <a class="el" href="classGraph.html">Graph</a> &amp;gX, const <a class="el" href="classGraph.html">Graph</a> &amp;gY, bool meets, bool izom, unsigned int nr, std::string testname)</td></tr>
+<tr class="memdesc:a58911a9916143ae18acef21486921e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchom unittest  <a href="#a58911a9916143ae18acef21486921e96">Więcej...</a><br/></td></tr>
+<tr class="separator:a58911a9916143ae18acef21486921e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a739b17510260e75c265cc792be17f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a31a739b17510260e75c265cc792be17f">runFileTest</a> (std::string filenameX, std::string filenameY, bool meets, bool izom, unsigned int nr, std::string testname)</td></tr>
+<tr class="memdesc:a31a739b17510260e75c265cc792be17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchom unittest na grafach zapisanych w plikach  <a href="#a31a739b17510260e75c265cc792be17f">Więcej...</a><br/></td></tr>
+<tr class="separator:a31a739b17510260e75c265cc792be17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea7ed9fa412f43134c46c1397e6f707"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a4ea7ed9fa412f43134c46c1397e6f707">runRandomTest</a> (unsigned int v, double d, bool izom, unsigned int nr, std::string testname)</td></tr>
+<tr class="memdesc:a4ea7ed9fa412f43134c46c1397e6f707"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchom unittest na grafach losowych  <a href="#a4ea7ed9fa412f43134c46c1397e6f707">Więcej...</a><br/></td></tr>
+<tr class="separator:a4ea7ed9fa412f43134c46c1397e6f707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863e4ee5d523eee436fdf5a744d498bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a863e4ee5d523eee436fdf5a744d498bb">executeTests</a> ()</td></tr>
+<tr class="memdesc:a863e4ee5d523eee436fdf5a744d498bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchom testy  <a href="#a863e4ee5d523eee436fdf5a744d498bb">Więcej...</a><br/></td></tr>
+<tr class="separator:a863e4ee5d523eee436fdf5a744d498bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af22615fb37e3037bdc0488a0eb8d18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a1af22615fb37e3037bdc0488a0eb8d18">executeFromFiles</a> (std::string filenameX, std::string filenameY)</td></tr>
+<tr class="memdesc:a1af22615fb37e3037bdc0488a0eb8d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchom program na grafach zapisanych w plikach  <a href="#a1af22615fb37e3037bdc0488a0eb8d18">Więcej...</a><br/></td></tr>
+<tr class="separator:a1af22615fb37e3037bdc0488a0eb8d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899ab41860e9884343d9b0e328068a5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#a899ab41860e9884343d9b0e328068a5c">executeRandom</a> (unsigned int v, double d)</td></tr>
+<tr class="memdesc:a899ab41860e9884343d9b0e328068a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchom program na losowych izomorficznych grafach  <a href="#a899ab41860e9884343d9b0e328068a5c">Więcej...</a><br/></td></tr>
+<tr class="separator:a899ab41860e9884343d9b0e328068a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa516c7b96652f0d0c32560ffb5a1da44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#aa516c7b96652f0d0c32560ffb5a1da44">parseInput</a> (int argc, const char *argv[])</td></tr>
+<tr class="memdesc:aa516c7b96652f0d0c32560ffb5a1da44"><td class="mdescLeft">&#160;</td><td class="mdescRight">interpretuj argumenty wywołania programu  <a href="#aa516c7b96652f0d0c32560ffb5a1da44">Więcej...</a><br/></td></tr>
+<tr class="separator:aa516c7b96652f0d0c32560ffb5a1da44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f2228420376f4db7e1274f2b41667c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="izomorf_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main</a> (int argc, const char *argv[])</td></tr>
+<tr class="memdesc:ac0f2228420376f4db7e1274f2b41667c"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja main  <a href="#ac0f2228420376f4db7e1274f2b41667c">Więcej...</a><br/></td></tr>
+<tr class="separator:ac0f2228420376f4db7e1274f2b41667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>plik z metodą main </p>
+<p>Detailed description starts here. </p>
+<hr/>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="a29718bc40cb3376b8a001ef2302405fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void checkIsomorphism </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>gX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>gY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wypisuje na konsolę proces weryfikacji izomorfizmu dwóch grafów </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gX</td><td>graf pierwszy </td></tr>
+    <tr><td class="paramname">gY</td><td>graf drugi </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1af22615fb37e3037bdc0488a0eb8d18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void executeFromFiles </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filenameX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filenameY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchom program na grafach zapisanych w plikach </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filenameX</td><td>plik z grafem 1 </td></tr>
+    <tr><td class="paramname">filenameY</td><td>plik z grafem 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a899ab41860e9884343d9b0e328068a5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void executeRandom </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchom program na losowych izomorficznych grafach </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>ilosc wierzchołków w grafach losowych </td></tr>
+    <tr><td class="paramname">d</td><td>gęstość krawędzi w grafach losowych </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a863e4ee5d523eee436fdf5a744d498bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void executeTests </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchom testy </p>
+
+</div>
+</div>
+<a class="anchor" id="ae47ae39684a21f9ed38126bec4bdeb91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string helpMsg </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca wiadomość pomocniczą programu </p>
+<dl class="section return"><dt>Zwraca</dt><dd>string z wiadomością pomocniczą. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0f2228420376f4db7e1274f2b41667c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funkcja main </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>ilość parametrów programu </td></tr>
+    <tr><td class="paramname">argv[]</td><td>parametry programu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>zwraca 0 w przypadku poprawnego wykonania, w razie błędnego wartość różną od 0. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa516c7b96652f0d0c32560ffb5a1da44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parseInput </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>interpretuj argumenty wywołania programu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>liczba zmiennych </td></tr>
+    <tr><td class="paramname">argv[]</td><td>tablica argumentów </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8d5995fab3e041363206e6fa4b29ae36"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void readGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>graphname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wczytuje z pliku, ew. wypisuje komunikat błędu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>wczytywany graf </td></tr>
+    <tr><td class="paramname">filename</td><td>nazwa pliku z grafem </td></tr>
+    <tr><td class="paramname">graphname</td><td>nazwa grafu dla komunikatu o błędzie </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a31a739b17510260e75c265cc792be17f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool runFileTest </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filenameX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filenameY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>meets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>izom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>testname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchom unittest na grafach zapisanych w plikach </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filenameX</td><td>plik z grafem 1 </td></tr>
+    <tr><td class="paramname">filenameY</td><td>plik z grafem 2 </td></tr>
+    <tr><td class="paramname">meets</td><td>czy grafy powinny spełniać warunki izomorfizmu </td></tr>
+    <tr><td class="paramname">izom</td><td>czy grafy powinny być izomorficzne </td></tr>
+    <tr><td class="paramname">nr</td><td>numer testu </td></tr>
+    <tr><td class="paramname">testname</td><td>nazwa testu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy test wykonał się poprawnie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ea7ed9fa412f43134c46c1397e6f707"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool runRandomTest </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>izom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>testname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchom unittest na grafach losowych </p>
+<p>Generuje dwa losowe grafy izomorficzne i weryfikuje ich izomorfizm</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>ilosc wierzchołków w grafach losowych </td></tr>
+    <tr><td class="paramname">d</td><td>gęstość krawędzi w grafach losowych </td></tr>
+    <tr><td class="paramname">izom</td><td>czy grafy powinny być izomorficzne </td></tr>
+    <tr><td class="paramname">nr</td><td>numer testu </td></tr>
+    <tr><td class="paramname">testname</td><td>nazwa testu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy test wykonał się poprawnie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a58911a9916143ae18acef21486921e96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool runTestUnit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>gX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>gY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>meets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>izom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>testname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchom unittest </p>
+<p>Unittest sprawdza czy grafy spełniają warunki izomorfizmu i czy są izomorficzny</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gX</td><td>graf pierwszy </td></tr>
+    <tr><td class="paramname">gY</td><td>graf drugi </td></tr>
+    <tr><td class="paramname">meets</td><td>czy grafy powinny spełniać warunki </td></tr>
+    <tr><td class="paramname">izom</td><td>czy grafy powinny być izomorficzne </td></tr>
+    <tr><td class="paramname">nr</td><td>numer testu </td></tr>
+    <tr><td class="paramname">testname</td><td>nazwa testu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy test wykonał się poprawnie </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

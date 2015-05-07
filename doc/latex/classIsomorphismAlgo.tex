@@ -1,0 +1,414 @@
+\hypertarget{classIsomorphismAlgo}{\section{Dokumentacja klasy Isomorphism\-Algo}
+\label{classIsomorphismAlgo}\index{Isomorphism\-Algo@{Isomorphism\-Algo}}
+}
+
+
+klasa reprezentuje algorytm do weryfikacji izomorfizmu grafów  
+
+
+
+
+{\ttfamily \#include $<$isomorphism\-Algo.\-hpp$>$}
+
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIsomorphismAlgo_1_1EdgeComparator}{Edge\-Comparator}
+\begin{DoxyCompactList}\small\item\em komparator do sortowania krawędzi w D\-F\-S lesie \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map\\*
+$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t}, \\*
+\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} $>$ \hyperlink{classIsomorphismAlgo_ad95c1101cd4ef09d4a581d8fbe44aff0}{iso\-\_\-map}
+\begin{DoxyCompactList}\small\item\em mapa do reprezentacji izomorfizmu dwóch grafów \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIsomorphismAlgo_a9ce685f18e7dc74ad6af1b70b8f1073e}{Isomorphism\-Algo} (const \hyperlink{classGraph}{Graph} \&\-\_\-graph\-X, const \hyperlink{classGraph}{Graph} \&\-\_\-graph\-Y)
+\begin{DoxyCompactList}\small\item\em konstruktor biorący referencje na dwa grafy \end{DoxyCompactList}\item 
+bool \hyperlink{classIsomorphismAlgo_a57a1df7c1d6b397a43b93f69e51a6849}{is\-Isomorphism} ()
+\begin{DoxyCompactList}\small\item\em funkcja weryfikująca izomorfizm grafów podanych w konstruktorze \end{DoxyCompactList}\item 
+bool \hyperlink{classIsomorphismAlgo_ad129995900091c355428eab6418f1a56}{meets\-Requirements} ()
+\begin{DoxyCompactList}\small\item\em sprawdź warunki podstawowe izomorfizmu grafów podanych w konstruktorze. \end{DoxyCompactList}\item 
+const \hyperlink{classIsomorphismAlgo_ad95c1101cd4ef09d4a581d8fbe44aff0}{iso\-\_\-map} \& \hyperlink{classIsomorphismAlgo_a043622f6de8535919784045ca8cc97cf}{get\-Iso\-Map} () const 
+\begin{DoxyCompactList}\small\item\em zwraca referencję na przekształcenie izomorficzne, otrzymane przy weryfikacji izomorfizmu. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classIsomorphismAlgo_a6af4fec0a6fc1877427d637bcd84a1ab}{get\-Info} () const 
+\begin{DoxyCompactList}\small\item\em informacje pomocnicze na temat obiektu klasy \hyperlink{classIsomorphismAlgo}{Isomorphism\-Algo} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classIsomorphismAlgo_ae8249f495dbf6ac95c89f468ac9c1be4}{verify\-Isomorphism} (const \hyperlink{classGraph}{Graph} \&\-\_\-graph\-X, const \hyperlink{classGraph}{Graph} \&\-\_\-graph\-Y, const \hyperlink{classIsomorphismAlgo_ad95c1101cd4ef09d4a581d8fbe44aff0}{iso\-\_\-map} \&f)
+\begin{DoxyCompactList}\small\item\em Weryfikuje przekształcenie izomorficzne dwóch grafów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typy prywatne}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{dfs\-\_\-idx\-\_\-t}
+\begin{DoxyCompactList}\small\item\em indeks wierzchołka D\-F\-S lasu \end{DoxyCompactList}\item 
+typedef std\-::vector\\*
+$<$ \hyperlink{structGraph_1_1Edge}{Graph\-::\-Edge} $>$\\*
+\-::const\-\_\-iterator \hyperlink{classIsomorphismAlgo_a2c5e2b83f11243efd51460172b3b0cfa}{edge\-\_\-iter}
+\begin{DoxyCompactList}\small\item\em iterator po posortowanych krawędziach \end{DoxyCompactList}\item 
+typedef std\-::map\\*
+$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t}, \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{dfs\-\_\-idx\-\_\-t} $>$ \hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{dfs\-\_\-num\-\_\-t}
+\begin{DoxyCompactList}\small\item\em mapowanie \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} -\/$>$ \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} \end{DoxyCompactList}\item 
+typedef std\-::vector\\*
+$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} $>$ \hyperlink{classIsomorphismAlgo_a906dbedec7eb2192c4a8963323031704}{dfs\-\_\-vec\-\_\-t}
+\begin{DoxyCompactList}\small\item\em mapowanie \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} -\/$>$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classIsomorphismAlgo_aa10814d9f3fe70fde74ec4f6aadb6273}{match} (\hyperlink{classIsomorphismAlgo_a2c5e2b83f11243efd51460172b3b0cfa}{edge\-\_\-iter} iter, int dfs\-\_\-num\-\_\-k)
+\begin{DoxyCompactList}\small\item\em główna procedura sprawdzająca izomorfizm grafów \end{DoxyCompactList}\item 
+void \hyperlink{classIsomorphismAlgo_a249ab9bd04912a86f39388976dd055ca}{reset\-Data} ()
+\begin{DoxyCompactList}\small\item\em czyści struktury danych \end{DoxyCompactList}\item 
+void \hyperlink{classIsomorphismAlgo_af639949389513c66aa9d4c9dd686b147}{count\-Inv\-Buckets} ()
+\begin{DoxyCompactList}\small\item\em wyznacza liczność wierzchołków o tych samych 'stopniach' (invariant) w obu grafach. \end{DoxyCompactList}\item 
+void \hyperlink{classIsomorphismAlgo_a491943424391031d479fdcde3afb2ed5}{number\-Vertexes} ()
+\begin{DoxyCompactList}\small\item\em numeruje wierzchołki grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} zgodnie z czasem przechodzenia D\-F\-S \end{DoxyCompactList}\item 
+void \hyperlink{classIsomorphismAlgo_a5b487ae56ceec1206c0c0e21fb49def0}{order\-Edges} ()
+\begin{DoxyCompactList}\small\item\em pobiera i sortuje krawędzie grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classGraph}{Graph} \& \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{graph\-X}
+\begin{DoxyCompactList}\small\item\em Graf X na podstawie którego budowany będzie D\-F\-S las. \end{DoxyCompactList}\item 
+const \hyperlink{classGraph}{Graph} \& \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{graph\-Y}
+\begin{DoxyCompactList}\small\item\em Graf Y w którym szukane będą wierzchołki izomorficzne. \end{DoxyCompactList}\item 
+\hyperlink{classIsomorphismAlgo_ad95c1101cd4ef09d4a581d8fbe44aff0}{iso\-\_\-map} \hyperlink{classIsomorphismAlgo_a75072a3ecb3b6ed97207b016a83b8571}{f\-\_\-map}
+\begin{DoxyCompactList}\small\item\em przekształcenie izomorficzne wierzchołków grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} na \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} \end{DoxyCompactList}\item 
+\hyperlink{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{dfs\-\_\-num\-\_\-t} \hyperlink{classIsomorphismAlgo_a4de551ab18fc95ef86ea8c79260656b2}{dfs\-\_\-num}
+\begin{DoxyCompactList}\small\item\em mapowanie \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} -\/$>$ \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} dla wierzchołków grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} \end{DoxyCompactList}\item 
+\hyperlink{classIsomorphismAlgo_a906dbedec7eb2192c4a8963323031704}{dfs\-\_\-vec\-\_\-t} \hyperlink{classIsomorphismAlgo_affd06f1251c222a483b7188313a11193}{dfs\-\_\-vec}
+\begin{DoxyCompactList}\small\item\em mapowanie \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} -\/$>$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} dla wierzchołków grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} \end{DoxyCompactList}\item 
+std\-::set$<$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} $>$ \hyperlink{classIsomorphismAlgo_aad800e9783285450edbcdcb3b65c4133}{in\-\_\-\-S}
+\begin{DoxyCompactList}\small\item\em wierzchołki grafu \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} już dopasowane \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{structGraph_1_1Edge}{Graph\-::\-Edge} $>$ \hyperlink{classIsomorphismAlgo_a0763ab4b07232f8aa9ca80561f353ad1}{ordered\-\_\-edges}
+\begin{DoxyCompactList}\small\item\em posortowane krawędzie D\-F\-S lasu, odpowiadające krawędziom grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} \end{DoxyCompactList}\item 
+std\-::map$<$ unsigned int, \\*
+unsigned int $>$ \hyperlink{classIsomorphismAlgo_a3cf2ede3f4668ecb3ea8a005e190c9f4}{inv\-X\-\_\-buckets}
+\begin{DoxyCompactList}\small\item\em struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} \end{DoxyCompactList}\item 
+std\-::map$<$ unsigned int, \\*
+unsigned int $>$ \hyperlink{classIsomorphismAlgo_a8dcd9224b6360d3e5776307d8680f975}{inv\-Y\-\_\-buckets}
+\begin{DoxyCompactList}\small\item\em struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} \end{DoxyCompactList}\item 
+int \hyperlink{classIsomorphismAlgo_af185ab17b845defe14c0998c173e70ae}{edges\-\_\-count\-\_\-k}
+\begin{DoxyCompactList}\small\item\em licznik wykorzystywany w metodzie \hyperlink{classIsomorphismAlgo_aa10814d9f3fe70fde74ec4f6aadb6273}{Isomorphism\-Algo\-::match} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+klasa reprezentuje algorytm do weryfikacji izomorfizmu grafów 
+
+Klasa zawiera struktury danych i funkcje pomocnicze realizujące rozszerzoną wersję algorytmu powrotów.
+
+Udostępnia także funkcję weryfikującą izomorfizm dwóch grafów. 
+
+\subsection{Dokumentacja składowych definicji typu}
+\hypertarget{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!dfs\-\_\-idx\-\_\-t@{dfs\-\_\-idx\-\_\-t}}
+\index{dfs\-\_\-idx\-\_\-t@{dfs\-\_\-idx\-\_\-t}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{dfs\-\_\-idx\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t}\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}
+
+
+indeks wierzchołka D\-F\-S lasu 
+
+\hypertarget{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!dfs\-\_\-num\-\_\-t@{dfs\-\_\-num\-\_\-t}}
+\index{dfs\-\_\-num\-\_\-t@{dfs\-\_\-num\-\_\-t}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{dfs\-\_\-num\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf Graph\-::label\-\_\-t}, {\bf dfs\-\_\-idx\-\_\-t}$>$ {\bf Isomorphism\-Algo\-::dfs\-\_\-num\-\_\-t}\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a848c1d965a1c201d768513f756629bbe}
+
+
+mapowanie \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} -\/$>$ \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} 
+
+\hypertarget{classIsomorphismAlgo_a906dbedec7eb2192c4a8963323031704}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!dfs\-\_\-vec\-\_\-t@{dfs\-\_\-vec\-\_\-t}}
+\index{dfs\-\_\-vec\-\_\-t@{dfs\-\_\-vec\-\_\-t}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{dfs\-\_\-vec\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<${\bf Graph\-::label\-\_\-t}$>$ {\bf Isomorphism\-Algo\-::dfs\-\_\-vec\-\_\-t}\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a906dbedec7eb2192c4a8963323031704}
+
+
+mapowanie \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} -\/$>$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} 
+
+\hypertarget{classIsomorphismAlgo_a2c5e2b83f11243efd51460172b3b0cfa}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!edge\-\_\-iter@{edge\-\_\-iter}}
+\index{edge\-\_\-iter@{edge\-\_\-iter}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{edge\-\_\-iter}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<${\bf Graph\-::\-Edge}$>$\-::const\-\_\-iterator {\bf Isomorphism\-Algo\-::edge\-\_\-iter}\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a2c5e2b83f11243efd51460172b3b0cfa}
+
+
+iterator po posortowanych krawędziach 
+
+\hypertarget{classIsomorphismAlgo_ad95c1101cd4ef09d4a581d8fbe44aff0}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!iso\-\_\-map@{iso\-\_\-map}}
+\index{iso\-\_\-map@{iso\-\_\-map}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{iso\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf Graph\-::label\-\_\-t}, {\bf Graph\-::label\-\_\-t}$>$ {\bf Isomorphism\-Algo\-::iso\-\_\-map}}}\label{classIsomorphismAlgo_ad95c1101cd4ef09d4a581d8fbe44aff0}
+
+
+mapa do reprezentacji izomorfizmu dwóch grafów 
+
+mapa znacznik (grafu X) -\/$>$ znacznik (grafu Y) 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classIsomorphismAlgo_a9ce685f18e7dc74ad6af1b70b8f1073e}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!Isomorphism\-Algo@{Isomorphism\-Algo}}
+\index{Isomorphism\-Algo@{Isomorphism\-Algo}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{Isomorphism\-Algo}]{\setlength{\rightskip}{0pt plus 5cm}Isomorphism\-Algo\-::\-Isomorphism\-Algo (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph} \&}]{\-\_\-graph\-X, }
+\item[{const {\bf Graph} \&}]{\-\_\-graph\-Y}
+\end{DoxyParamCaption}
+)}}\label{classIsomorphismAlgo_a9ce685f18e7dc74ad6af1b70b8f1073e}
+
+
+konstruktor biorący referencje na dwa grafy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \-\_\-graph\-X} & graf X \\
+\hline
+{\em \-\_\-graph\-Y} & graf Y \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classIsomorphismAlgo_af639949389513c66aa9d4c9dd686b147}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!count\-Inv\-Buckets@{count\-Inv\-Buckets}}
+\index{count\-Inv\-Buckets@{count\-Inv\-Buckets}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{count\-Inv\-Buckets}]{\setlength{\rightskip}{0pt plus 5cm}void Isomorphism\-Algo\-::count\-Inv\-Buckets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_af639949389513c66aa9d4c9dd686b147}
+
+
+wyznacza liczność wierzchołków o tych samych 'stopniach' (invariant) w obu grafach. 
+
+Generuje struktury danych \hyperlink{classIsomorphismAlgo_a3cf2ede3f4668ecb3ea8a005e190c9f4}{Isomorphism\-Algo\-::inv\-X\-\_\-buckets} i \hyperlink{classIsomorphismAlgo_a8dcd9224b6360d3e5776307d8680f975}{Isomorphism\-Algo\-::inv\-Y\-\_\-buckets}. \hypertarget{classIsomorphismAlgo_a6af4fec0a6fc1877427d637bcd84a1ab}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!get\-Info@{get\-Info}}
+\index{get\-Info@{get\-Info}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{get\-Info}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Isomorphism\-Algo\-::get\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classIsomorphismAlgo_a6af4fec0a6fc1877427d637bcd84a1ab}
+
+
+informacje pomocnicze na temat obiektu klasy \hyperlink{classIsomorphismAlgo}{Isomorphism\-Algo} 
+
+\begin{DoxyReturn}{Zwraca}
+string z informacjami pomocniczymi 
+\end{DoxyReturn}
+\hypertarget{classIsomorphismAlgo_a043622f6de8535919784045ca8cc97cf}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!get\-Iso\-Map@{get\-Iso\-Map}}
+\index{get\-Iso\-Map@{get\-Iso\-Map}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{get\-Iso\-Map}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf iso\-\_\-map}\& Isomorphism\-Algo\-::get\-Iso\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classIsomorphismAlgo_a043622f6de8535919784045ca8cc97cf}
+
+
+zwraca referencję na przekształcenie izomorficzne, otrzymane przy weryfikacji izomorfizmu. 
+
+\begin{DoxyReturn}{Zwraca}
+referencja na mapę znaczników grafu X na graf Y 
+\end{DoxyReturn}
+\hypertarget{classIsomorphismAlgo_a57a1df7c1d6b397a43b93f69e51a6849}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!is\-Isomorphism@{is\-Isomorphism}}
+\index{is\-Isomorphism@{is\-Isomorphism}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{is\-Isomorphism}]{\setlength{\rightskip}{0pt plus 5cm}bool Isomorphism\-Algo\-::is\-Isomorphism (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classIsomorphismAlgo_a57a1df7c1d6b397a43b93f69e51a6849}
+
+
+funkcja weryfikująca izomorfizm grafów podanych w konstruktorze 
+
+
+\begin{DoxyItemize}
+\item W pierwszym kroku sprawdzane jest czy grafy spełniają wymagania podstawowe \hyperlink{classIsomorphismAlgo_ad129995900091c355428eab6418f1a56}{Isomorphism\-Algo\-::meets\-Requirements}.
+\item Jeżeli grafy spełniają te wymagania, przygotowywane są struktury danych.
+\item Następnie wykonywany jest właściwy algorytm (metoda powrotów).
+\item Jeżeli grafy są izomorficzne, po wykonaniu się funkcji obiekt klasy zawiera przekształcenie izomorficzne z grafu X na graf Y.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Zwraca}
+czy grafy \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} i \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} są izomorficzne. 
+\end{DoxyReturn}
+\hypertarget{classIsomorphismAlgo_aa10814d9f3fe70fde74ec4f6aadb6273}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!match@{match}}
+\index{match@{match}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{match}]{\setlength{\rightskip}{0pt plus 5cm}bool Isomorphism\-Algo\-::match (
+\begin{DoxyParamCaption}
+\item[{{\bf edge\-\_\-iter}}]{iter, }
+\item[{int}]{dfs\-\_\-num\-\_\-k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_aa10814d9f3fe70fde74ec4f6aadb6273}
+
+
+główna procedura sprawdzająca izomorfizm grafów 
+
+Metoda rekurencyjna, która próbuje przyporządkować k-\/temu wierzchołkowi D\-F\-S lasu, wierzchołek z grafu G\-\_\-\-Y, tak żeby G\-\_\-\-X\mbox{[}k\mbox{]} $\sim$= G\-\_\-\-Y\mbox{[}S\mbox{]}.
+
+Procedura przechodzi przez wierzchołki D\-F\-S lesu. Porusza się po odpowiednio posortowanych krawędziach grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X}. Gdy uda się przejść wszystkie krawędzie grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X}, procedura kończy się sukcesem.
+
+
+\begin{DoxyParams}{Parametry}
+{\em iter} & iterator po posortowanych krawędziach grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X}, czyli po \hyperlink{classIsomorphismAlgo_a4de551ab18fc95ef86ea8c79260656b2}{Isomorphism\-Algo\-::dfs\-\_\-num}. \\
+\hline
+{\em dfs\-\_\-num\-\_\-k} & indeks rozpatrywanego wierzchołka D\-F\-S lasu.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy krawędź wskazywana przez {\ttfamily iter} może zostać przyporządkowana jakieś niewykorzystanej krawędzi grafu \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y}. 
+\end{DoxyReturn}
+\hypertarget{classIsomorphismAlgo_ad129995900091c355428eab6418f1a56}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!meets\-Requirements@{meets\-Requirements}}
+\index{meets\-Requirements@{meets\-Requirements}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{meets\-Requirements}]{\setlength{\rightskip}{0pt plus 5cm}bool Isomorphism\-Algo\-::meets\-Requirements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classIsomorphismAlgo_ad129995900091c355428eab6418f1a56}
+
+
+sprawdź warunki podstawowe izomorfizmu grafów podanych w konstruktorze. 
+
+Sprawdzane warunki to\-:
+\begin{DoxyItemize}
+\item Taka sama liczba wierzchołków.
+\item Taka sama liczba krawędzi.
+\item Taka sama liczba wierzchołków o jednakowych 'stopniach' (invariant)
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Zwraca}
+czy grafy \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} i \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} mają szansę być izomorficzne. 
+\end{DoxyReturn}
+\hypertarget{classIsomorphismAlgo_a491943424391031d479fdcde3afb2ed5}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!number\-Vertexes@{number\-Vertexes}}
+\index{number\-Vertexes@{number\-Vertexes}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{number\-Vertexes}]{\setlength{\rightskip}{0pt plus 5cm}void Isomorphism\-Algo\-::number\-Vertexes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a491943424391031d479fdcde3afb2ed5}
+
+
+numeruje wierzchołki grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} zgodnie z czasem przechodzenia D\-F\-S 
+
+Generuje struktury danych \hyperlink{classIsomorphismAlgo_a4de551ab18fc95ef86ea8c79260656b2}{Isomorphism\-Algo\-::dfs\-\_\-num} i \hyperlink{classIsomorphismAlgo_affd06f1251c222a483b7188313a11193}{Isomorphism\-Algo\-::dfs\-\_\-vec}. \hypertarget{classIsomorphismAlgo_a5b487ae56ceec1206c0c0e21fb49def0}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!order\-Edges@{order\-Edges}}
+\index{order\-Edges@{order\-Edges}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{order\-Edges}]{\setlength{\rightskip}{0pt plus 5cm}void Isomorphism\-Algo\-::order\-Edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a5b487ae56ceec1206c0c0e21fb49def0}
+
+
+pobiera i sortuje krawędzie grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} 
+
+Do sortowania wykorzystywany jest komaprator \hyperlink{classIsomorphismAlgo_1_1EdgeComparator}{Isomorphism\-Algo\-::\-Edge\-Comparator}
+
+Generuje strukturę danych \hyperlink{classIsomorphismAlgo_a0763ab4b07232f8aa9ca80561f353ad1}{Isomorphism\-Algo\-::ordered\-\_\-edges} \hypertarget{classIsomorphismAlgo_a249ab9bd04912a86f39388976dd055ca}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!reset\-Data@{reset\-Data}}
+\index{reset\-Data@{reset\-Data}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{reset\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Isomorphism\-Algo\-::reset\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a249ab9bd04912a86f39388976dd055ca}
+
+
+czyści struktury danych 
+
+\hypertarget{classIsomorphismAlgo_ae8249f495dbf6ac95c89f468ac9c1be4}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!verify\-Isomorphism@{verify\-Isomorphism}}
+\index{verify\-Isomorphism@{verify\-Isomorphism}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{verify\-Isomorphism}]{\setlength{\rightskip}{0pt plus 5cm}bool Isomorphism\-Algo\-::verify\-Isomorphism (
+\begin{DoxyParamCaption}
+\item[{const {\bf Graph} \&}]{\-\_\-graph\-X, }
+\item[{const {\bf Graph} \&}]{\-\_\-graph\-Y, }
+\item[{const {\bf iso\-\_\-map} \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classIsomorphismAlgo_ae8249f495dbf6ac95c89f468ac9c1be4}
+
+
+Weryfikuje przekształcenie izomorficzne dwóch grafów. 
+
+Weryfikuje, czy przekształcenie f\-: X -\/$>$ Y jest izomorfizmem grafów.
+
+
+\begin{DoxyParams}{Parametry}
+{\em \-\_\-graph\-X} & referencja na graf X \\
+\hline
+{\em \-\_\-graph\-Y} & referencja na graf Y \\
+\hline
+{\em f} & referencja na przekształcenie\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy przekształcenie jest izomorfizmem 
+\end{DoxyReturn}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classIsomorphismAlgo_a4de551ab18fc95ef86ea8c79260656b2}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!dfs\-\_\-num@{dfs\-\_\-num}}
+\index{dfs\-\_\-num@{dfs\-\_\-num}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{dfs\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dfs\-\_\-num\-\_\-t} Isomorphism\-Algo\-::dfs\-\_\-num\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a4de551ab18fc95ef86ea8c79260656b2}
+
+
+mapowanie \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} -\/$>$ \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} dla wierzchołków grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} 
+
+\hypertarget{classIsomorphismAlgo_affd06f1251c222a483b7188313a11193}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!dfs\-\_\-vec@{dfs\-\_\-vec}}
+\index{dfs\-\_\-vec@{dfs\-\_\-vec}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{dfs\-\_\-vec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dfs\-\_\-vec\-\_\-t} Isomorphism\-Algo\-::dfs\-\_\-vec\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_affd06f1251c222a483b7188313a11193}
+
+
+mapowanie \hyperlink{classIsomorphismAlgo_ab4ec6489271a99fae3bd2476b22ef35b}{Isomorphism\-Algo\-::dfs\-\_\-idx\-\_\-t} -\/$>$ \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} dla wierzchołków grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} 
+
+\hypertarget{classIsomorphismAlgo_af185ab17b845defe14c0998c173e70ae}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!edges\-\_\-count\-\_\-k@{edges\-\_\-count\-\_\-k}}
+\index{edges\-\_\-count\-\_\-k@{edges\-\_\-count\-\_\-k}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{edges\-\_\-count\-\_\-k}]{\setlength{\rightskip}{0pt plus 5cm}int Isomorphism\-Algo\-::edges\-\_\-count\-\_\-k\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_af185ab17b845defe14c0998c173e70ae}
+
+
+licznik wykorzystywany w metodzie \hyperlink{classIsomorphismAlgo_aa10814d9f3fe70fde74ec4f6aadb6273}{Isomorphism\-Algo\-::match} 
+
+Licznik wskazuje ile jest krawędzi incydentnych z rozpatrywanym wierzchołkiem k grafu G\-\_\-\-X\mbox{[}k\mbox{]}. \hypertarget{classIsomorphismAlgo_a75072a3ecb3b6ed97207b016a83b8571}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!f\-\_\-map@{f\-\_\-map}}
+\index{f\-\_\-map@{f\-\_\-map}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{f\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iso\-\_\-map} Isomorphism\-Algo\-::f\-\_\-map\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a75072a3ecb3b6ed97207b016a83b8571}
+
+
+przekształcenie izomorficzne wierzchołków grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} na \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} 
+
+\hypertarget{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!graph\-X@{graph\-X}}
+\index{graph\-X@{graph\-X}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{graph\-X}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Graph}\& Isomorphism\-Algo\-::graph\-X\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}
+
+
+Graf X na podstawie którego budowany będzie D\-F\-S las. 
+
+\hypertarget{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!graph\-Y@{graph\-Y}}
+\index{graph\-Y@{graph\-Y}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{graph\-Y}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Graph}\& Isomorphism\-Algo\-::graph\-Y\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}
+
+
+Graf Y w którym szukane będą wierzchołki izomorficzne. 
+
+\hypertarget{classIsomorphismAlgo_aad800e9783285450edbcdcb3b65c4133}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!in\-\_\-\-S@{in\-\_\-\-S}}
+\index{in\-\_\-\-S@{in\-\_\-\-S}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{in\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf Graph\-::label\-\_\-t}$>$ Isomorphism\-Algo\-::in\-\_\-\-S\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_aad800e9783285450edbcdcb3b65c4133}
+
+
+wierzchołki grafu \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} już dopasowane 
+
+\hypertarget{classIsomorphismAlgo_a3cf2ede3f4668ecb3ea8a005e190c9f4}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!inv\-X\-\_\-buckets@{inv\-X\-\_\-buckets}}
+\index{inv\-X\-\_\-buckets@{inv\-X\-\_\-buckets}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{inv\-X\-\_\-buckets}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$unsigned int, unsigned int$>$ Isomorphism\-Algo\-::inv\-X\-\_\-buckets\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a3cf2ede3f4668ecb3ea8a005e190c9f4}
+
+
+struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} 
+
+\hypertarget{classIsomorphismAlgo_a8dcd9224b6360d3e5776307d8680f975}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!inv\-Y\-\_\-buckets@{inv\-Y\-\_\-buckets}}
+\index{inv\-Y\-\_\-buckets@{inv\-Y\-\_\-buckets}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{inv\-Y\-\_\-buckets}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$unsigned int, unsigned int$>$ Isomorphism\-Algo\-::inv\-Y\-\_\-buckets\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a8dcd9224b6360d3e5776307d8680f975}
+
+
+struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie \hyperlink{classIsomorphismAlgo_a7656ae201d816e62edda60462cdb3a6e}{Isomorphism\-Algo\-::graph\-Y} 
+
+\hypertarget{classIsomorphismAlgo_a0763ab4b07232f8aa9ca80561f353ad1}{\index{Isomorphism\-Algo@{Isomorphism\-Algo}!ordered\-\_\-edges@{ordered\-\_\-edges}}
+\index{ordered\-\_\-edges@{ordered\-\_\-edges}!IsomorphismAlgo@{Isomorphism\-Algo}}
+\subsubsection[{ordered\-\_\-edges}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Graph\-::\-Edge}$>$ Isomorphism\-Algo\-::ordered\-\_\-edges\hspace{0.3cm}{\ttfamily [private]}}}\label{classIsomorphismAlgo_a0763ab4b07232f8aa9ca80561f353ad1}
+
+
+posortowane krawędzie D\-F\-S lasu, odpowiadające krawędziom grafu \hyperlink{classIsomorphismAlgo_a78bc7264b0a6a264b0343209b3ca3647}{Isomorphism\-Algo\-::graph\-X} 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{isomorphismAlgo_8hpp}{isomorphism\-Algo.\-hpp}\item 
+\hyperlink{isomorphismAlgo_8cpp}{isomorphism\-Algo.\-cpp}\end{DoxyCompactItemize}

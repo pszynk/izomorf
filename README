@@ -1,0 +1,11 @@
+* Kompilacja (Linux)
+ 1) cd .../izomorf
+ 2) make
+
+Plik wykonywalny `release'
+w folderze .../izomorf/bin
+
+* Dokumentacja
+  - .../izomorf/doc/latex/refman.pdf
+   lub
+  - .../izomorf/doc/html/index.html

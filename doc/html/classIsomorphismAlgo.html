@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Dokumentacja klasy IsomorphismAlgo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#pub-types">Typy publiczne</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pri-types">Typy prywatne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="classIsomorphismAlgo-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy IsomorphismAlgo</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>klasa reprezentuje algorytm do weryfikacji izomorfizmu grafów  
+ <a href="classIsomorphismAlgo.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="isomorphismAlgo_8hpp_source.html">isomorphismAlgo.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo_1_1EdgeComparator.html">EdgeComparator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">komparator do sortowania krawędzi w DFS lesie  <a href="classIsomorphismAlgo_1_1EdgeComparator.html#details">Więcej...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Typy publiczne</h2></td></tr>
+<tr class="memitem:ad95c1101cd4ef09d4a581d8fbe44aff0"><td class="memItemLeft" align="right" valign="top">typedef std::map<br class="typebreak"/>
+&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>, <br class="typebreak"/>
+<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a></td></tr>
+<tr class="memdesc:ad95c1101cd4ef09d4a581d8fbe44aff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapa do reprezentacji izomorfizmu dwóch grafów  <a href="#ad95c1101cd4ef09d4a581d8fbe44aff0">Więcej...</a><br/></td></tr>
+<tr class="separator:ad95c1101cd4ef09d4a581d8fbe44aff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a9ce685f18e7dc74ad6af1b70b8f1073e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a9ce685f18e7dc74ad6af1b70b8f1073e">IsomorphismAlgo</a> (const <a class="el" href="classGraph.html">Graph</a> &amp;_graphX, const <a class="el" href="classGraph.html">Graph</a> &amp;_graphY)</td></tr>
+<tr class="memdesc:a9ce685f18e7dc74ad6af1b70b8f1073e"><td class="mdescLeft">&#160;</td><td class="mdescRight">konstruktor biorący referencje na dwa grafy  <a href="#a9ce685f18e7dc74ad6af1b70b8f1073e">Więcej...</a><br/></td></tr>
+<tr class="separator:a9ce685f18e7dc74ad6af1b70b8f1073e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a1df7c1d6b397a43b93f69e51a6849"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a57a1df7c1d6b397a43b93f69e51a6849">isIsomorphism</a> ()</td></tr>
+<tr class="memdesc:a57a1df7c1d6b397a43b93f69e51a6849"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja weryfikująca izomorfizm grafów podanych w konstruktorze  <a href="#a57a1df7c1d6b397a43b93f69e51a6849">Więcej...</a><br/></td></tr>
+<tr class="separator:a57a1df7c1d6b397a43b93f69e51a6849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad129995900091c355428eab6418f1a56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#ad129995900091c355428eab6418f1a56">meetsRequirements</a> ()</td></tr>
+<tr class="memdesc:ad129995900091c355428eab6418f1a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">sprawdź warunki podstawowe izomorfizmu grafów podanych w konstruktorze.  <a href="#ad129995900091c355428eab6418f1a56">Więcej...</a><br/></td></tr>
+<tr class="separator:ad129995900091c355428eab6418f1a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043622f6de8535919784045ca8cc97cf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a043622f6de8535919784045ca8cc97cf">getIsoMap</a> () const </td></tr>
+<tr class="memdesc:a043622f6de8535919784045ca8cc97cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca referencję na przekształcenie izomorficzne, otrzymane przy weryfikacji izomorfizmu.  <a href="#a043622f6de8535919784045ca8cc97cf">Więcej...</a><br/></td></tr>
+<tr class="separator:a043622f6de8535919784045ca8cc97cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af4fec0a6fc1877427d637bcd84a1ab"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a6af4fec0a6fc1877427d637bcd84a1ab">getInfo</a> () const </td></tr>
+<tr class="memdesc:a6af4fec0a6fc1877427d637bcd84a1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">informacje pomocnicze na temat obiektu klasy <a class="el" href="classIsomorphismAlgo.html">IsomorphismAlgo</a>  <a href="#a6af4fec0a6fc1877427d637bcd84a1ab">Więcej...</a><br/></td></tr>
+<tr class="separator:a6af4fec0a6fc1877427d637bcd84a1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:ae8249f495dbf6ac95c89f468ac9c1be4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#ae8249f495dbf6ac95c89f468ac9c1be4">verifyIsomorphism</a> (const <a class="el" href="classGraph.html">Graph</a> &amp;_graphX, const <a class="el" href="classGraph.html">Graph</a> &amp;_graphY, const <a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> &amp;f)</td></tr>
+<tr class="memdesc:ae8249f495dbf6ac95c89f468ac9c1be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weryfikuje przekształcenie izomorficzne dwóch grafów.  <a href="#ae8249f495dbf6ac95c89f468ac9c1be4">Więcej...</a><br/></td></tr>
+<tr class="separator:ae8249f495dbf6ac95c89f468ac9c1be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Typy prywatne</h2></td></tr>
+<tr class="memitem:ab4ec6489271a99fae3bd2476b22ef35b"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">dfs_idx_t</a></td></tr>
+<tr class="memdesc:ab4ec6489271a99fae3bd2476b22ef35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">indeks wierzchołka DFS lasu  <a href="#ab4ec6489271a99fae3bd2476b22ef35b">Więcej...</a><br/></td></tr>
+<tr class="separator:ab4ec6489271a99fae3bd2476b22ef35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5e2b83f11243efd51460172b3b0cfa"><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
+&lt; <a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">edge_iter</a></td></tr>
+<tr class="memdesc:a2c5e2b83f11243efd51460172b3b0cfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator po posortowanych krawędziach  <a href="#a2c5e2b83f11243efd51460172b3b0cfa">Więcej...</a><br/></td></tr>
+<tr class="separator:a2c5e2b83f11243efd51460172b3b0cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a848c1d965a1c201d768513f756629bbe"><td class="memItemLeft" align="right" valign="top">typedef std::map<br class="typebreak"/>
+&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>, <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">dfs_idx_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a></td></tr>
+<tr class="memdesc:a848c1d965a1c201d768513f756629bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapowanie <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> -&gt; <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a>  <a href="#a848c1d965a1c201d768513f756629bbe">Więcej...</a><br/></td></tr>
+<tr class="separator:a848c1d965a1c201d768513f756629bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906dbedec7eb2192c4a8963323031704"><td class="memItemLeft" align="right" valign="top">typedef std::vector<br class="typebreak"/>
+&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">dfs_vec_t</a></td></tr>
+<tr class="memdesc:a906dbedec7eb2192c4a8963323031704"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapowanie <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> -&gt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>  <a href="#a906dbedec7eb2192c4a8963323031704">Więcej...</a><br/></td></tr>
+<tr class="separator:a906dbedec7eb2192c4a8963323031704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:aa10814d9f3fe70fde74ec4f6aadb6273"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#aa10814d9f3fe70fde74ec4f6aadb6273">match</a> (<a class="el" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">edge_iter</a> iter, int dfs_num_k)</td></tr>
+<tr class="memdesc:aa10814d9f3fe70fde74ec4f6aadb6273"><td class="mdescLeft">&#160;</td><td class="mdescRight">główna procedura sprawdzająca izomorfizm grafów  <a href="#aa10814d9f3fe70fde74ec4f6aadb6273">Więcej...</a><br/></td></tr>
+<tr class="separator:aa10814d9f3fe70fde74ec4f6aadb6273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249ab9bd04912a86f39388976dd055ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a249ab9bd04912a86f39388976dd055ca">resetData</a> ()</td></tr>
+<tr class="memdesc:a249ab9bd04912a86f39388976dd055ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">czyści struktury danych  <a href="#a249ab9bd04912a86f39388976dd055ca">Więcej...</a><br/></td></tr>
+<tr class="separator:a249ab9bd04912a86f39388976dd055ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af639949389513c66aa9d4c9dd686b147"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#af639949389513c66aa9d4c9dd686b147">countInvBuckets</a> ()</td></tr>
+<tr class="memdesc:af639949389513c66aa9d4c9dd686b147"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyznacza liczność wierzchołków o tych samych 'stopniach' (invariant) w obu grafach.  <a href="#af639949389513c66aa9d4c9dd686b147">Więcej...</a><br/></td></tr>
+<tr class="separator:af639949389513c66aa9d4c9dd686b147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491943424391031d479fdcde3afb2ed5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a491943424391031d479fdcde3afb2ed5">numberVertexes</a> ()</td></tr>
+<tr class="memdesc:a491943424391031d479fdcde3afb2ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">numeruje wierzchołki grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> zgodnie z czasem przechodzenia DFS  <a href="#a491943424391031d479fdcde3afb2ed5">Więcej...</a><br/></td></tr>
+<tr class="separator:a491943424391031d479fdcde3afb2ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b487ae56ceec1206c0c0e21fb49def0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a5b487ae56ceec1206c0c0e21fb49def0">orderEdges</a> ()</td></tr>
+<tr class="memdesc:a5b487ae56ceec1206c0c0e21fb49def0"><td class="mdescLeft">&#160;</td><td class="mdescRight">pobiera i sortuje krawędzie grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>  <a href="#a5b487ae56ceec1206c0c0e21fb49def0">Więcej...</a><br/></td></tr>
+<tr class="separator:a5b487ae56ceec1206c0c0e21fb49def0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a78bc7264b0a6a264b0343209b3ca3647"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">graphX</a></td></tr>
+<tr class="memdesc:a78bc7264b0a6a264b0343209b3ca3647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graf X na podstawie którego budowany będzie DFS las.  <a href="#a78bc7264b0a6a264b0343209b3ca3647">Więcej...</a><br/></td></tr>
+<tr class="separator:a78bc7264b0a6a264b0343209b3ca3647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7656ae201d816e62edda60462cdb3a6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">graphY</a></td></tr>
+<tr class="memdesc:a7656ae201d816e62edda60462cdb3a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graf Y w którym szukane będą wierzchołki izomorficzne.  <a href="#a7656ae201d816e62edda60462cdb3a6e">Więcej...</a><br/></td></tr>
+<tr class="separator:a7656ae201d816e62edda60462cdb3a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75072a3ecb3b6ed97207b016a83b8571"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a75072a3ecb3b6ed97207b016a83b8571">f_map</a></td></tr>
+<tr class="memdesc:a75072a3ecb3b6ed97207b016a83b8571"><td class="mdescLeft">&#160;</td><td class="mdescRight">przekształcenie izomorficzne wierzchołków grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> na <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a>  <a href="#a75072a3ecb3b6ed97207b016a83b8571">Więcej...</a><br/></td></tr>
+<tr class="separator:a75072a3ecb3b6ed97207b016a83b8571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de551ab18fc95ef86ea8c79260656b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a4de551ab18fc95ef86ea8c79260656b2">dfs_num</a></td></tr>
+<tr class="memdesc:a4de551ab18fc95ef86ea8c79260656b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapowanie <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> -&gt; <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> dla wierzchołków grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>  <a href="#a4de551ab18fc95ef86ea8c79260656b2">Więcej...</a><br/></td></tr>
+<tr class="separator:a4de551ab18fc95ef86ea8c79260656b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd06f1251c222a483b7188313a11193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">dfs_vec_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#affd06f1251c222a483b7188313a11193">dfs_vec</a></td></tr>
+<tr class="memdesc:affd06f1251c222a483b7188313a11193"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapowanie <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> -&gt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> dla wierzchołków grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>  <a href="#affd06f1251c222a483b7188313a11193">Więcej...</a><br/></td></tr>
+<tr class="separator:affd06f1251c222a483b7188313a11193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad800e9783285450edbcdcb3b65c4133"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#aad800e9783285450edbcdcb3b65c4133">in_S</a></td></tr>
+<tr class="memdesc:aad800e9783285450edbcdcb3b65c4133"><td class="mdescLeft">&#160;</td><td class="mdescRight">wierzchołki grafu <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a> już dopasowane  <a href="#aad800e9783285450edbcdcb3b65c4133">Więcej...</a><br/></td></tr>
+<tr class="separator:aad800e9783285450edbcdcb3b65c4133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0763ab4b07232f8aa9ca80561f353ad1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a0763ab4b07232f8aa9ca80561f353ad1">ordered_edges</a></td></tr>
+<tr class="memdesc:a0763ab4b07232f8aa9ca80561f353ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">posortowane krawędzie DFS lasu, odpowiadające krawędziom grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>  <a href="#a0763ab4b07232f8aa9ca80561f353ad1">Więcej...</a><br/></td></tr>
+<tr class="separator:a0763ab4b07232f8aa9ca80561f353ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf2ede3f4668ecb3ea8a005e190c9f4"><td class="memItemLeft" align="right" valign="top">std::map&lt; unsigned int, <br class="typebreak"/>
+unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a3cf2ede3f4668ecb3ea8a005e190c9f4">invX_buckets</a></td></tr>
+<tr class="memdesc:a3cf2ede3f4668ecb3ea8a005e190c9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>  <a href="#a3cf2ede3f4668ecb3ea8a005e190c9f4">Więcej...</a><br/></td></tr>
+<tr class="separator:a3cf2ede3f4668ecb3ea8a005e190c9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcd9224b6360d3e5776307d8680f975"><td class="memItemLeft" align="right" valign="top">std::map&lt; unsigned int, <br class="typebreak"/>
+unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#a8dcd9224b6360d3e5776307d8680f975">invY_buckets</a></td></tr>
+<tr class="memdesc:a8dcd9224b6360d3e5776307d8680f975"><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a>  <a href="#a8dcd9224b6360d3e5776307d8680f975">Więcej...</a><br/></td></tr>
+<tr class="separator:a8dcd9224b6360d3e5776307d8680f975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af185ab17b845defe14c0998c173e70ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIsomorphismAlgo.html#af185ab17b845defe14c0998c173e70ae">edges_count_k</a></td></tr>
+<tr class="memdesc:af185ab17b845defe14c0998c173e70ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">licznik wykorzystywany w metodzie <a class="el" href="classIsomorphismAlgo.html#aa10814d9f3fe70fde74ec4f6aadb6273" title="główna procedura sprawdzająca izomorfizm grafów ">IsomorphismAlgo::match</a>  <a href="#af185ab17b845defe14c0998c173e70ae">Więcej...</a><br/></td></tr>
+<tr class="separator:af185ab17b845defe14c0998c173e70ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>klasa reprezentuje algorytm do weryfikacji izomorfizmu grafów </p>
+<p>Klasa zawiera struktury danych i funkcje pomocnicze realizujące rozszerzoną wersję algorytmu powrotów.</p>
+<p>Udostępnia także funkcję weryfikującą izomorfizm dwóch grafów. </p>
+</div><h2 class="groupheader">Dokumentacja składowych definicji typu</h2>
+<a class="anchor" id="ab4ec6489271a99fae3bd2476b22ef35b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>indeks wierzchołka DFS lasu </p>
+
+</div>
+</div>
+<a class="anchor" id="a848c1d965a1c201d768513f756629bbe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>, <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">dfs_idx_t</a>&gt; <a class="el" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">IsomorphismAlgo::dfs_num_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapowanie <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> -&gt; <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a906dbedec7eb2192c4a8963323031704"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>&gt; <a class="el" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">IsomorphismAlgo::dfs_vec_t</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapowanie <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> -&gt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a2c5e2b83f11243efd51460172b3b0cfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a>&gt;::const_iterator <a class="el" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">IsomorphismAlgo::edge_iter</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>iterator po posortowanych krawędziach </p>
+
+</div>
+</div>
+<a class="anchor" id="ad95c1101cd4ef09d4a581d8fbe44aff0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>&gt; <a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">IsomorphismAlgo::iso_map</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>mapa do reprezentacji izomorfizmu dwóch grafów </p>
+<p>mapa znacznik (grafu X) -&gt; znacznik (grafu Y) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a9ce685f18e7dc74ad6af1b70b8f1073e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IsomorphismAlgo::IsomorphismAlgo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>_graphX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>_graphY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>konstruktor biorący referencje na dwa grafy </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_graphX</td><td>graf X </td></tr>
+    <tr><td class="paramname">_graphY</td><td>graf Y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="af639949389513c66aa9d4c9dd686b147"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsomorphismAlgo::countInvBuckets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyznacza liczność wierzchołków o tych samych 'stopniach' (invariant) w obu grafach. </p>
+<p>Generuje struktury danych <a class="el" href="classIsomorphismAlgo.html#a3cf2ede3f4668ecb3ea8a005e190c9f4">IsomorphismAlgo::invX_buckets</a> i <a class="el" href="classIsomorphismAlgo.html#a8dcd9224b6360d3e5776307d8680f975">IsomorphismAlgo::invY_buckets</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6af4fec0a6fc1877427d637bcd84a1ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string IsomorphismAlgo::getInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>informacje pomocnicze na temat obiektu klasy <a class="el" href="classIsomorphismAlgo.html">IsomorphismAlgo</a> </p>
+<dl class="section return"><dt>Zwraca</dt><dd>string z informacjami pomocniczymi </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a043622f6de8535919784045ca8cc97cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a>&amp; IsomorphismAlgo::getIsoMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zwraca referencję na przekształcenie izomorficzne, otrzymane przy weryfikacji izomorfizmu. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja na mapę znaczników grafu X na graf Y </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a57a1df7c1d6b397a43b93f69e51a6849"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsomorphismAlgo::isIsomorphism </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>funkcja weryfikująca izomorfizm grafów podanych w konstruktorze </p>
+<ul>
+<li>W pierwszym kroku sprawdzane jest czy grafy spełniają wymagania podstawowe <a class="el" href="classIsomorphismAlgo.html#ad129995900091c355428eab6418f1a56">IsomorphismAlgo::meetsRequirements</a>.</li>
+<li>Jeżeli grafy spełniają te wymagania, przygotowywane są struktury danych.</li>
+<li>Następnie wykonywany jest właściwy algorytm (metoda powrotów).</li>
+<li>Jeżeli grafy są izomorficzne, po wykonaniu się funkcji obiekt klasy zawiera przekształcenie izomorficzne z grafu X na graf Y.</li>
+</ul>
+<dl class="section return"><dt>Zwraca</dt><dd>czy grafy <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> i <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e" title="Graf Y w którym szukane będą wierzchołki izomorficzne. ">IsomorphismAlgo::graphY</a> są izomorficzne. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa10814d9f3fe70fde74ec4f6aadb6273"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsomorphismAlgo::match </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIsomorphismAlgo.html#a2c5e2b83f11243efd51460172b3b0cfa">edge_iter</a>&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dfs_num_k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>główna procedura sprawdzająca izomorfizm grafów </p>
+<p>Metoda rekurencyjna, która próbuje przyporządkować k-temu wierzchołkowi DFS lasu, wierzchołek z grafu G_Y, tak żeby G_X[k] ~= G_Y[S].</p>
+<p>Procedura przechodzi przez wierzchołki DFS lesu. Porusza się po odpowiednio posortowanych krawędziach grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>. Gdy uda się przejść wszystkie krawędzie grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>, procedura kończy się sukcesem.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>iterator po posortowanych krawędziach grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a>, czyli po <a class="el" href="classIsomorphismAlgo.html#a4de551ab18fc95ef86ea8c79260656b2">IsomorphismAlgo::dfs_num</a>. </td></tr>
+    <tr><td class="paramname">dfs_num_k</td><td>indeks rozpatrywanego wierzchołka DFS lasu.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy krawędź wskazywana przez <code>iter</code> może zostać przyporządkowana jakieś niewykorzystanej krawędzi grafu <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad129995900091c355428eab6418f1a56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsomorphismAlgo::meetsRequirements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sprawdź warunki podstawowe izomorfizmu grafów podanych w konstruktorze. </p>
+<p>Sprawdzane warunki to:</p>
+<ul>
+<li>Taka sama liczba wierzchołków.</li>
+<li>Taka sama liczba krawędzi.</li>
+<li>Taka sama liczba wierzchołków o jednakowych 'stopniach' (invariant)</li>
+</ul>
+<dl class="section return"><dt>Zwraca</dt><dd>czy grafy <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> i <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e" title="Graf Y w którym szukane będą wierzchołki izomorficzne. ">IsomorphismAlgo::graphY</a> mają szansę być izomorficzne. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a491943424391031d479fdcde3afb2ed5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsomorphismAlgo::numberVertexes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>numeruje wierzchołki grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> zgodnie z czasem przechodzenia DFS </p>
+<p>Generuje struktury danych <a class="el" href="classIsomorphismAlgo.html#a4de551ab18fc95ef86ea8c79260656b2">IsomorphismAlgo::dfs_num</a> i <a class="el" href="classIsomorphismAlgo.html#affd06f1251c222a483b7188313a11193">IsomorphismAlgo::dfs_vec</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b487ae56ceec1206c0c0e21fb49def0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsomorphismAlgo::orderEdges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pobiera i sortuje krawędzie grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> </p>
+<p>Do sortowania wykorzystywany jest komaprator <a class="el" href="classIsomorphismAlgo_1_1EdgeComparator.html">IsomorphismAlgo::EdgeComparator</a></p>
+<p>Generuje strukturę danych <a class="el" href="classIsomorphismAlgo.html#a0763ab4b07232f8aa9ca80561f353ad1">IsomorphismAlgo::ordered_edges</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a249ab9bd04912a86f39388976dd055ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsomorphismAlgo::resetData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czyści struktury danych </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8249f495dbf6ac95c89f468ac9c1be4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsomorphismAlgo::verifyIsomorphism </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>_graphX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>_graphY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Weryfikuje przekształcenie izomorficzne dwóch grafów. </p>
+<p>Weryfikuje, czy przekształcenie f: X -&gt; Y jest izomorfizmem grafów.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_graphX</td><td>referencja na graf X </td></tr>
+    <tr><td class="paramname">_graphY</td><td>referencja na graf Y </td></tr>
+    <tr><td class="paramname">f</td><td>referencja na przekształcenie</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy przekształcenie jest izomorfizmem </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a4de551ab18fc95ef86ea8c79260656b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIsomorphismAlgo.html#a848c1d965a1c201d768513f756629bbe">dfs_num_t</a> IsomorphismAlgo::dfs_num</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapowanie <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> -&gt; <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> dla wierzchołków grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="affd06f1251c222a483b7188313a11193"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIsomorphismAlgo.html#a906dbedec7eb2192c4a8963323031704">dfs_vec_t</a> IsomorphismAlgo::dfs_vec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapowanie <a class="el" href="classIsomorphismAlgo.html#ab4ec6489271a99fae3bd2476b22ef35b">IsomorphismAlgo::dfs_idx_t</a> -&gt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a> dla wierzchołków grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="af185ab17b845defe14c0998c173e70ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IsomorphismAlgo::edges_count_k</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>licznik wykorzystywany w metodzie <a class="el" href="classIsomorphismAlgo.html#aa10814d9f3fe70fde74ec4f6aadb6273" title="główna procedura sprawdzająca izomorfizm grafów ">IsomorphismAlgo::match</a> </p>
+<p>Licznik wskazuje ile jest krawędzi incydentnych z rozpatrywanym wierzchołkiem k grafu G_X[k]. </p>
+
+</div>
+</div>
+<a class="anchor" id="a75072a3ecb3b6ed97207b016a83b8571"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIsomorphismAlgo.html#ad95c1101cd4ef09d4a581d8fbe44aff0">iso_map</a> IsomorphismAlgo::f_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>przekształcenie izomorficzne wierzchołków grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> na <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a78bc7264b0a6a264b0343209b3ca3647"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGraph.html">Graph</a>&amp; IsomorphismAlgo::graphX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Graf X na podstawie którego budowany będzie DFS las. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7656ae201d816e62edda60462cdb3a6e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGraph.html">Graph</a>&amp; IsomorphismAlgo::graphY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Graf Y w którym szukane będą wierzchołki izomorficzne. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad800e9783285450edbcdcb3b65c4133"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>&gt; IsomorphismAlgo::in_S</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wierzchołki grafu <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a> już dopasowane </p>
+
+</div>
+</div>
+<a class="anchor" id="a3cf2ede3f4668ecb3ea8a005e190c9f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;unsigned int, unsigned int&gt; IsomorphismAlgo::invX_buckets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a8dcd9224b6360d3e5776307d8680f975"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;unsigned int, unsigned int&gt; IsomorphismAlgo::invY_buckets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>struktura pomocnicza, do wyznaczenia liczby wierzchołków o takim samym 'stopniu' (invariant) w grafie <a class="el" href="classIsomorphismAlgo.html#a7656ae201d816e62edda60462cdb3a6e">IsomorphismAlgo::graphY</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a0763ab4b07232f8aa9ca80561f353ad1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structGraph_1_1Edge.html">Graph::Edge</a>&gt; IsomorphismAlgo::ordered_edges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>posortowane krawędzie DFS lasu, odpowiadające krawędziom grafu <a class="el" href="classIsomorphismAlgo.html#a78bc7264b0a6a264b0343209b3ca3647">IsomorphismAlgo::graphX</a> </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="isomorphismAlgo_8hpp_source.html">isomorphismAlgo.hpp</a></li>
+<li><a class="el" href="isomorphismAlgo_8cpp.html">isomorphismAlgo.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

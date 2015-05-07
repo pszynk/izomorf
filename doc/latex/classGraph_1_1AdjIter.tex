@@ -1,0 +1,146 @@
+\hypertarget{classGraph_1_1AdjIter}{\section{Dokumentacja klasy Graph\-:\-:Adj\-Iter}
+\label{classGraph_1_1AdjIter}\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}}
+}
+
+
+klasa pomocnicza, iterator po znacznikach wierzchołków sąsiadujących z wierzchołkiem  
+
+
+
+
+{\ttfamily \#include $<$graph.\-hpp$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_1_1AdjIter_aae861e1fb89ed4a5aa252186a6b43f6e}{Adj\-Iter} (const \hyperlink{classGraph_1_1AdjIter_a288bf18f510dc63ed539c9f55919e38b}{Map} \&\-\_\-idx\-\_\-label\-\_\-map, const \hyperlink{classVertex_ac889dee153c9abe7b3fb652ec6583df9}{Vertex\-::iterator} \&\-\_\-vit)
+\begin{DoxyCompactList}\small\item\em konstruktor potrzebuje mapy i wierzchołka \end{DoxyCompactList}\item 
+\hyperlink{classGraph_1_1AdjIter}{Adj\-Iter} \& \hyperlink{classGraph_1_1AdjIter_aac922624e9e58c1a03740beb049a423c}{operator++} ()
+\item 
+const \hyperlink{classGraph_1_1AdjIter}{Adj\-Iter} \hyperlink{classGraph_1_1AdjIter_a5afaf8c8b5298f207356ce1979166797}{operator++} (int)
+\item 
+const \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} \& \hyperlink{classGraph_1_1AdjIter_acc41cdab52336b6ca85fbc74c79ed027}{operator$\ast$} ()
+\item 
+const \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $\ast$ \hyperlink{classGraph_1_1AdjIter_a261abb3cb6e6447c061c670d0636dd34}{operator-\/$>$} ()
+\item 
+bool \hyperlink{classGraph_1_1AdjIter_a2777ef4fb2868c735be23b8354c07364}{operator==} (const \hyperlink{classGraph_1_1AdjIter}{Adj\-Iter} \&rhs)
+\item 
+bool \hyperlink{classGraph_1_1AdjIter_a7231b79f13eb2b0028debc480c077e6e}{operator!=} (const \hyperlink{classGraph_1_1AdjIter}{Adj\-Iter} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Typy prywatne}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map\\*
+$<$ \hyperlink{classVertex_a12fe2194264f72b70b284bba723052c1}{Vertex\-::idx\-\_\-t}, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{label\-\_\-t} $>$ \hyperlink{classGraph_1_1AdjIter_a288bf18f510dc63ed539c9f55919e38b}{Map}
+\begin{DoxyCompactList}\small\item\em mapowanie za pomocą mapy index -\/$>$ znacznik \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classGraph_1_1AdjIter_a288bf18f510dc63ed539c9f55919e38b}{Map} \& \hyperlink{classGraph_1_1AdjIter_a1e4efc1aa5f449f16e1f8651bab11987}{idx\-\_\-label\-\_\-map}
+\begin{DoxyCompactList}\small\item\em mapa indeks -\/$>$ znacznik \end{DoxyCompactList}\item 
+\hyperlink{classVertex_ac889dee153c9abe7b3fb652ec6583df9}{Vertex\-::iterator} \hyperlink{classGraph_1_1AdjIter_ad76d2b5dfade41f5c25cfc02e26dd6e7}{vit}
+\begin{DoxyCompactList}\small\item\em iterator po indeksach wierzchołków sąsiadujących \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+klasa pomocnicza, iterator po znacznikach wierzchołków sąsiadujących z wierzchołkiem 
+
+Ponieważ wewnątrz grafu wierzchołki są indeksowane w inny sposób niż z zewnątrz, potrzebny jest iterator mapujący indeks wierzchołka na jego znacznik 
+
+\subsection{Dokumentacja składowych definicji typu}
+\hypertarget{classGraph_1_1AdjIter_a288bf18f510dc63ed539c9f55919e38b}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!Map@{Map}}
+\index{Map@{Map}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf Vertex\-::idx\-\_\-t}, {\bf label\-\_\-t}$>$ {\bf Graph\-::\-Adj\-Iter\-::\-Map}\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_1_1AdjIter_a288bf18f510dc63ed539c9f55919e38b}
+
+
+mapowanie za pomocą mapy index -\/$>$ znacznik 
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classGraph_1_1AdjIter_aae861e1fb89ed4a5aa252186a6b43f6e}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!Adj\-Iter@{Adj\-Iter}}
+\index{Adj\-Iter@{Adj\-Iter}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{Adj\-Iter}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-::\-Adj\-Iter\-::\-Adj\-Iter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Map} \&}]{\-\_\-idx\-\_\-label\-\_\-map, }
+\item[{const {\bf Vertex\-::iterator} \&}]{\-\_\-vit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_aae861e1fb89ed4a5aa252186a6b43f6e}
+
+
+konstruktor potrzebuje mapy i wierzchołka 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \-\_\-idx\-\_\-label\-\_\-map} & mapa do mapowania \\
+\hline
+{\em \-\_\-vit} & wierzchołek \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classGraph_1_1AdjIter_a7231b79f13eb2b0028debc480c077e6e}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::\-Adj\-Iter\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Adj\-Iter} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_a7231b79f13eb2b0028debc480c077e6e}
+\hypertarget{classGraph_1_1AdjIter_acc41cdab52336b6ca85fbc74c79ed027}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf label\-\_\-t}\& Graph\-::\-Adj\-Iter\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_acc41cdab52336b6ca85fbc74c79ed027}
+\hypertarget{classGraph_1_1AdjIter_aac922624e9e58c1a03740beb049a423c}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!operator++@{operator++}}
+\index{operator++@{operator++}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adj\-Iter}\& Graph\-::\-Adj\-Iter\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_aac922624e9e58c1a03740beb049a423c}
+\hypertarget{classGraph_1_1AdjIter_a5afaf8c8b5298f207356ce1979166797}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!operator++@{operator++}}
+\index{operator++@{operator++}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Adj\-Iter} Graph\-::\-Adj\-Iter\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_a5afaf8c8b5298f207356ce1979166797}
+\hypertarget{classGraph_1_1AdjIter_a261abb3cb6e6447c061c670d0636dd34}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf label\-\_\-t}$\ast$ Graph\-::\-Adj\-Iter\-::operator-\/$>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_a261abb3cb6e6447c061c670d0636dd34}
+\hypertarget{classGraph_1_1AdjIter_a2777ef4fb2868c735be23b8354c07364}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!operator==@{operator==}}
+\index{operator==@{operator==}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::\-Adj\-Iter\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Adj\-Iter} \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGraph_1_1AdjIter_a2777ef4fb2868c735be23b8354c07364}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classGraph_1_1AdjIter_a1e4efc1aa5f449f16e1f8651bab11987}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!idx\-\_\-label\-\_\-map@{idx\-\_\-label\-\_\-map}}
+\index{idx\-\_\-label\-\_\-map@{idx\-\_\-label\-\_\-map}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{idx\-\_\-label\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Map}\& Graph\-::\-Adj\-Iter\-::idx\-\_\-label\-\_\-map\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_1_1AdjIter_a1e4efc1aa5f449f16e1f8651bab11987}
+
+
+mapa indeks -\/$>$ znacznik 
+
+\hypertarget{classGraph_1_1AdjIter_ad76d2b5dfade41f5c25cfc02e26dd6e7}{\index{Graph\-::\-Adj\-Iter@{Graph\-::\-Adj\-Iter}!vit@{vit}}
+\index{vit@{vit}!Graph::AdjIter@{Graph\-::\-Adj\-Iter}}
+\subsubsection[{vit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex\-::iterator} Graph\-::\-Adj\-Iter\-::vit\hspace{0.3cm}{\ttfamily [private]}}}\label{classGraph_1_1AdjIter_ad76d2b5dfade41f5c25cfc02e26dd6e7}
+
+
+iterator po indeksach wierzchołków sąsiadujących 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graph_8hpp}{graph.\-hpp}\end{DoxyCompactItemize}

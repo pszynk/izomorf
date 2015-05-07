@@ -1,0 +1,1687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Izomorfizm grafów: Dokumentacja klasy Graph</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Izomorfizm grafów
+   </div>
+   <div id="projectbrief">Sprawdzanie izomorfizmu dwóch spójnych grafów skierowanych</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#pub-types">Typy publiczne</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="#friends">Przyjaciele</a> &#124;
+<a href="classGraph-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Graph</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>klasa implementuje graf w reprezentacji listowej  
+ <a href="classGraph.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="graph_8hpp_source.html">graph.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph_1_1AdjIter.html">AdjIter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">klasa pomocnicza, iterator po znacznikach wierzchołków sąsiadujących z wierzchołkiem  <a href="classGraph_1_1AdjIter.html#details">Więcej...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraph_1_1Edge.html">Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura reprezentuje krawędź skierowaną w grafie  <a href="structGraph_1_1Edge.html#details">Więcej...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Typy publiczne</h2></td></tr>
+<tr class="memitem:a2237a0ada8484c37b8200c0e3685ca71"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a></td></tr>
+<tr class="memdesc:a2237a0ada8484c37b8200c0e3685ca71"><td class="mdescLeft">&#160;</td><td class="mdescRight">znacznik wierzchołka w grafie  <a href="#a2237a0ada8484c37b8200c0e3685ca71">Więcej...</a><br/></td></tr>
+<tr class="separator:a2237a0ada8484c37b8200c0e3685ca71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac91822a10fe3fc10ea8449531fc32b95"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a></td></tr>
+<tr class="memdesc:ac91822a10fe3fc10ea8449531fc32b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">zbiór znaczników wierzchołków  <a href="#ac91822a10fe3fc10ea8449531fc32b95">Więcej...</a><br/></td></tr>
+<tr class="separator:ac91822a10fe3fc10ea8449531fc32b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865985566962f6fcab1c0a465305424f"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak"/>
+vertex_set_t::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a865985566962f6fcab1c0a465305424f">iterator</a></td></tr>
+<tr class="memdesc:a865985566962f6fcab1c0a465305424f"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator po zbiorze znaczników  <a href="#a865985566962f6fcab1c0a465305424f">Więcej...</a><br/></td></tr>
+<tr class="separator:a865985566962f6fcab1c0a465305424f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2f79e14998a438e64bf07f31abb359"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a8d2f79e14998a438e64bf07f31abb359">dfs_path</a></td></tr>
+<tr class="memdesc:a8d2f79e14998a438e64bf07f31abb359"><td class="mdescLeft">&#160;</td><td class="mdescRight">struktura pomocnicza reprezentująca krawędź skierowaną w grafie  <a href="#a8d2f79e14998a438e64bf07f31abb359">Więcej...</a><br/></td></tr>
+<tr class="separator:a8d2f79e14998a438e64bf07f31abb359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10e18e1cb3834650bd69bad6bec3fc0"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af10e18e1cb3834650bd69bad6bec3fc0">dfs_visited</a></td></tr>
+<tr class="memdesc:af10e18e1cb3834650bd69bad6bec3fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">zbiór wcześniej odwiedzonych wierzchołków  <a href="#af10e18e1cb3834650bd69bad6bec3fc0">Więcej...</a><br/></td></tr>
+<tr class="separator:af10e18e1cb3834650bd69bad6bec3fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7875f5959501bdafb3ba4dd428dfb10b"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; <a class="el" href="structGraph_1_1Edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a></td></tr>
+<tr class="memdesc:a7875f5959501bdafb3ba4dd428dfb10b"><td class="mdescLeft">&#160;</td><td class="mdescRight">zbiór krawędzi  <a href="#a7875f5959501bdafb3ba4dd428dfb10b">Więcej...</a><br/></td></tr>
+<tr class="separator:a7875f5959501bdafb3ba4dd428dfb10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ae4c72b8ac4d693c49800a4c7e273654f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae4c72b8ac4d693c49800a4c7e273654f">Graph</a> ()</td></tr>
+<tr class="memdesc:ae4c72b8ac4d693c49800a4c7e273654f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stwórz pusty graf  <a href="#ae4c72b8ac4d693c49800a4c7e273654f">Więcej...</a><br/></td></tr>
+<tr class="separator:ae4c72b8ac4d693c49800a4c7e273654f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2940fa9094c860f7e4ff5b3f513c2732"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a2940fa9094c860f7e4ff5b3f513c2732">getVertexCount</a> () const </td></tr>
+<tr class="memdesc:a2940fa9094c860f7e4ff5b3f513c2732"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć liczbę wierzchołków w grafie  <a href="#a2940fa9094c860f7e4ff5b3f513c2732">Więcej...</a><br/></td></tr>
+<tr class="separator:a2940fa9094c860f7e4ff5b3f513c2732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d560f48bc0d31e822ab660984a570a8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a5d560f48bc0d31e822ab660984a570a8">getEdgeCount</a> () const </td></tr>
+<tr class="memdesc:a5d560f48bc0d31e822ab660984a570a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć liczbę krawędzi w grafie  <a href="#a5d560f48bc0d31e822ab660984a570a8">Więcej...</a><br/></td></tr>
+<tr class="separator:a5d560f48bc0d31e822ab660984a570a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aebca6e6e0d56f1beab029bdba321f4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a3aebca6e6e0d56f1beab029bdba321f4">getSize</a> () const </td></tr>
+<tr class="memdesc:a3aebca6e6e0d56f1beab029bdba321f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć liczbę wierzchołków w grafie  <a href="#a3aebca6e6e0d56f1beab029bdba321f4">Więcej...</a><br/></td></tr>
+<tr class="separator:a3aebca6e6e0d56f1beab029bdba321f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c719c0e92763e034e6519c46a1cf4b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a35c719c0e92763e034e6519c46a1cf4b">getInvariant</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:a35c719c0e92763e034e6519c46a1cf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć 'stopień' (invariant) wierzchołka  <a href="#a35c719c0e92763e034e6519c46a1cf4b">Więcej...</a><br/></td></tr>
+<tr class="separator:a35c719c0e92763e034e6519c46a1cf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1410db4047cde674ca0f602a6eb722f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ab1410db4047cde674ca0f602a6eb722f">getIn</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:ab1410db4047cde674ca0f602a6eb722f"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć wejściowość wierzchołka  <a href="#ab1410db4047cde674ca0f602a6eb722f">Więcej...</a><br/></td></tr>
+<tr class="separator:ab1410db4047cde674ca0f602a6eb722f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948347b4ce0ea0f18663bb75003406d4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a948347b4ce0ea0f18663bb75003406d4">getIn</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label, const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;vset) const </td></tr>
+<tr class="memdesc:a948347b4ce0ea0f18663bb75003406d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć wejściowość wierzchołka  <a href="#a948347b4ce0ea0f18663bb75003406d4">Więcej...</a><br/></td></tr>
+<tr class="separator:a948347b4ce0ea0f18663bb75003406d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136b8e5410d1f68c808f76cb1859026d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a136b8e5410d1f68c808f76cb1859026d">getOut</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:a136b8e5410d1f68c808f76cb1859026d"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć wyjściowość wierzchołka  <a href="#a136b8e5410d1f68c808f76cb1859026d">Więcej...</a><br/></td></tr>
+<tr class="separator:a136b8e5410d1f68c808f76cb1859026d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e23b858256af1a9ce21b74bffb62f4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a39e23b858256af1a9ce21b74bffb62f4">getOut</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label, const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;vset) const </td></tr>
+<tr class="memdesc:a39e23b858256af1a9ce21b74bffb62f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć wyjściowość wierzchołka  <a href="#a39e23b858256af1a9ce21b74bffb62f4">Więcej...</a><br/></td></tr>
+<tr class="separator:a39e23b858256af1a9ce21b74bffb62f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108b1de9af3e6cd422ded99e80a18664"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a108b1de9af3e6cd422ded99e80a18664">getEdges</a> (<a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a> &amp;edges) const </td></tr>
+<tr class="memdesc:a108b1de9af3e6cd422ded99e80a18664"><td class="mdescLeft">&#160;</td><td class="mdescRight">zapełnij zbiór krawędziami grafu  <a href="#a108b1de9af3e6cd422ded99e80a18664">Więcej...</a><br/></td></tr>
+<tr class="separator:a108b1de9af3e6cd422ded99e80a18664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fc3b29889013a4a2d271357715904d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aa9fc3b29889013a4a2d271357715904d">getEdges</a> (<a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a> &amp;edges, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="separator:aa9fc3b29889013a4a2d271357715904d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57425d2dd30d5f9ba267654deadda35a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a57425d2dd30d5f9ba267654deadda35a">getEdges</a> (<a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a> &amp;edges, const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;verts) const </td></tr>
+<tr class="separator:a57425d2dd30d5f9ba267654deadda35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c276cd34e6b1103a533e9cf6419877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a23c276cd34e6b1103a533e9cf6419877">getDFSPath</a> (<a class="el" href="classGraph.html#a8d2f79e14998a438e64bf07f31abb359">dfs_path</a> &amp;path, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> start, const <a class="el" href="classGraph.html#af10e18e1cb3834650bd69bad6bec3fc0">dfs_visited</a> &amp;visited=<a class="el" href="classGraph.html#af10e18e1cb3834650bd69bad6bec3fc0">dfs_visited</a>()) const </td></tr>
+<tr class="memdesc:a23c276cd34e6b1103a533e9cf6419877"><td class="mdescLeft">&#160;</td><td class="mdescRight">zapisz ścieżkę po przejściu grafu wgłąb (DFS)  <a href="#a23c276cd34e6b1103a533e9cf6419877">Więcej...</a><br/></td></tr>
+<tr class="separator:a23c276cd34e6b1103a533e9cf6419877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e18e8a9825e77323ebfcc70b718380"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a74e18e8a9825e77323ebfcc70b718380">getInfo</a> () const </td></tr>
+<tr class="memdesc:a74e18e8a9825e77323ebfcc70b718380"><td class="mdescLeft">&#160;</td><td class="mdescRight">informacje na temat grafu  <a href="#a74e18e8a9825e77323ebfcc70b718380">Więcej...</a><br/></td></tr>
+<tr class="separator:a74e18e8a9825e77323ebfcc70b718380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fc255863c32f9f7d1920ca4a2570fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a96fc255863c32f9f7d1920ca4a2570fe">addVertex</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label)</td></tr>
+<tr class="memdesc:a96fc255863c32f9f7d1920ca4a2570fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaj wierzchołek do grafu  <a href="#a96fc255863c32f9f7d1920ca4a2570fe">Więcej...</a><br/></td></tr>
+<tr class="separator:a96fc255863c32f9f7d1920ca4a2570fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d679a954ffea0b463d6b559aec8597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac4d679a954ffea0b463d6b559aec8597">setVertex</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label, std::initializer_list&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt; adj)</td></tr>
+<tr class="memdesc:ac4d679a954ffea0b463d6b559aec8597"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustaw wierzchołek  <a href="#ac4d679a954ffea0b463d6b559aec8597">Więcej...</a><br/></td></tr>
+<tr class="separator:ac4d679a954ffea0b463d6b559aec8597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c638cac3d3bb7b47b1aef864b2c6a69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a2c638cac3d3bb7b47b1aef864b2c6a69">setVertex</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label, std::vector&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt; adj)</td></tr>
+<tr class="memdesc:a2c638cac3d3bb7b47b1aef864b2c6a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustaw wierzchołek  <a href="#a2c638cac3d3bb7b47b1aef864b2c6a69">Więcej...</a><br/></td></tr>
+<tr class="separator:a2c638cac3d3bb7b47b1aef864b2c6a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f214a25b838ec94dff78062364694f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a7f214a25b838ec94dff78062364694f5">addEdge</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> v, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> w)</td></tr>
+<tr class="memdesc:a7f214a25b838ec94dff78062364694f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje krawędź między dwoma wierzchołkami  <a href="#a7f214a25b838ec94dff78062364694f5">Więcej...</a><br/></td></tr>
+<tr class="separator:a7f214a25b838ec94dff78062364694f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6192a41101102ca8aa6acca607c84f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac6192a41101102ca8aa6acca607c84f3">clear</a> ()</td></tr>
+<tr class="memdesc:ac6192a41101102ca8aa6acca607c84f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">usuwa wszystkie krawędzie i wierzchołki z grafu  <a href="#ac6192a41101102ca8aa6acca607c84f3">Więcej...</a><br/></td></tr>
+<tr class="separator:ac6192a41101102ca8aa6acca607c84f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d0a9b8a15458f9fd6fe2ad71debaeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ab3d0a9b8a15458f9fd6fe2ad71debaeb">isEmpty</a> () const </td></tr>
+<tr class="memdesc:ab3d0a9b8a15458f9fd6fe2ad71debaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">sprawdź czy graf nie zawiera wierzchołków  <a href="#ab3d0a9b8a15458f9fd6fe2ad71debaeb">Więcej...</a><br/></td></tr>
+<tr class="separator:ab3d0a9b8a15458f9fd6fe2ad71debaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52d8b66a416c850f24ea4a507f8bbc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aa52d8b66a416c850f24ea4a507f8bbc1">isNode</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:aa52d8b66a416c850f24ea4a507f8bbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy wierzchołek o danym znaczniku należy do grafu  <a href="#aa52d8b66a416c850f24ea4a507f8bbc1">Więcej...</a><br/></td></tr>
+<tr class="separator:aa52d8b66a416c850f24ea4a507f8bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c39ac36f29f27c0241796bd8f49973"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#af7c39ac36f29f27c0241796bd8f49973">isConnection</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> v, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> w) const </td></tr>
+<tr class="memdesc:af7c39ac36f29f27c0241796bd8f49973"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy w grafie występuje połączenie między wierzchołkami  <a href="#af7c39ac36f29f27c0241796bd8f49973">Więcej...</a><br/></td></tr>
+<tr class="separator:af7c39ac36f29f27c0241796bd8f49973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6257363d71719e5cbb7a32485606fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#afa6257363d71719e5cbb7a32485606fc">isConnection</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> v, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> w, const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;vset) const </td></tr>
+<tr class="memdesc:afa6257363d71719e5cbb7a32485606fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy w grafie indukowanym występuje połączenie między wierzchołkami  <a href="#afa6257363d71719e5cbb7a32485606fc">Więcej...</a><br/></td></tr>
+<tr class="separator:afa6257363d71719e5cbb7a32485606fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db1e55265e70cd90f392355c7fb7e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html#a865985566962f6fcab1c0a465305424f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a9db1e55265e70cd90f392355c7fb7e41">begin</a> () const </td></tr>
+<tr class="memdesc:a9db1e55265e70cd90f392355c7fb7e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator wierzchołków grafu  <a href="#a9db1e55265e70cd90f392355c7fb7e41">Więcej...</a><br/></td></tr>
+<tr class="separator:a9db1e55265e70cd90f392355c7fb7e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6826e424173fd08bdf8574ef15ce33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html#a865985566962f6fcab1c0a465305424f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#adf6826e424173fd08bdf8574ef15ce33">end</a> () const </td></tr>
+<tr class="memdesc:adf6826e424173fd08bdf8574ef15ce33"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator wierzchołków grafu  <a href="#adf6826e424173fd08bdf8574ef15ce33">Więcej...</a><br/></td></tr>
+<tr class="separator:adf6826e424173fd08bdf8574ef15ce33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3319a876a8ca646b9095c0ff0be154ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph_1_1AdjIter.html">AdjIter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a3319a876a8ca646b9095c0ff0be154ac">adjBegin</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:a3319a876a8ca646b9095c0ff0be154ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator wierzchołków incydentnych  <a href="#a3319a876a8ca646b9095c0ff0be154ac">Więcej...</a><br/></td></tr>
+<tr class="separator:a3319a876a8ca646b9095c0ff0be154ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359f0041dfa65eec7d1d658200f19a2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph_1_1AdjIter.html">AdjIter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a359f0041dfa65eec7d1d658200f19a2a">adjEnd</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:a359f0041dfa65eec7d1d658200f19a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator wierzchołków incydentnych  <a href="#a359f0041dfa65eec7d1d658200f19a2a">Więcej...</a><br/></td></tr>
+<tr class="separator:a359f0041dfa65eec7d1d658200f19a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae82fbe23587b4650fe1356b0fb72645e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae82fbe23587b4650fe1356b0fb72645e">dumpVertex</a> (const <a class="el" href="classVertex.html">Vertex</a> &amp;v) const </td></tr>
+<tr class="memdesc:ae82fbe23587b4650fe1356b0fb72645e"><td class="mdescLeft">&#160;</td><td class="mdescRight">zapisz wierzchołek do postaci stringa  <a href="#ae82fbe23587b4650fe1356b0fb72645e">Więcej...</a><br/></td></tr>
+<tr class="separator:ae82fbe23587b4650fe1356b0fb72645e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12b2c8e5fe1cebfd477de21ac94d430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad12b2c8e5fe1cebfd477de21ac94d430">loadVertex</a> (std::string &amp;str)</td></tr>
+<tr class="memdesc:ad12b2c8e5fe1cebfd477de21ac94d430"><td class="mdescLeft">&#160;</td><td class="mdescRight">wczyta wierzchołek ze stringa  <a href="#ad12b2c8e5fe1cebfd477de21ac94d430">Więcej...</a><br/></td></tr>
+<tr class="separator:ad12b2c8e5fe1cebfd477de21ac94d430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e5863626904c020da9ca97044786c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a30e5863626904c020da9ca97044786c0">saveToFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a30e5863626904c020da9ca97044786c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">zapisz graf do pliku  <a href="#a30e5863626904c020da9ca97044786c0">Więcej...</a><br/></td></tr>
+<tr class="separator:a30e5863626904c020da9ca97044786c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d059878df5c617afb415cc1f4cd8dbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a2d059878df5c617afb415cc1f4cd8dbc">loadFromFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a2d059878df5c617afb415cc1f4cd8dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">wczytaj graf z pliku  <a href="#a2d059878df5c617afb415cc1f4cd8dbc">Więcej...</a><br/></td></tr>
+<tr class="separator:a2d059878df5c617afb415cc1f4cd8dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f50072f6f495e94211b6d59cfcd0acf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a5f50072f6f495e94211b6d59cfcd0acf">randomIsomorphic</a> (const <a class="el" href="classGraph.html">Graph</a> &amp;other)</td></tr>
+<tr class="memdesc:a5f50072f6f495e94211b6d59cfcd0acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">twórz losowy graf izomorficzny  <a href="#a5f50072f6f495e94211b6d59cfcd0acf">Więcej...</a><br/></td></tr>
+<tr class="separator:a5f50072f6f495e94211b6d59cfcd0acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:a84c0f0a47f1ccfc8587a571cc039daad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGraph.html">Graph</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a84c0f0a47f1ccfc8587a571cc039daad">generateRandom</a> (unsigned int <a class="el" href="classGraph.html#aa0961f75ec603fa6b4f1e631b70233f1">vertex_count</a>, double density)</td></tr>
+<tr class="memdesc:a84c0f0a47f1ccfc8587a571cc039daad"><td class="mdescLeft">&#160;</td><td class="mdescRight">wygeneruj losowy, skierowany graf spójny  <a href="#a84c0f0a47f1ccfc8587a571cc039daad">Więcej...</a><br/></td></tr>
+<tr class="separator:a84c0f0a47f1ccfc8587a571cc039daad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:ad2c5979f339ecee307f980972a088342"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad2c5979f339ecee307f980972a088342">getLabel</a> (<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a> idx) const </td></tr>
+<tr class="memdesc:ad2c5979f339ecee307f980972a088342"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć znacznik dla wierzchołka o indeksie idx  <a href="#ad2c5979f339ecee307f980972a088342">Więcej...</a><br/></td></tr>
+<tr class="separator:ad2c5979f339ecee307f980972a088342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefa9a82c8dfa36713c8fe15000cd2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#acefa9a82c8dfa36713c8fe15000cd2ac">getIndex</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:acefa9a82c8dfa36713c8fe15000cd2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwróć indeks dla wierzchołka o znaczniku label  <a href="#acefa9a82c8dfa36713c8fe15000cd2ac">Więcej...</a><br/></td></tr>
+<tr class="separator:acefa9a82c8dfa36713c8fe15000cd2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949e2c8794a3c1dc85b4f6dc4e76f843"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classVertex.html">Vertex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a949e2c8794a3c1dc85b4f6dc4e76f843">getVertexAt</a> (<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> label) const </td></tr>
+<tr class="memdesc:a949e2c8794a3c1dc85b4f6dc4e76f843"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca referencję na wierzchołek o podanym znaczniku  <a href="#a949e2c8794a3c1dc85b4f6dc4e76f843">Więcej...</a><br/></td></tr>
+<tr class="separator:a949e2c8794a3c1dc85b4f6dc4e76f843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae971bb36c7c46b65f4ba7c4902bf4c53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ae971bb36c7c46b65f4ba7c4902bf4c53">findNextFreeIdx</a> ()</td></tr>
+<tr class="memdesc:ae971bb36c7c46b65f4ba7c4902bf4c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">znajdź kolejny wolny indeks dla następnego wierzchołka  <a href="#ae971bb36c7c46b65f4ba7c4902bf4c53">Więcej...</a><br/></td></tr>
+<tr class="separator:ae971bb36c7c46b65f4ba7c4902bf4c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:aa0961f75ec603fa6b4f1e631b70233f1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#aa0961f75ec603fa6b4f1e631b70233f1">vertex_count</a></td></tr>
+<tr class="memdesc:aa0961f75ec603fa6b4f1e631b70233f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba wierzchołków w grafie  <a href="#aa0961f75ec603fa6b4f1e631b70233f1">Więcej...</a><br/></td></tr>
+<tr class="separator:aa0961f75ec603fa6b4f1e631b70233f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84b4512d3366d236491358b6314bc47"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ad84b4512d3366d236491358b6314bc47">edge_count</a></td></tr>
+<tr class="memdesc:ad84b4512d3366d236491358b6314bc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba krawędzi w grafie  <a href="#ad84b4512d3366d236491358b6314bc47">Więcej...</a><br/></td></tr>
+<tr class="separator:ad84b4512d3366d236491358b6314bc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53211b7cd85e28093bbe540e5a2ec21d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a53211b7cd85e28093bbe540e5a2ec21d">__inv_power</a></td></tr>
+<tr class="memdesc:a53211b7cd85e28093bbe540e5a2ec21d"><td class="mdescLeft">&#160;</td><td class="mdescRight">potęga t używana przy liczeniu 'stopnia' wierzchołka  <a href="#a53211b7cd85e28093bbe540e5a2ec21d">Więcej...</a><br/></td></tr>
+<tr class="separator:a53211b7cd85e28093bbe540e5a2ec21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205f5526664ea4f94ad94c1cb7de3c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a205f5526664ea4f94ad94c1cb7de3c56">__first_free_idx</a></td></tr>
+<tr class="memdesc:a205f5526664ea4f94ad94c1cb7de3c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">pierwszy wolny indeks dla kolejnego wierzchołka grafu  <a href="#a205f5526664ea4f94ad94c1cb7de3c56">Więcej...</a><br/></td></tr>
+<tr class="separator:a205f5526664ea4f94ad94c1cb7de3c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d5f1746e168b9555daa83b84c0341b"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>, <a class="el" href="classVertex.html">Vertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a69d5f1746e168b9555daa83b84c0341b">vertexes</a></td></tr>
+<tr class="memdesc:a69d5f1746e168b9555daa83b84c0341b"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapa indeks -&gt; wierzchołek  <a href="#a69d5f1746e168b9555daa83b84c0341b">Więcej...</a><br/></td></tr>
+<tr class="separator:a69d5f1746e168b9555daa83b84c0341b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752008a468385625c22da499d248ada3"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a752008a468385625c22da499d248ada3">labels</a></td></tr>
+<tr class="memdesc:a752008a468385625c22da499d248ada3"><td class="mdescLeft">&#160;</td><td class="mdescRight">wszystkie znaczniki w grafie  <a href="#a752008a468385625c22da499d248ada3">Więcej...</a><br/></td></tr>
+<tr class="separator:a752008a468385625c22da499d248ada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6472b8bfc461dc9081b609b28e27d2b0"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a6472b8bfc461dc9081b609b28e27d2b0">idx_label_map</a></td></tr>
+<tr class="memdesc:a6472b8bfc461dc9081b609b28e27d2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapa indeks -&gt; znacznik  <a href="#a6472b8bfc461dc9081b609b28e27d2b0">Więcej...</a><br/></td></tr>
+<tr class="separator:a6472b8bfc461dc9081b609b28e27d2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2083a954ecbb76a242deed60755fd07"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>, <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#ac2083a954ecbb76a242deed60755fd07">label_idx_map</a></td></tr>
+<tr class="memdesc:ac2083a954ecbb76a242deed60755fd07"><td class="mdescLeft">&#160;</td><td class="mdescRight">mapa znacznik -&gt; indeks  <a href="#ac2083a954ecbb76a242deed60755fd07">Więcej...</a><br/></td></tr>
+<tr class="separator:ac2083a954ecbb76a242deed60755fd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Przyjaciele</h2></td></tr>
+<tr class="memitem:a8aff7513bde5154e374e5c7a99f38bb7"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a8aff7513bde5154e374e5c7a99f38bb7">operator&lt;&lt;</a> (std::ostream &amp;strm, const <a class="el" href="classGraph.html">Graph</a> &amp;g)</td></tr>
+<tr class="separator:a8aff7513bde5154e374e5c7a99f38bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694dfce5839c398362898b57184d57d5"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraph.html#a694dfce5839c398362898b57184d57d5">operator&gt;&gt;</a> (std::istream &amp;strm, <a class="el" href="classGraph.html">Graph</a> &amp;g)</td></tr>
+<tr class="separator:a694dfce5839c398362898b57184d57d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>klasa implementuje graf w reprezentacji listowej </p>
+<p>Klasa <a class="el" href="classGraph.html" title="klasa implementuje graf w reprezentacji listowej ">Graph</a> to implementacja grafu w reprezentacji list sąsiedztwa. Pozwala na:</p>
+<ul>
+<li>ręczne generowanie grafu</li>
+<li>wczytywanie i zapisywanie grafu do pliku</li>
+<li>generowanie losowego grafu</li>
+</ul>
+<p>Wierzchołki grafu identyfikowane są typem <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a>, ale wewnątrz grafu są indeksowane typem <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>. Pozwala to na łatwe wygenerowanie grafów izomorficznych. Wystarczy zmienić mapowanie znaczników na indeksy. </p>
+</div><h2 class="groupheader">Dokumentacja składowych definicji typu</h2>
+<a class="anchor" id="a8d2f79e14998a438e64bf07f31abb359"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&gt; <a class="el" href="classGraph.html#a8d2f79e14998a438e64bf07f31abb359">Graph::dfs_path</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>struktura pomocnicza reprezentująca krawędź skierowaną w grafie </p>
+<p>Prosta struktura do reprezentacji krawędzi skierowanych. Wykorzystywania do porównywania krawędzi np. przy sortowaniu. ścieżka dfs po grafie</p>
+<p>Wykorzystywane przy przechodzeniu grafu wgłąb </p>
+
+</div>
+</div>
+<a class="anchor" id="af10e18e1cb3834650bd69bad6bec3fc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&gt; <a class="el" href="classGraph.html#af10e18e1cb3834650bd69bad6bec3fc0">Graph::dfs_visited</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zbiór wcześniej odwiedzonych wierzchołków </p>
+<p>Wykorzystywane przy przechodzeniu grafu wgłąb </p>
+
+</div>
+</div>
+<a class="anchor" id="a7875f5959501bdafb3ba4dd428dfb10b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;<a class="el" href="structGraph_1_1Edge.html">Edge</a>&gt; <a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">Graph::edge_set_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zbiór krawędzi </p>
+
+</div>
+</div>
+<a class="anchor" id="a865985566962f6fcab1c0a465305424f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef vertex_set_t::const_iterator <a class="el" href="classGraph.html#a865985566962f6fcab1c0a465305424f">Graph::iterator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator po zbiorze znaczników </p>
+
+</div>
+</div>
+<a class="anchor" id="a2237a0ada8484c37b8200c0e3685ca71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">Graph::label_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>znacznik wierzchołka w grafie </p>
+<p>Identyfikuje wierzchołki w grafie. Zewnętrzne oznakowanie wierzchołków. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac91822a10fe3fc10ea8449531fc32b95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&gt; <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">Graph::vertex_set_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zbiór znaczników wierzchołków </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="ae4c72b8ac4d693c49800a4c7e273654f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Graph::Graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>stwórz pusty graf </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a7f214a25b838ec94dff78062364694f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::addEdge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje krawędź między dwoma wierzchołkami </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>znacznik wierzchołka źródłowego </td></tr>
+    <tr><td class="paramname">w</td><td>znacznik wierzchołka docelowego</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy dodano krawędź (nie dodano gdy już ustnieje lub nie w grafie nie ma któregoś z wierzchołków) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a96fc255863c32f9f7d1920ca4a2570fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::addVertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaj wierzchołek do grafu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik dodawanego wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy rzeczywiście dodano wierzchołek (jeżeli znacznik jest już w użyciu to nie dodano) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3319a876a8ca646b9095c0ff0be154ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph_1_1AdjIter.html">Graph::AdjIter</a> Graph::adjBegin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator wierzchołków incydentnych </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka źródłowego</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>iterator wskazujący na początek znaczników wierzchołków incydentnych z wierzchołkiem label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a359f0041dfa65eec7d1d658200f19a2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph_1_1AdjIter.html">Graph::AdjIter</a> Graph::adjEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator wierzchołków incydentnych </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka źródłowego</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>iterator wskazujący na koniec znaczników wierzchołków incydentnych z wierzchołkiem label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9db1e55265e70cd90f392355c7fb7e41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph.html#a865985566962f6fcab1c0a465305424f">iterator</a> Graph::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>iterator wierzchołków grafu </p>
+<dl class="section return"><dt>Zwraca</dt><dd>iterator wskazujący na początek znaczników wierzchołków grafu </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac6192a41101102ca8aa6acca607c84f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>usuwa wszystkie krawędzie i wierzchołki z grafu </p>
+
+</div>
+</div>
+<a class="anchor" id="ae82fbe23587b4650fe1356b0fb72645e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Graph::dumpVertex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classVertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zapisz wierzchołek do postaci stringa </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>referencja na wierzchołek</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>string z zapisanym wierzchołkiem </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adf6826e424173fd08bdf8574ef15ce33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph.html#a865985566962f6fcab1c0a465305424f">iterator</a> Graph::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>iterator wierzchołków grafu </p>
+<dl class="section return"><dt>Zwraca</dt><dd>iterator wskazujący na koniec znaczników wierzchołków grafu </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae971bb36c7c46b65f4ba7c4902bf4c53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::findNextFreeIdx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>znajdź kolejny wolny indeks dla następnego wierzchołka </p>
+
+</div>
+</div>
+<a class="anchor" id="a84c0f0a47f1ccfc8587a571cc039daad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph.html">Graph</a> Graph::generateRandom </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>vertex_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>density</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wygeneruj losowy, skierowany graf spójny </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertex_count</td><td>liczba wierzchołków w grafie losowym </td></tr>
+    <tr><td class="paramname">density</td><td>gęstość grafu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>losowy, skierowany graf spójny o vertex_count wierzchołkach i gęstości density krawędzi </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a23c276cd34e6b1103a533e9cf6419877"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::getDFSPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a8d2f79e14998a438e64bf07f31abb359">dfs_path</a> &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html#af10e18e1cb3834650bd69bad6bec3fc0">dfs_visited</a> &amp;&#160;</td>
+          <td class="paramname"><em>visited</em> = <code><a class="el" href="classGraph.html#af10e18e1cb3834650bd69bad6bec3fc0">dfs_visited</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zapisz ścieżkę po przejściu grafu wgłąb (DFS) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>referencja na ścieżkę </td></tr>
+    <tr><td class="paramname">start</td><td>znacznik wierzchołka startowego </td></tr>
+    <tr><td class="paramname">visited</td><td>zbiór wierzchołków które należy uznać za wcześniej odwiedzone </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d560f48bc0d31e822ab660984a570a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getEdgeCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć liczbę krawędzi w grafie </p>
+<dl class="section return"><dt>Zwraca</dt><dd>liczba krawędzi w grafie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a108b1de9af3e6cd422ded99e80a18664"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>edges</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zapełnij zbiór krawędziami grafu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edges</td><td>referencja na zbiór krawędzi</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>liczba umieszczonych krawędzi </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa9fc3b29889013a4a2d271357715904d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zapełnij zbiór krawędziami grafu</p>
+<p>krawędzie grafu incydentne z wierzchołkiem label</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edges</td><td>referencja na zbiór krawędzi </td></tr>
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka z incydentnego</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>liczba umieszczonych krawędzi </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a57425d2dd30d5f9ba267654deadda35a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getEdges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a7875f5959501bdafb3ba4dd428dfb10b">edge_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>verts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zapełnij zbiór krawędziami grafu</p>
+<p>krawędzie grafu indukowanego wierzchołkami z verts</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edges</td><td>referencja na zbiór krawędzi </td></tr>
+    <tr><td class="paramname">verts</td><td>referencja na zbiór znaczników wierzchołków</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>liczba umieszczonych krawędzi </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab1410db4047cde674ca0f602a6eb722f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getIn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć wejściowość wierzchołka </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wejściowość wierzchołka label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a948347b4ce0ea0f18663bb75003406d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getIn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>vset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć wejściowość wierzchołka </p>
+<p>wejściowość wierzchołka w podgrafie indukowanym zbiorem wierzchołków</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka </td></tr>
+    <tr><td class="paramname">vset</td><td>podzbiór wierzchołków grafu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wejściowość wierzchołka label w grafie indkowanym zbiorem vset </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acefa9a82c8dfa36713c8fe15000cd2ac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="graph_8cpp.html#a9a6f26b84fc94662f89adb8568b79725">idx_t</a> Graph::getIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zwróć indeks dla wierzchołka o znaczniku label </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>indeks wierzchołka label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a74e18e8a9825e77323ebfcc70b718380"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Graph::getInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>informacje na temat grafu </p>
+<p>Metoda pomocnicza.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>string z informacjami o grafie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a35c719c0e92763e034e6519c46a1cf4b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getInvariant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć 'stopień' (invariant) wierzchołka </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>'stopień' wierzchołka label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad2c5979f339ecee307f980972a088342"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> Graph::getLabel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zwróć znacznik dla wierzchołka o indeksie idx </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>indeks wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>znacznik wierzchołka idx </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a136b8e5410d1f68c808f76cb1859026d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getOut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć wyjściowość wierzchołka </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wyjściowość wierzchołka label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a39e23b858256af1a9ce21b74bffb62f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getOut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>vset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć wyjściowość wierzchołka </p>
+<p>wyjściowość wierzchołka w podgrafie indukowanym zbiorem wierzchołków</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka </td></tr>
+    <tr><td class="paramname">vset</td><td>podzbiór wierzchołków grafu</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wyjściowość wierzchołka label w grafie indkowanym zbiorem vset </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3aebca6e6e0d56f1beab029bdba321f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć liczbę wierzchołków w grafie </p>
+<dl class="section return"><dt>Zwraca</dt><dd>liczba wierzchołków w grafie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a949e2c8794a3c1dc85b4f6dc4e76f843"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classVertex.html">Vertex</a> &amp; Graph::getVertexAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zwraca referencję na wierzchołek o podanym znaczniku </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja na wierzchołek o znaczniku label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2940fa9094c860f7e4ff5b3f513c2732"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::getVertexCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwróć liczbę wierzchołków w grafie </p>
+<dl class="section return"><dt>Zwraca</dt><dd>liczba wierzchołków w grafie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af7c39ac36f29f27c0241796bd8f49973"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::isConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>czy w grafie występuje połączenie między wierzchołkami </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>znacznik wierzchołka źródłowego </td></tr>
+    <tr><td class="paramname">w</td><td>znacznik wierzchołka docelowego</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy wstępuje połączenie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afa6257363d71719e5cbb7a32485606fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::isConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html#ac91822a10fe3fc10ea8449531fc32b95">vertex_set_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>vset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>czy w grafie indukowanym występuje połączenie między wierzchołkami </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>znacznik wierzchołka źródłowego </td></tr>
+    <tr><td class="paramname">w</td><td>znacznik wierzchołka docelowego </td></tr>
+    <tr><td class="paramname">vset</td><td>zbiór wierzchołków rozpinających</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy wstępuje połączenie </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab3d0a9b8a15458f9fd6fe2ad71debaeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>sprawdź czy graf nie zawiera wierzchołków </p>
+<dl class="section return"><dt>Zwraca</dt><dd>czy graf jest pusty </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa52d8b66a416c850f24ea4a507f8bbc1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::isNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>czy wierzchołek o danym znaczniku należy do grafu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>czy graf zawiera wierzchołek label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2d059878df5c617afb415cc1f4cd8dbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wczytaj graf z pliku </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad12b2c8e5fe1cebfd477de21ac94d430"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::loadVertex </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wczyta wierzchołek ze stringa </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>string z wierzchołkiem </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5f50072f6f495e94211b6d59cfcd0acf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraph.html">Graph</a> &amp; Graph::randomIsomorphic </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>twórz losowy graf izomorficzny </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>graf który będzie izomorficzny z nowym grafem</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja na graf izomorficzny do grafu other </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a30e5863626904c020da9ca97044786c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::saveToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zapisz graf do pliku </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac4d679a954ffea0b463d6b559aec8597"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::setVertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td>
+          <td class="paramname"><em>adj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ustaw wierzchołek </p>
+<p>ustawia listę sąsiedztwa wierzchołka. Jeżeli w grafie nie istnieją jeszcze rozpatrywane wierzchołki to są one dodawane.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka </td></tr>
+    <tr><td class="paramname">adj</td><td>lista znaczników wierzchołków (lista sąsiedztwa) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c638cac3d3bb7b47b1aef864b2c6a69"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::setVertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a> &gt;&#160;</td>
+          <td class="paramname"><em>adj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ustaw wierzchołek </p>
+<p>ustawia listę sąsiedztwa wierzchołka. Jeżeli w grafie nie istnieją jeszcze rozpatrywane wierzchołki to są one dodawane.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>znacznik wierzchołka </td></tr>
+    <tr><td class="paramname">adj</td><td>lista znaczników wierzchołków (lista sąsiedztwa) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja przyjaciół i funkcji związanych</h2>
+<a class="anchor" id="a8aff7513bde5154e374e5c7a99f38bb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a694dfce5839c398362898b57184d57d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a205f5526664ea4f94ad94c1cb7de3c56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a> Graph::__first_free_idx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>pierwszy wolny indeks dla kolejnego wierzchołka grafu </p>
+
+</div>
+</div>
+<a class="anchor" id="a53211b7cd85e28093bbe540e5a2ec21d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::__inv_power</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>potęga t używana przy liczeniu 'stopnia' wierzchołka </p>
+<p>10^t * wyjściowość + wejściowość </p>
+
+</div>
+</div>
+<a class="anchor" id="ad84b4512d3366d236491358b6314bc47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::edge_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>liczba krawędzi w grafie </p>
+
+</div>
+</div>
+<a class="anchor" id="a6472b8bfc461dc9081b609b28e27d2b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>, <a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&gt; Graph::idx_label_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapa indeks -&gt; znacznik </p>
+
+</div>
+</div>
+<a class="anchor" id="ac2083a954ecbb76a242deed60755fd07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>, <a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>&gt; Graph::label_idx_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapa znacznik -&gt; indeks </p>
+
+</div>
+</div>
+<a class="anchor" id="a752008a468385625c22da499d248ada3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="classGraph.html#a2237a0ada8484c37b8200c0e3685ca71">label_t</a>&gt; Graph::labels</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wszystkie znaczniki w grafie </p>
+
+</div>
+</div>
+<a class="anchor" id="aa0961f75ec603fa6b4f1e631b70233f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Graph::vertex_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>liczba wierzchołków w grafie </p>
+
+</div>
+</div>
+<a class="anchor" id="a69d5f1746e168b9555daa83b84c0341b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="classVertex.html#a12fe2194264f72b70b284bba723052c1">Vertex::idx_t</a>, <a class="el" href="classVertex.html">Vertex</a>&gt; Graph::vertexes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>mapa indeks -&gt; wierzchołek </p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="graph_8hpp_source.html">graph.hpp</a></li>
+<li><a class="el" href="graph_8cpp.html">graph.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano So, 4 sty 2014 20:25:22 dla Izomorfizm grafów programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

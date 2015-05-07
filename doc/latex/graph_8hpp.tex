@@ -1,0 +1,97 @@
+\hypertarget{graph_8hpp}{\section{Dokumentacja pliku graph.\-hpp}
+\label{graph_8hpp}\index{graph.\-hpp@{graph.\-hpp}}
+}
+
+
+plik nagłówkowy klasy \hyperlink{classGraph}{Graph}  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+{\ttfamily \#include $<$initializer\-\_\-list$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$random$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}vertex.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-hpp\char`\"{}}\\*
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGraph}{Graph}
+\begin{DoxyCompactList}\small\item\em klasa implementuje graf w reprezentacji listowej \end{DoxyCompactList}\item 
+struct \hyperlink{structGraph_1_1Edge}{Graph\-::\-Edge}
+\begin{DoxyCompactList}\small\item\em struktura reprezentuje krawędź skierowaną w grafie \end{DoxyCompactList}\item 
+class \hyperlink{classGraph_1_1AdjIter}{Graph\-::\-Adj\-Iter}
+\begin{DoxyCompactList}\small\item\em klasa pomocnicza, iterator po znacznikach wierzchołków sąsiadujących z wierzchołkiem \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{graph_8hpp_a36f6fc7d1a3bb66002ed1bf7205d0056}{C\-O\-M\-\_\-\-S\-I\-G\-N}~\char`\"{}\#\char`\"{}
+\begin{DoxyCompactList}\small\item\em znak komentarza w plikach z rep. grafu \end{DoxyCompactList}\item 
+\#define \hyperlink{graph_8hpp_af748d6be1adfe0bf504c296f132de9ff}{D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R}~','
+\begin{DoxyCompactList}\small\item\em znak oddzielający w plikach z rep. grafu \end{DoxyCompactList}\item 
+\#define \hyperlink{graph_8hpp_a670aeb71fe957355658431f037fe4990}{M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S}~(1000$\ast$10)
+\begin{DoxyCompactList}\small\item\em maksymalna liczba losowań przy generowanie grafu losowego \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{graph_8hpp_a8aff7513bde5154e374e5c7a99f38bb7}{operator$<$$<$} (std\-::ostream \&strm, const \hyperlink{classGraph}{Graph} \&g)
+\item 
+std\-::istream \& \hyperlink{graph_8hpp_a694dfce5839c398362898b57184d57d5}{operator$>$$>$} (std\-::istream \&strm, \hyperlink{classGraph}{Graph} \&g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+plik nagłówkowy klasy \hyperlink{classGraph}{Graph} Detailed description starts here.
+
+Deklaracja klasy \hyperlink{classGraph}{Graph} i klas wewnętrznych klasy \hyperlink{classGraph}{Graph} 
+
+
+
+\subsection{Dokumentacja definicji}
+\hypertarget{graph_8hpp_a36f6fc7d1a3bb66002ed1bf7205d0056}{\index{graph.\-hpp@{graph.\-hpp}!C\-O\-M\-\_\-\-S\-I\-G\-N@{C\-O\-M\-\_\-\-S\-I\-G\-N}}
+\index{C\-O\-M\-\_\-\-S\-I\-G\-N@{C\-O\-M\-\_\-\-S\-I\-G\-N}!graph.hpp@{graph.\-hpp}}
+\subsubsection[{C\-O\-M\-\_\-\-S\-I\-G\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-M\-\_\-\-S\-I\-G\-N~\char`\"{}\#\char`\"{}}}\label{graph_8hpp_a36f6fc7d1a3bb66002ed1bf7205d0056}
+
+
+znak komentarza w plikach z rep. grafu 
+
+\hypertarget{graph_8hpp_af748d6be1adfe0bf504c296f132de9ff}{\index{graph.\-hpp@{graph.\-hpp}!D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R@{D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R}}
+\index{D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R@{D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R}!graph.hpp@{graph.\-hpp}}
+\subsubsection[{D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-L\-I\-M\-I\-T\-E\-R\-\_\-\-C\-H\-A\-R~','}}\label{graph_8hpp_af748d6be1adfe0bf504c296f132de9ff}
+
+
+znak oddzielający w plikach z rep. grafu 
+
+\hypertarget{graph_8hpp_a670aeb71fe957355658431f037fe4990}{\index{graph.\-hpp@{graph.\-hpp}!M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S@{M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S}}
+\index{M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S@{M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S}!graph.hpp@{graph.\-hpp}}
+\subsubsection[{M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-R\-A\-N\-D\-O\-M\-\_\-\-F\-A\-I\-L\-S~(1000$\ast$10)}}\label{graph_8hpp_a670aeb71fe957355658431f037fe4990}
+
+
+maksymalna liczba losowań przy generowanie grafu losowego 
+
+Liczba możliwych nieudanych prób przy losowaniu nowej krawędzi do grafu losowego. 
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{graph_8hpp_a8aff7513bde5154e374e5c7a99f38bb7}{\index{graph.\-hpp@{graph.\-hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!graph.hpp@{graph.\-hpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{strm, }
+\item[{const {\bf Graph} \&}]{g}
+\end{DoxyParamCaption}
+)}}\label{graph_8hpp_a8aff7513bde5154e374e5c7a99f38bb7}
+\hypertarget{graph_8hpp_a694dfce5839c398362898b57184d57d5}{\index{graph.\-hpp@{graph.\-hpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!graph.hpp@{graph.\-hpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{strm, }
+\item[{{\bf Graph} \&}]{g}
+\end{DoxyParamCaption}
+)}}\label{graph_8hpp_a694dfce5839c398362898b57184d57d5}

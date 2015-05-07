@@ -1,0 +1,110 @@
+\hypertarget{structGraph_1_1Edge}{\section{Dokumentacja struktury Graph\-:\-:Edge}
+\label{structGraph_1_1Edge}\index{Graph\-::\-Edge@{Graph\-::\-Edge}}
+}
+
+
+struktura reprezentuje krawędź skierowaną w grafie  
+
+
+
+
+{\ttfamily \#include $<$graph.\-hpp$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structGraph_1_1Edge_a8921760bce6405458d135f8fff36da33}{Edge} (\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} \-\_\-source, \hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} \-\_\-target)
+\begin{DoxyCompactList}\small\item\em konstruktor struktury \hyperlink{structGraph_1_1Edge}{Edge} \end{DoxyCompactList}\item 
+bool \hyperlink{structGraph_1_1Edge_af08616db0154985676b4ef48460d70bd}{operator==} (const \hyperlink{structGraph_1_1Edge}{Edge} \&e) const 
+\begin{DoxyCompactList}\small\item\em porównywanie krawędzi \end{DoxyCompactList}\item 
+bool \hyperlink{structGraph_1_1Edge_af6f25b416c2e1b3f67ffd709e2d2951d}{operator$<$} (const \hyperlink{structGraph_1_1Edge}{Edge} \&e) const 
+\begin{DoxyCompactList}\small\item\em leksykograficzny porządek na krawędziach \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} \hyperlink{structGraph_1_1Edge_a8111b5ffa036e48e4d1c4e55e8cf37d8}{source}
+\item 
+\hyperlink{classGraph_a2237a0ada8484c37b8200c0e3685ca71}{Graph\-::label\-\_\-t} \hyperlink{structGraph_1_1Edge_a10c3c3116be32c39949fd6de3c03d9fa}{target}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+struktura reprezentuje krawędź skierowaną w grafie 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{structGraph_1_1Edge_a8921760bce6405458d135f8fff36da33}{\index{Graph\-::\-Edge@{Graph\-::\-Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Graph::Edge@{Graph\-::\-Edge}}
+\subsubsection[{Edge}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-::\-Edge\-::\-Edge (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph\-::label\-\_\-t}}]{\-\_\-source, }
+\item[{{\bf Graph\-::label\-\_\-t}}]{\-\_\-target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structGraph_1_1Edge_a8921760bce6405458d135f8fff36da33}
+
+
+konstruktor struktury \hyperlink{structGraph_1_1Edge}{Edge} 
+
+
+\begin{DoxyParams}{Parametry}
+{\em \-\_\-source} & znacznik wierzchołka źródłowego \\
+\hline
+{\em \-\_\-target} & znacznik wierzchołka docelowego \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{structGraph_1_1Edge_af6f25b416c2e1b3f67ffd709e2d2951d}{\index{Graph\-::\-Edge@{Graph\-::\-Edge}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Graph::Edge@{Graph\-::\-Edge}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::\-Edge\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structGraph_1_1Edge_af6f25b416c2e1b3f67ffd709e2d2951d}
+
+
+leksykograficzny porządek na krawędziach 
+
+
+\begin{DoxyParams}{Parametry}
+{\em e} & druga krawędź\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy krawędź jest mniejsza od krawędzi e 
+\end{DoxyReturn}
+\hypertarget{structGraph_1_1Edge_af08616db0154985676b4ef48460d70bd}{\index{Graph\-::\-Edge@{Graph\-::\-Edge}!operator==@{operator==}}
+\index{operator==@{operator==}!Graph::Edge@{Graph\-::\-Edge}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Graph\-::\-Edge\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structGraph_1_1Edge_af08616db0154985676b4ef48460d70bd}
+
+
+porównywanie krawędzi 
+
+krawędzie są równe jeżeli źródło i cel są takie same
+
+
+\begin{DoxyParams}{Parametry}
+{\em e} & druga krawędź\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+czy są to te same krawędzie 
+\end{DoxyReturn}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{structGraph_1_1Edge_a8111b5ffa036e48e4d1c4e55e8cf37d8}{\index{Graph\-::\-Edge@{Graph\-::\-Edge}!source@{source}}
+\index{source@{source}!Graph::Edge@{Graph\-::\-Edge}}
+\subsubsection[{source}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\-::label\-\_\-t} Graph\-::\-Edge\-::source}}\label{structGraph_1_1Edge_a8111b5ffa036e48e4d1c4e55e8cf37d8}
+\hypertarget{structGraph_1_1Edge_a10c3c3116be32c39949fd6de3c03d9fa}{\index{Graph\-::\-Edge@{Graph\-::\-Edge}!target@{target}}
+\index{target@{target}!Graph::Edge@{Graph\-::\-Edge}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph\-::label\-\_\-t} Graph\-::\-Edge\-::target}}\label{structGraph_1_1Edge_a10c3c3116be32c39949fd6de3c03d9fa}
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graph_8hpp}{graph.\-hpp}\end{DoxyCompactItemize}
